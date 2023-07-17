@@ -100,6 +100,7 @@ public class moveset : MonoBehaviour
         }
 
         dirX = Input.GetAxisRaw("Horizontal");
+       horizontalMove = Input.GetAxisRaw("Horizontal");
         if (!Dialogue.inDialogue && !shielded) rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
 
         if (Input.GetButtonDown("Jump") && !Dialogue.inDialogue)// && IsGrounded()) //&& IsGrounded()
@@ -114,11 +115,11 @@ public class moveset : MonoBehaviour
             anim.SetTrigger("dash");
         }
 
-        if (dirX > 0f)
+        if (horizontalMove > 0f)
         {
             anim.SetInteger("state", 1);
         }
-        else if (dirX < 0f)
+        else if (horizontalMove< 0f)
         {
             anim.SetInteger("state", 1);
         }
