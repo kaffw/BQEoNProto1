@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - SecretEntryPoint
+  - Moveable
+  - PlayerPlacer
+  - FallDetector
+  - Checkpoint
+  - PressurePlateKey
+  - Bullet
+  - Trigger
+  - Shield
+  - SpawnTriggerDetector
+  - NPC
+  - Enemy
+  - Projectile
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Ground
+  - Player
+  - Wall
+  - Enemies
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 992127533
+    locked: 0
+  - name: NPC
+    uniqueID: 705290683
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Terrain
+    uniqueID: 4288133261
+    locked: 0
+  - name: Dialogue Background
+    uniqueID: 1440545287
+    locked: 0
+  - name: Dialogue Foreground
+    uniqueID: 609167783
+    locked: 0
+  - name: Dialogue Speaker's Name
+    uniqueID: 225701863
+    locked: 0
+  - name: Dialogue Speaker's Face
+    uniqueID: 288672047
+    locked: 0
