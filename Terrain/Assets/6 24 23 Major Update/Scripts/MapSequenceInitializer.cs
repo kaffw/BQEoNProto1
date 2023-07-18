@@ -14,30 +14,31 @@ public class MapSequenceInitializer : MonoBehaviour
 
     public static bool entryToAct3 = false;
     
-    //public static int oneInstance = 0;
-    //public static float savedCurrentHealth = 5; recently removed
+    public static int oneInstance = 0;
+    public static float savedCurrentHealth = 5; //recently removed
 
     void Start()
     {
-        //if (oneInstance == 0) { MapSequenceUpdate(); oneInstance++; }
+        if (oneInstance == 0) { MapSequenceUpdate(); oneInstance++; }
     }
 
     void Update()
     {
-        /*if (moveset.deathCounter == 5)
+        if (moveset.deathCounter == 5)
         {
 
             mapsequence.Clear();
             MapSequenceUpdate();
             moveset.deathCounter = 0;
             SceneManager.LoadScene(1);
-        }*/
+        }
 
-        //if (Health.damaged) { moveset.savedCurrentHealth--; Health.damaged = false; }
+        if (Health.damaged) { savedCurrentHealth--; Health.damaged = false; }
     }
 
     public void MapSequenceUpdate()
     {
+        //Debug.Log("Sequence Updated");
         location = 0;
         counterToAct1End = 0;
         entryToAct3 = false;
@@ -65,5 +66,10 @@ public class MapSequenceInitializer : MonoBehaviour
         }
 
         mapsequence.Add(8);
+
+        for (int i = 0; i < 6; i++)
+        {
+            Debug.Log(mapsequence[i]);
+        }
     }
 }

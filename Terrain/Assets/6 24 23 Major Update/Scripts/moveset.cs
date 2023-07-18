@@ -37,14 +37,14 @@ public class moveset : MonoBehaviour
     public bool isWallSliding;
 
     //variables for LedgeClimb
-    [HideInInspector]public bool LedgeDetected;
+    [HideInInspector] public bool LedgeDetected;
     [Header("Ledge Info")]
     [SerializeField] private Vector2 offset1;
     [SerializeField] private Vector2 offset2;
     private Vector2 climbBegunPosition;
     private Vector2 climbOverPosition;
     private bool canGrabLedge = true;
-    private bool canClimb; 
+    private bool canClimb;
 
 
 
@@ -60,6 +60,13 @@ public class moveset : MonoBehaviour
     public float wallJumpingCounter;
     public float wallJumpingDuration = 0.4f;
 
+
+    //double jump
+    private bool doubleJump;
+    [SerializeField] private float doubleJumpingPower = 17.5f;
+
+
+
     //ground
     [SerializeField] private LayerMask jumpableGround;
     [SerializeField] private TrailRenderer tr;
@@ -72,10 +79,6 @@ public class moveset : MonoBehaviour
     [SerializeField] private GameObject shield;
 
     public static bool isJumping, isGrabbing; //from PlayerVariable.cs moved to moveset.cs
-
-    public static int oneInstance = 0;
-    public static float savedCurrentHealth = 5;
-    public MapSequenceInitializer mapReset;
 
     //private enum MovementState { idle, running, jumping, falling }
     //private MovementState state = MovementState.idle;
@@ -92,8 +95,6 @@ public class moveset : MonoBehaviour
         }
 
         CharacterPositionManager.ifFromEntrance = false;
-
-        mapReset.GetComponent<MapSequenceInitializer>().MapSequenceUpdate();
     }
 
     private void Start()
@@ -104,27 +105,10 @@ public class moveset : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         respawnPoint = transform.position;
-
-        if (oneInstance == 0) { mapReset.MapSequenceUpdate();  oneInstance++; }
     }
 
     private void Update()
     {
-        if (moveset.deathCounter == 5)
-        {
-
-            MapSequenceInitializer.mapsequence.Clear();
-            mapReset.MapSequenceUpdate();
-            moveset.deathCounter = 0;
-            SceneManager.LoadScene(1);
-        }
-
-        if (Health.damaged)
-        {
-            savedCurrentHealth--;
-            Health.damaged = false;
-        }
-
         isShielded();
         WallSlide();
         WallJump();
@@ -137,10 +121,18 @@ public class moveset : MonoBehaviour
         dirX = Input.GetAxisRaw("Horizontal");
         horizontalMove = Input.GetAxisRaw("Horizontal");
         if (!Dialogue.inDialogue && !shielded) rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
-
-        if (Input.GetButtonDown("Jump") && !Dialogue.inDialogue)// && IsGrounded()) //&& IsGrounded()
+        if (Input.GetButtonDown("Jump") && IsGrounded())
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            doubleJump = false;
+
+        }
+        if (Input.GetButtonDown("Jump") && !Dialogue.inDialogue) //&& IsGrounded()
+        {
+            if (IsGrounded() || doubleJump)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, doubleJump ? doubleJumpingPower : jumpForce);
+                doubleJump = !doubleJump;
+            }
         }
 
         // newly added
@@ -154,7 +146,7 @@ public class moveset : MonoBehaviour
         {
             anim.SetInteger("state", 1);
         }
-        else if (horizontalMove< 0f)
+        else if (horizontalMove < 0f)
         {
             anim.SetInteger("state", 1);
         }
@@ -182,8 +174,10 @@ public class moveset : MonoBehaviour
 
     //above Playermovement.cs UpdateAnimationState...
 
-    private void CheckForLedge(){
-        if(LedgeDetected&& canGrabLedge){
+    private void CheckForLedge()
+    {
+        if (LedgeDetected && canGrabLedge)
+        {
             canGrabLedge = false;
 
             Vector2 ledgePosition = GetComponentInChildren<LedgeDetection>().transform.position;
@@ -193,7 +187,8 @@ public class moveset : MonoBehaviour
             climbOverPosition = ledgePosition + offset2;
             canClimb = true;
         }
-        if(canClimb){
+        if (canClimb)
+        {
 
             transform.position = climbBegunPosition;
         }
@@ -335,6 +330,8 @@ public class moveset : MonoBehaviour
             rb.velocity = new Vector2(wallJumpingDirection * 8f, 8f);
             wallJumpingCounter = 0f;
 
+            
+            /*
             if (transform.localScale.x != wallJumpingDirection)
             {
 
@@ -342,7 +339,7 @@ public class moveset : MonoBehaviour
                 Vector3 localScale = transform.localScale;
                 localScale.x *= -1f;
                 transform.localScale = localScale;
-            }
+            }*/
             Invoke(nameof(StopWallJumping), wallJumpingDuration);
         }
     }
@@ -382,7 +379,7 @@ public class moveset : MonoBehaviour
             Instantiate(PseudoBulletProjectile, new Vector2(rb.transform.position.x + 1, rb.transform.position.y), transform.rotation);
             fireRateTimer = 0f;
         }
-        else
+        else if (!dirFire && fireRateTimer >= fireRate)
         {
             Instantiate(PseudoBulletProjectile, new Vector2(rb.transform.position.x - 1, rb.transform.position.y), transform.rotation);
             fireRateTimer = 0f;

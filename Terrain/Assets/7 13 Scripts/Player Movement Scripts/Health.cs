@@ -18,7 +18,7 @@ public class Health : MonoBehaviour
 
     private void Awake()
     {
-        if (moveset.oneInstance == 0) currentHealth = startingHealth;
+        if (MapSequenceInitializer.oneInstance == 0) currentHealth = startingHealth;
         else
         {
             currentHealth = (5 - moveset.deathCounter);
