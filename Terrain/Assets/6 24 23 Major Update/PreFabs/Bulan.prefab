@@ -206,6 +206,7 @@ MonoBehaviour:
   wallJumpingTime: 0.2
   wallJumpingCounter: 0
   wallJumpingDuration: 0.4
+  doubleJumpingPower: 17.5
   jumpableGround:
     serializedVersion: 2
     m_Bits: 64
@@ -215,7 +216,6 @@ MonoBehaviour:
     m_Bits: 256
   wallCheck: {fileID: 2611164972161044031}
   shield: {fileID: 2877102605687276961}
-  mapReset: {fileID: 7645340735052910119, guid: 05d50e555312d2144bd668cf7e98c1d6, type: 3}
 --- !u!95 &2611164972877872476
 Animator:
   serializedVersion: 5
@@ -368,8 +368,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   damage: 1
-  anim: {fileID: 0}
-  AttackProjectile: {fileID: 0}
+  anim: {fileID: 2611164972877872476}
+  AttackProjectile: {fileID: 7992620329124778148}
   AttackProjectileState: 0
 --- !u!1 &2877102605687276961
 GameObject:
