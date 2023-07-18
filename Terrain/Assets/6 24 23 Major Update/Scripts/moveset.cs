@@ -36,6 +36,18 @@ public class moveset : MonoBehaviour
     public bool isDashing;
     public bool isWallSliding;
 
+    //variables for LedgeClimb
+    [HideInInspector]public bool LedgeDetected;
+    [Header("Ledge Info")]
+    [SerializeField] private Vector2 offset1;
+    [SerializeField] private Vector2 offset2;
+    private Vector2 climbBegunPosition;
+    private Vector2 climbOverPosition;
+    private bool canGrabLedge = true;
+    private bool canClimb; 
+
+
+
     private float wallSlidingSpeed = 2f;
     public float dashingPower = 24f;
     public float dashingTime = 0.2f;
@@ -131,7 +143,7 @@ public class moveset : MonoBehaviour
         {
             anim.SetInteger("state", 0);
         }
-
+        UpdateAnimationState();
         fireRateTimer += Time.deltaTime;
         if (Input.GetKeyDown("j") && fireRateTimer >= fireRate && !isFiring)
         {
@@ -140,13 +152,30 @@ public class moveset : MonoBehaviour
             StartCoroutine(DelayFire());
         }
 
-        UpdateAnimationState();
 
         //falldetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
 
     }
 
     //above Playermovement.cs UpdateAnimationState...
+
+    private void CheckForLedge(){
+        if(LedgeDetected&& canGrabLedge){
+            canGrabLedge = false;
+
+            Vector2 ledgePosition = GetComponentInChildren<LedgeDetection>().transform.position;
+
+
+            climbBegunPosition = ledgePosition + offset1;
+            climbOverPosition = ledgePosition + offset2;
+            canClimb = true;
+        }
+        if(canClimb){
+
+            transform.position = climbBegunPosition;
+        }
+    }
+
 
     private IEnumerator Dash()
     {
