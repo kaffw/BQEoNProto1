@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b40a5a34e4bb8b14eb35460845b57bf0
+guid: 3896150f0d8118a43899551a18ee0521
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,23 +101,11 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BULAN_Ledge Grab Climb_01_0
+      name: BULAN_Run_01_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52ad1e6590b03fa44a58b03ff98e523a
-      internalID: -270177949
+      spriteID: d42d1b7391ac37546b4591555f4b5fc5
+      internalID: -518650437
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BULAN_Ledge Grab Climb_01_1
+      name: BULAN_Run_01_1
       rect:
         serializedVersion: 2
         x: 48
@@ -152,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2427f57e592ffc4bb46ee778c80ede9
-      internalID: -803366401
+      spriteID: f21b99641c5dcec47b7d57b4b79ab478
+      internalID: -1474567598
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BULAN_Ledge Grab Climb_01_2
+      name: BULAN_Run_01_2
       rect:
         serializedVersion: 2
         x: 96
@@ -173,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1882d20950ff5534583a00aa3fce4610
-      internalID: -500848774
+      spriteID: a9e375d00e0ef3b44a23b6afa3b7a460
+      internalID: -1888021140
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BULAN_Ledge Grab Climb_01_3
+      name: BULAN_Run_01_3
       rect:
         serializedVersion: 2
         x: 144
@@ -194,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c93dc2d0f6dad84c9f1a83e8f15fc11
-      internalID: -866814204
+      spriteID: 3bddef30986d5b54db4d0dd30ed7d130
+      internalID: -573564769
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BULAN_Ledge Grab Climb_01_4
+      name: BULAN_Run_01_4
       rect:
         serializedVersion: 2
         x: 192
@@ -215,8 +203,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 927ba841a12ae2c4aa42d36f46763932
-      internalID: -744617807
+      spriteID: 5b7111c9bcbe98044ad91a7d1657883e
+      internalID: -1746135553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BULAN_Run_01_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47e6f9680818c7540ba70c42102320ea
+      internalID: 1244516693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BULAN_Run_01_6
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da17d36d19305c146b61130d0cb15ea8
+      internalID: 1616108854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BULAN_Run_01_7
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b08c4ffd9e7f400489bdd0e37fce2892
+      internalID: -137229239
       vertices: []
       indices: 
       edges: []
@@ -232,11 +283,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BULAN_Ledge Grab Climb_01_0: -270177949
-      BULAN_Ledge Grab Climb_01_1: -803366401
-      BULAN_Ledge Grab Climb_01_2: -500848774
-      BULAN_Ledge Grab Climb_01_3: -866814204
-      BULAN_Ledge Grab Climb_01_4: -744617807
+      BULAN_Run_01_0: -518650437
+      BULAN_Run_01_1: -1474567598
+      BULAN_Run_01_2: -1888021140
+      BULAN_Run_01_3: -573564769
+      BULAN_Run_01_4: -1746135553
+      BULAN_Run_01_5: 1244516693
+      BULAN_Run_01_6: 1616108854
+      BULAN_Run_01_7: -137229239
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
