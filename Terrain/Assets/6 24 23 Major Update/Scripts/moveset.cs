@@ -73,6 +73,10 @@ public class moveset : MonoBehaviour
 
     public static bool isJumping, isGrabbing; //from PlayerVariable.cs moved to moveset.cs
 
+    public static int oneInstance = 0;
+    public static float savedCurrentHealth = 5;
+    public MapSequenceInitializer mapReset;
+
     //private enum MovementState { idle, running, jumping, falling }
     //private MovementState state = MovementState.idle;
 
@@ -88,6 +92,8 @@ public class moveset : MonoBehaviour
         }
 
         CharacterPositionManager.ifFromEntrance = false;
+
+        mapReset.GetComponent<MapSequenceInitializer>().MapSequenceUpdate();
     }
 
     private void Start()
@@ -98,10 +104,27 @@ public class moveset : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         respawnPoint = transform.position;
+
+        if (oneInstance == 0) { mapReset.MapSequenceUpdate();  oneInstance++; }
     }
 
     private void Update()
     {
+        if (moveset.deathCounter == 5)
+        {
+
+            MapSequenceInitializer.mapsequence.Clear();
+            mapReset.MapSequenceUpdate();
+            moveset.deathCounter = 0;
+            SceneManager.LoadScene(1);
+        }
+
+        if (Health.damaged)
+        {
+            savedCurrentHealth--;
+            Health.damaged = false;
+        }
+
         isShielded();
         WallSlide();
         WallJump();
@@ -112,7 +135,7 @@ public class moveset : MonoBehaviour
         }
 
         dirX = Input.GetAxisRaw("Horizontal");
-       horizontalMove = Input.GetAxisRaw("Horizontal");
+        horizontalMove = Input.GetAxisRaw("Horizontal");
         if (!Dialogue.inDialogue && !shielded) rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
 
         if (Input.GetButtonDown("Jump") && !Dialogue.inDialogue)// && IsGrounded()) //&& IsGrounded()

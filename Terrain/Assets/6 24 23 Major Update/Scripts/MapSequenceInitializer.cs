@@ -13,31 +13,30 @@ public class MapSequenceInitializer : MonoBehaviour
     public bool dupeChecker = false;
 
     public static bool entryToAct3 = false;
-    public static int oneInstance = 0;
-
-    public static float savedCurrentHealth = 5;
+    
+    //public static int oneInstance = 0;
+    //public static float savedCurrentHealth = 5; recently removed
 
     void Start()
     {
-        if (oneInstance == 0) { MapSequenceUpdate(); oneInstance++; }
+        //if (oneInstance == 0) { MapSequenceUpdate(); oneInstance++; }
     }
 
     void Update()
     {
-        if (moveset.deathCounter == 5)
+        /*if (moveset.deathCounter == 5)
         {
-            //FadeInOut.fadein = false;
-            //FadeInOut.fadeout = false;
+
             mapsequence.Clear();
             MapSequenceUpdate();
             moveset.deathCounter = 0;
             SceneManager.LoadScene(1);
-        }
+        }*/
 
-        if (Health.damaged) { savedCurrentHealth--; Health.damaged = false; }
+        //if (Health.damaged) { moveset.savedCurrentHealth--; Health.damaged = false; }
     }
 
-    void MapSequenceUpdate()
+    public void MapSequenceUpdate()
     {
         location = 0;
         counterToAct1End = 0;

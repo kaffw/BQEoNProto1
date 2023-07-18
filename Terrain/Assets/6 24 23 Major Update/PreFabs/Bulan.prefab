@@ -195,6 +195,9 @@ MonoBehaviour:
   canDash: 1
   isDashing: 0
   isWallSliding: 0
+  LedgeDetected: 0
+  offset1: {x: 0, y: 0}
+  offset2: {x: 0, y: 0}
   dashingPower: 24
   dashingTime: 0.2
   dashingCooldown: 1
@@ -212,6 +215,7 @@ MonoBehaviour:
     m_Bits: 256
   wallCheck: {fileID: 2611164972161044031}
   shield: {fileID: 2877102605687276961}
+  mapReset: {fileID: 7645340735052910119, guid: 05d50e555312d2144bd668cf7e98c1d6, type: 3}
 --- !u!95 &2611164972877872476
 Animator:
   serializedVersion: 5
