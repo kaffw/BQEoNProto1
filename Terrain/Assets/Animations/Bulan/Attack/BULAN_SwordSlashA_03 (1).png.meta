@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fe45e0a9a96989f4ca477dd1396bd1d4
+guid: c487cda664733c64d99a3f05fa97d77b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,211 +117,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BULAN_SwordSlashB_02_0
+      name: BULAN_SwordSlashA_03 (1)_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 7
-        width: 29
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 26fb7d75a155ad04a92500b9bccb0f7b
-      internalID: -695094407
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BULAN_SwordSlashB_02_1
-      rect:
-        serializedVersion: 2
-        x: 101
-        y: 9
-        width: 32
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 546e03a5100691746896d97d745055f9
-      internalID: 1349136009
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BULAN_SwordSlashB_02_2
-      rect:
-        serializedVersion: 2
-        x: 174
-        y: 5
-        width: 55
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 815973ebcf4799a469738010e0767cb6
-      internalID: -269853964
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BULAN_SwordSlashB_02_3
-      rect:
-        serializedVersion: 2
-        x: 256
+        x: 0
         y: 0
-        width: 52
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 80
+        height: 48
+      alignment: 9
+      pivot: {x: 0.48949584, y: 0.307423}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7fae26566100124483f850713471286
-      internalID: 1263410527
+      spriteID: df9a1455d1519504da5f2af6363e74e9
+      internalID: 151144422
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BULAN_SwordSlashB_02_4
+      name: BULAN_SwordSlashA_03 (1)_1
       rect:
         serializedVersion: 2
-        x: 337
+        x: 80
         y: 0
-        width: 35
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 80
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.307423}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d4828630b247c74497d318415be315d
-      internalID: 2120123892
+      spriteID: 7b7b3e2f9b7746f44ac3e6a62bd8debd
+      internalID: -258954716
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BULAN_SwordSlashB_02_5
+      name: BULAN_SwordSlashA_03 (1)_2
       rect:
         serializedVersion: 2
-        x: 371
-        y: 21
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7daa5cfcef3e8ae47b1c76a13db567af
-      internalID: -23854915
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BULAN_SwordSlashB_02_6
-      rect:
-        serializedVersion: 2
-        x: 374
-        y: 7
-        width: 24
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f3d515964c5894447812dd9c2d5f9643
-      internalID: -2050621106
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BULAN_SwordSlashB_02_7
-      rect:
-        serializedVersion: 2
-        x: 427
+        x: 160
         y: 0
-        width: 30
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 80
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.307423}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d29f537ab3fc5ee40bf390e0b4d9b0e4
-      internalID: 603235321
+      spriteID: 5bdf7be18b971284da5410775a9ab8a0
+      internalID: 2099073501
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BULAN_SwordSlashB_02_8
+      name: BULAN_SwordSlashA_03 (1)_3
       rect:
         serializedVersion: 2
-        x: 459
-        y: 14
-        width: 21
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bbf25f5326c59b548977032fd5bb1b1b
-      internalID: 1276277680
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BULAN_SwordSlashB_02_9
-      rect:
-        serializedVersion: 2
-        x: 496
+        x: 240
         y: 0
-        width: 52
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 80
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5210087, y: 0.28408036}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a1c3ba5195ac5145ac2a280281a28db
-      internalID: -62988928
+      spriteID: 3d7f2cfb68e8134448a285f747a22733
+      internalID: -1955877807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BULAN_SwordSlashA_03 (1)_4
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 80
+        height: 48
+      alignment: 9
+      pivot: {x: 0.55602264, y: 0.29575166}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 361a81eb3348ada4598f837988eee793
+      internalID: -746133003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BULAN_SwordSlashA_03 (1)_5
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 80
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.307423}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 485328874c4821d4bad5379ed5fc4c64
+      internalID: -504323198
       vertices: []
       indices: 
       edges: []
@@ -337,16 +253,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BULAN_SwordSlashB_02_0: -695094407
-      BULAN_SwordSlashB_02_1: 1349136009
-      BULAN_SwordSlashB_02_2: -269853964
-      BULAN_SwordSlashB_02_3: 1263410527
-      BULAN_SwordSlashB_02_4: 2120123892
-      BULAN_SwordSlashB_02_5: -23854915
-      BULAN_SwordSlashB_02_6: -2050621106
-      BULAN_SwordSlashB_02_7: 603235321
-      BULAN_SwordSlashB_02_8: 1276277680
-      BULAN_SwordSlashB_02_9: -62988928
+      BULAN_SwordSlashA_03 (1)_0: 151144422
+      BULAN_SwordSlashA_03 (1)_1: -258954716
+      BULAN_SwordSlashA_03 (1)_2: 2099073501
+      BULAN_SwordSlashA_03 (1)_3: -1955877807
+      BULAN_SwordSlashA_03 (1)_4: -746133003
+      BULAN_SwordSlashA_03 (1)_5: -504323198
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

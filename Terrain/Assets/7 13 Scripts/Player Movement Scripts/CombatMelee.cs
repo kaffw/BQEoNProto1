@@ -30,10 +30,9 @@ public class CombatMelee : MonoBehaviour
         {
             if (!isAttacking && Input.GetKeyDown("g"))
             {
-                //isAttacking = true; // Set attacking flag to prevent further attacks until combo is complete
+                isAttacking = true; // Set attacking flag to prevent further attacks until combo is complete
                 comboCount++;
 
-                /*
                 AttackProjectile.SetActive(true);
                 AttackProjectileState = true;
 
@@ -44,55 +43,21 @@ public class CombatMelee : MonoBehaviour
                 {
                     enemiesToDamage[i].GetComponent<EnemyBehaviour>().TakeHit(damage);
                 }
-                */
 
                 // Trigger the appropriate animation based on the combo count
                 switch (comboCount)
                 {
                     case 1:
                         anim.SetTrigger("melee attack 1");
-                                        AttackProjectile.SetActive(true);
-                AttackProjectileState = true;
 
-                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
-                AttackDetails[0] = damage;
-                AttackDetails[1] = transform.position.x;
-                for (int i = 0; i < enemiesToDamage.Length; i++)
-                {
-                    enemiesToDamage[i].GetComponent<EnemyBehaviour>().TakeHit(damage);
-                }
-                        isAttacking = true;
                         break;
                     case 2:
                         anim.SetTrigger("melee attack 2");
-                                        AttackProjectile.SetActive(true);
-                AttackProjectileState = true;
 
-                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
-                AttackDetails[0] = damage;
-                AttackDetails[1] = transform.position.x;
-                /*
-                for (int i = 0; i < enemiesToDamage.Length; i++)
-                {
-                    enemiesToDamage[i].GetComponent<EnemyBehaviour>().TakeHit(damage);
-                }
-                */
-                        isAttacking = true;
                         break;
                     case 3:
                         anim.SetTrigger("melee attack 3");
-                                        AttackProjectile.SetActive(true);
-                AttackProjectileState = true;
 
-                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
-                AttackDetails[0] = damage;
-                AttackDetails[1] = transform.position.x;
-                /*
-                for (int i = 0; i < enemiesToDamage.Length; i++)
-                {
-                    enemiesToDamage[i].GetComponent<EnemyBehaviour>().TakeHit(damage);
-                }*/
-                        isAttacking = true;
                         break;
                 }
 
