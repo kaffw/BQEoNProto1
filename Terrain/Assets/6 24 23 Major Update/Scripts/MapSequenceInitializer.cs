@@ -26,7 +26,8 @@ public class MapSequenceInitializer : MonoBehaviour
     {
         if (moveset.deathCounter == 5)
         {
-
+            //FadeInOut.fadein = false;
+            //FadeInOut.fadeout = false;
             mapsequence.Clear();
             MapSequenceUpdate();
             moveset.deathCounter = 0;
