@@ -37,14 +37,14 @@ public class moveset : MonoBehaviour
     public bool isWallSliding;
 
     //variables for LedgeClimb
-    [HideInInspector] public bool LedgeDetected;
+    [HideInInspector]public bool LedgeDetected;
     [Header("Ledge Info")]
     [SerializeField] private Vector2 offset1;
     [SerializeField] private Vector2 offset2;
     private Vector2 climbBegunPosition;
     private Vector2 climbOverPosition;
     private bool canGrabLedge = true;
-    private bool canClimb;
+    private bool canClimb; 
 
 
 
@@ -119,21 +119,19 @@ public class moveset : MonoBehaviour
         }
 
         dirX = Input.GetAxisRaw("Horizontal");
-        horizontalMove = Input.GetAxisRaw("Horizontal");
+       horizontalMove = Input.GetAxisRaw("Horizontal");
         if (!Dialogue.inDialogue && !shielded) rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
-        if (Input.GetButtonDown("Jump") && IsGrounded())
-        {
+        if(Input.GetButtonDown("Jump") && IsGrounded()){
             doubleJump = false;
 
         }
-        if (Input.GetButtonDown("Jump") && !Dialogue.inDialogue) //&& IsGrounded()
+        if (Input.GetButtonDown("Jump") && !Dialogue.inDialogue  ) //&& IsGrounded()
         {
-            if (IsGrounded() || doubleJump)
-            {
-                rb.velocity = new Vector2(rb.velocity.x, doubleJump ? doubleJumpingPower : jumpForce);
-                doubleJump = !doubleJump;
+            if(IsGrounded()|| doubleJump){
+            rb.velocity = new Vector2(rb.velocity.x, doubleJump ? doubleJumpingPower : jumpForce);
+            doubleJump = !doubleJump;
             }
-        }
+        }   
 
         // newly added
         if (Input.GetKeyDown("z") && canDash)
@@ -146,7 +144,7 @@ public class moveset : MonoBehaviour
         {
             anim.SetInteger("state", 1);
         }
-        else if (horizontalMove < 0f)
+        else if (horizontalMove< 0f)
         {
             anim.SetInteger("state", 1);
         }
@@ -174,10 +172,8 @@ public class moveset : MonoBehaviour
 
     //above Playermovement.cs UpdateAnimationState...
 
-    private void CheckForLedge()
-    {
-        if (LedgeDetected && canGrabLedge)
-        {
+    private void CheckForLedge(){
+        if(LedgeDetected&& canGrabLedge){
             canGrabLedge = false;
 
             Vector2 ledgePosition = GetComponentInChildren<LedgeDetection>().transform.position;
@@ -187,8 +183,7 @@ public class moveset : MonoBehaviour
             climbOverPosition = ledgePosition + offset2;
             canClimb = true;
         }
-        if (canClimb)
-        {
+        if(canClimb){
 
             transform.position = climbBegunPosition;
         }
@@ -330,8 +325,6 @@ public class moveset : MonoBehaviour
             rb.velocity = new Vector2(wallJumpingDirection * 8f, 8f);
             wallJumpingCounter = 0f;
 
-            
-            /*
             if (transform.localScale.x != wallJumpingDirection)
             {
 
@@ -339,7 +332,7 @@ public class moveset : MonoBehaviour
                 Vector3 localScale = transform.localScale;
                 localScale.x *= -1f;
                 transform.localScale = localScale;
-            }*/
+            }
             Invoke(nameof(StopWallJumping), wallJumpingDuration);
         }
     }
@@ -379,7 +372,7 @@ public class moveset : MonoBehaviour
             Instantiate(PseudoBulletProjectile, new Vector2(rb.transform.position.x + 1, rb.transform.position.y), transform.rotation);
             fireRateTimer = 0f;
         }
-        else if (!dirFire && fireRateTimer >= fireRate)
+        else
         {
             Instantiate(PseudoBulletProjectile, new Vector2(rb.transform.position.x - 1, rb.transform.position.y), transform.rotation);
             fireRateTimer = 0f;
