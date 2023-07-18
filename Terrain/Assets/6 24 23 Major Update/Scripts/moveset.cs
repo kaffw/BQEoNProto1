@@ -60,6 +60,13 @@ public class moveset : MonoBehaviour
     public float wallJumpingCounter;
     public float wallJumpingDuration = 0.4f;
 
+
+    //double jump
+    private bool doubleJump;
+    [SerializeField] private float doubleJumpingPower = 17.5f;
+
+
+
     //ground
     [SerializeField] private LayerMask jumpableGround;
     [SerializeField] private TrailRenderer tr;
@@ -114,11 +121,17 @@ public class moveset : MonoBehaviour
         dirX = Input.GetAxisRaw("Horizontal");
        horizontalMove = Input.GetAxisRaw("Horizontal");
         if (!Dialogue.inDialogue && !shielded) rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
+        if(Input.GetButtonDown("Jump") && IsGrounded()){
+            doubleJump = false;
 
-        if (Input.GetButtonDown("Jump") && !Dialogue.inDialogue)// && IsGrounded()) //&& IsGrounded()
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
+        if (Input.GetButtonDown("Jump") && !Dialogue.inDialogue  ) //&& IsGrounded()
+        {
+            if(IsGrounded()|| doubleJump){
+            rb.velocity = new Vector2(rb.velocity.x, doubleJump ? doubleJumpingPower : jumpForce);
+            doubleJump = !doubleJump;
+            }
+        }   
 
         // newly added
         if (Input.GetKeyDown("z") && canDash)
