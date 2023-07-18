@@ -13,9 +13,9 @@ public class MapSequenceInitializer : MonoBehaviour
     public bool dupeChecker = false;
 
     public static bool entryToAct3 = false;
+    
     public static int oneInstance = 0;
-
-    public static float savedCurrentHealth = 5;
+    public static float savedCurrentHealth = 5; //recently removed
 
     void Start()
     {
@@ -26,8 +26,7 @@ public class MapSequenceInitializer : MonoBehaviour
     {
         if (moveset.deathCounter == 5)
         {
-            //FadeInOut.fadein = false;
-            //FadeInOut.fadeout = false;
+
             mapsequence.Clear();
             MapSequenceUpdate();
             moveset.deathCounter = 0;
@@ -37,8 +36,9 @@ public class MapSequenceInitializer : MonoBehaviour
         if (Health.damaged) { savedCurrentHealth--; Health.damaged = false; }
     }
 
-    void MapSequenceUpdate()
+    public void MapSequenceUpdate()
     {
+        //Debug.Log("Sequence Updated");
         location = 0;
         counterToAct1End = 0;
         entryToAct3 = false;
@@ -66,5 +66,10 @@ public class MapSequenceInitializer : MonoBehaviour
         }
 
         mapsequence.Add(8);
+
+        for (int i = 0; i < 6; i++)
+        {
+            Debug.Log(mapsequence[i]);
+        }
     }
 }

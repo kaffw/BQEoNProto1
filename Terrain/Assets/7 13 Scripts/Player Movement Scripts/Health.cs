@@ -39,6 +39,7 @@ public class Health : MonoBehaviour
             {
                 anim.SetTrigger("hurt");
                 Debug.Log("hurt");
+                //Debug.Log(moveset.deathCounter);
             }
             else
             {
@@ -47,6 +48,7 @@ public class Health : MonoBehaviour
                     anim.SetTrigger("die");
                     playerRB.velocity = Vector2.right * 0;
                     dead = true;
+                    //Debug.Log(moveset.deathCounter);
                     Debug.Log("died");
                 }
             }
