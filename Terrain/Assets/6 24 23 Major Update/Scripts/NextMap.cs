@@ -14,11 +14,16 @@ public class NextMap : MonoBehaviour
 
     public IEnumerator ChangeScene()
     {
-        //Debug.Log(MapSequenceInitializer.location);
+        Debug.Log("current Act location: " + moveset.ActLocation);
         fade.FadeIn();
         yield return new WaitForSeconds(1);
 
-        if (moveset.ActLocation == 1 && moveset.ActLocation != 2)
+        if (moveset.ActLocation == 3 || MapSequenceInitializer.entryToAct3 == true)
+        {
+            SceneManager.LoadScene(19);
+        }
+
+        else if (moveset.ActLocation == 1 && moveset.ActLocation != 2)
         {
             MapSequenceInitializer.location++;
             MapSequenceInitializer.counterToAct1End++;
@@ -51,21 +56,6 @@ public class NextMap : MonoBehaviour
                 SceneManager.LoadScene(MapSequenceInitializer.mapsequence2[MapSequenceInitializer.act2Location]);
             }
         }
-
-        else if (MapSequenceInitializer.entryToAct3 == true)
-        {
-            SceneManager.LoadScene(19);
-        }
-        /*
-        else
-        {
-            if (moveset.ActLocation == 1)
-                SceneManager.LoadScene(MapSequenceInitializer.mapsequence[MapSequenceInitializer.location]);
-            if(moveset.ActLocation == 2)
-                SceneManager.LoadScene(MapSequenceInitializer.mapsequence2[MapSequenceInitializer.act2Location]);
-
-            //if (moveset.ActLocation == 3) { SceneManager.LoadScene(9); }//SceneManager.LoadScene(MapSequenceInitializer.mapsequence[MapSequenceInitializer.location]);
-        }*/
         
     }
 
