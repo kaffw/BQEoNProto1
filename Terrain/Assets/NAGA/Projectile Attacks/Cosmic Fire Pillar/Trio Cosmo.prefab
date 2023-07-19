@@ -102,6 +102,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic Fire Pillar (Right)
       objectReference: {fileID: 0}
+    - target: {fileID: 3279372110740470858, guid: ebe4bcca9e3be984caded6c76b144388, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279372110740470858, guid: ebe4bcca9e3be984caded6c76b144388, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279372110740470858, guid: ebe4bcca9e3be984caded6c76b144388, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -6834035
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebe4bcca9e3be984caded6c76b144388, type: 3}
 --- !u!4 &1897641983027141276 stripped
@@ -164,6 +176,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic Fire Pillar
       objectReference: {fileID: 0}
+    - target: {fileID: 3279372110740470858, guid: ebe4bcca9e3be984caded6c76b144388, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279372110740470858, guid: ebe4bcca9e3be984caded6c76b144388, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279372110740470858, guid: ebe4bcca9e3be984caded6c76b144388, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -6834035
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebe4bcca9e3be984caded6c76b144388, type: 3}
 --- !u!4 &1897641982917035509 stripped
@@ -225,6 +249,18 @@ PrefabInstance:
     - target: {fileID: 3279372110740470856, guid: ebe4bcca9e3be984caded6c76b144388, type: 3}
       propertyPath: m_Name
       value: Cosmic Fire Pillar (Left)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279372110740470858, guid: ebe4bcca9e3be984caded6c76b144388, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279372110740470858, guid: ebe4bcca9e3be984caded6c76b144388, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279372110740470858, guid: ebe4bcca9e3be984caded6c76b144388, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -6834035
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebe4bcca9e3be984caded6c76b144388, type: 3}

@@ -121,7 +121,7 @@ public class moveset : MonoBehaviour
         WallSlide();
         WallJump();
 
-        if (!immunity)
+        if (immunity == true)
         {
             StartCoroutine(ImmunityDuration());
         }
@@ -149,6 +149,7 @@ public class moveset : MonoBehaviour
         // newly added
         if (Input.GetKeyDown("z") && canDash)
         {
+            immunity = true;
             StartCoroutine(Dash());
             anim.SetTrigger("dash");
         }
@@ -177,7 +178,7 @@ public class moveset : MonoBehaviour
             anim.SetTrigger("CombatRanged");
             StartCoroutine(DelayFire());
         }
-
+        Debug.Log(immunity);
         ActLocator();
         //falldetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
 
@@ -205,7 +206,7 @@ public class moveset : MonoBehaviour
 
     private IEnumerator Dash()
     {
-        immunity = true;
+
         canDash = false;
         isDashing = true;
         float originalGravity = rb.gravityScale;
@@ -413,7 +414,7 @@ public class moveset : MonoBehaviour
 
     private IEnumerator ImmunityDuration()
     {
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(3f);
         immunity = false;
     }
 }

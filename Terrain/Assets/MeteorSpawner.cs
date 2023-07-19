@@ -16,9 +16,9 @@ public class MeteorSpawner : MonoBehaviour
             spawnInterval += Time.deltaTime;
         }
 
-        if (spawnInterval > 1f)
+        if (spawnInterval > 0.5f)
         {
-            Instantiate(meteorSpawn, new Vector2(UnityEngine.Random.Range(20, 71), 50), transform.rotation);
+            Instantiate(meteorSpawn, new Vector2(UnityEngine.Random.Range(40, 101), 50), transform.rotation);
             spawnInterval = 0f;
         }
 

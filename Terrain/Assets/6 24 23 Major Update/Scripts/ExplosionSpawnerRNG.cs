@@ -21,11 +21,11 @@ public class ExplosionSpawnerRNG : MonoBehaviour
     void Update()
     {
 
-        if (timer < 10)
+        if (timer < 7) //10
         {
             Target = new Vector2(player.transform.position.x, player.transform.position.y);
         }
-        else if (timer == 8)
+        else if (timer == 5) //8
         {
             for(int i=0; i<5; i++) Destroy(ToddlerModeTouhouBombs[i]);
         }

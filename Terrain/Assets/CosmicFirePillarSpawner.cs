@@ -17,7 +17,7 @@ public class CosmicFirePillarSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer < 10)
+        if (timer < 3) // 10
         {
             Target = new Vector2(player.transform.position.x, 3);
             timer += Time.deltaTime;

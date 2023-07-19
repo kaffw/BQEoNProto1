@@ -16,7 +16,7 @@ public class Health : MonoBehaviour
     public int timer = 0;
 
     public static bool damaged = false;
-
+    private bool dashIFrame = false;
     private void Awake()
     {
         if (MapSequenceInitializer.oneInstance == 0) currentHealth = startingHealth;
@@ -31,11 +31,21 @@ public class Health : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+    private void Update()
+    {
+        if (moveset.immunity == true) dashIFrame = true;
+    }
+
     public void TakeDamage(float _damage)
     {
-        if (moveset.shielded == true || moveset.immunity == true) { }
+        if (moveset.shielded == true || moveset.immunity == true)
+        {
+            dashIFrame = true;
+        }
 
-        else
+        else dashIFrame = false;
+
+        if (dashIFrame == false)
         {
             currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
             moveset.deathCounter++;
@@ -58,7 +68,12 @@ public class Health : MonoBehaviour
             }
 
             damaged = true;
+
+                
         }
+        dashIFrame = false;
+        moveset.immunity = true;
     }
+
 
 }
