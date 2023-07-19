@@ -16,15 +16,15 @@ public class Explosions : MonoBehaviour
 
     void Update()
     {
-        if(timer < 4.5f)
+        if(timer < 2f)
         {
             explosion.offset = new Vector2(999, 999);
-            explosionAnim.SetBool("Indicator", true);
+            //explosionAnim.SetBool("Indicator", true);
             explosion.size = new Vector2(explosion.size.x, explosion.size.y);
-            if(timer > 3)
+            if(timer > 1.25f)
             {
-                explosionAnim.SetBool("Indicator", false);
-                explosionAnim.SetTrigger("Explosion");
+                //explosionAnim.SetBool("Indicator", false);
+                //explosionAnim.SetTrigger("Explosion");
                 explosion.size = new Vector2(.75f, .75f);
                 explosion.offset = new Vector2(0, 0);
             }
