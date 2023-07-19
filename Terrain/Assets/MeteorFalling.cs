@@ -14,6 +14,6 @@ public class MeteorFalling : MonoBehaviour
     }
     void Update()
     {
-        transform.position = new Vector2(meteorRB.transform.position.x - (Time.deltaTime * fallingSpeed), meteorRB.transform.position.y - (Time.deltaTime * fallingSpeed));
+        transform.position = new Vector2(meteorRB.transform.position.x - (Time.deltaTime * fallingSpeed), meteorRB.transform.position.y - (Time.deltaTime * fallingSpeed ));
     }
 }

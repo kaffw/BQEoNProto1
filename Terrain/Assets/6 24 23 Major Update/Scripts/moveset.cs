@@ -25,6 +25,7 @@ public class moveset : MonoBehaviour
     public GameObject fallDetector;
 
     public static int deathCounter = 0;
+    public static bool immunity = false;
 
     //og from Playermovement.cs
     //idk
@@ -119,6 +120,11 @@ public class moveset : MonoBehaviour
         isShielded();
         WallSlide();
         WallJump();
+
+        if (!immunity)
+        {
+            StartCoroutine(ImmunityDuration());
+        }
 
         if (isDashing)
         {
@@ -403,5 +409,11 @@ public class moveset : MonoBehaviour
         {
             ActLocation = 3;
         }*/
+    }
+
+    private IEnumerator ImmunityDuration()
+    {
+        yield return new WaitForSeconds(3f);
+        immunity = false;
     }
 }

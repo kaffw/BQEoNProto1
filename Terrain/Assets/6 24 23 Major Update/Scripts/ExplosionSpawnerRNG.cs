@@ -15,7 +15,7 @@ public class ExplosionSpawnerRNG : MonoBehaviour
 
     void Awake()
     {
-        player = GameObject.Find("Character");
+        player = GameObject.Find("Bulan");
     }
 
     void Update()

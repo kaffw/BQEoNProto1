@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyTrap : MonoBehaviour
 {
     [SerializeField] private float damage;
+    public bool hit = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -12,6 +13,7 @@ public class EnemyTrap : MonoBehaviour
         if (collision.tag == "Player")
         {
             collision.GetComponent<Health>().TakeDamage(damage);
+            hit = true;
         }
     }
 }

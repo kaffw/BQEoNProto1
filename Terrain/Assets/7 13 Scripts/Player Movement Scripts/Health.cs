@@ -32,9 +32,10 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float _damage)
     {
-        if (!moveset.shielded)
+        if (!moveset.shielded && !moveset.immunity)
         {
             currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
+            moveset.deathCounter++;
             if (currentHealth > 0)
             {
                 anim.SetTrigger("hurt");
