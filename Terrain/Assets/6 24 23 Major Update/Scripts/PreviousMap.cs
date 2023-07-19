@@ -10,11 +10,22 @@ public class PreviousMap : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             CharacterPositionManager.ifFromEntrance = true;
-            MapSequenceInitializer.location--;
+            //MapSequenceInitializer.location--;
 
-            if(moveset.ActLocation == 1) MapSequenceInitializer.counterToAct1End--;
-            if(moveset.ActLocation == 2) MapSequenceInitializer.counterToAct2End--;
-            SceneManager.LoadScene(MapSequenceInitializer.mapsequence[MapSequenceInitializer.location]);
+            if (moveset.ActLocation == 1)
+            {
+                MapSequenceInitializer.location--;
+                MapSequenceInitializer.counterToAct1End--;
+                SceneManager.LoadScene(MapSequenceInitializer.mapsequence[MapSequenceInitializer.location]);
+            }
+
+            //MapSequenceInitializer.act2Location--;
+            if (moveset.ActLocation == 2)
+            {
+                MapSequenceInitializer.act2Location--;
+                MapSequenceInitializer.counterToAct2End--;
+                SceneManager.LoadScene(MapSequenceInitializer.mapsequence2[MapSequenceInitializer.act2Location]);
+            }
         }
     }
 }

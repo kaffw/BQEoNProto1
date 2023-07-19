@@ -198,7 +198,7 @@ MonoBehaviour:
   LedgeDetected: 0
   offset1: {x: 0, y: 0}
   offset2: {x: 0, y: 0}
-  dashingPower: 24
+  dashingPower: 48
   dashingTime: 0.2
   dashingCooldown: 1
   isWallJumping: 0

@@ -9373,7 +9373,7 @@ GameObject:
   - component: {fileID: 385276130}
   - component: {fileID: 385276129}
   - component: {fileID: 385276128}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9963,7 +9963,7 @@ GameObject:
   - component: {fileID: 772496529}
   - component: {fileID: 772496528}
   - component: {fileID: 772496527}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10371,7 +10371,7 @@ GameObject:
   - component: {fileID: 1052007028}
   - component: {fileID: 1052007027}
   - component: {fileID: 1052007026}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10720,7 +10720,7 @@ GameObject:
   - component: {fileID: 1345993422}
   - component: {fileID: 1345993421}
   - component: {fileID: 1345993420}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10969,7 +10969,7 @@ GameObject:
   - component: {fileID: 1455221427}
   - component: {fileID: 1455221426}
   - component: {fileID: 1455221425}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11279,7 +11279,7 @@ GameObject:
   - component: {fileID: 1512970497}
   - component: {fileID: 1512970496}
   - component: {fileID: 1512970495}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11585,7 +11585,7 @@ GameObject:
   - component: {fileID: 1788605777}
   - component: {fileID: 1788605776}
   - component: {fileID: 1788605775}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11834,7 +11834,7 @@ GameObject:
   - component: {fileID: 1811312322}
   - component: {fileID: 1811312321}
   - component: {fileID: 1811312320}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12161,7 +12161,7 @@ GameObject:
   - component: {fileID: 1986020911}
   - component: {fileID: 1986020910}
   - component: {fileID: 1986020909}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -89,11 +89,16 @@ public class moveset : MonoBehaviour
     {
         if (CharacterPositionManager.ifFromEntrance == true)
         {
-            transform.position = CharacterPositionManager.exitPosition;
+            //transform.position = CharacterPositionManager.exitPosition;
+            
+            if(ActLocation == 1) transform.position = CharacterPositionManager.exitPosition;
+            if(ActLocation == 2) transform.position = CharacterPositionManager.exitPositionAct2;
         }
         else
         {
-            transform.position = CharacterPositionManager.entrancePosition;
+            //transform.position = CharacterPositionManager.entrancePosition;
+            if(ActLocation == 1) transform.position = CharacterPositionManager.entrancePosition;
+            if(ActLocation == 2) transform.position = CharacterPositionManager.entrancePositionAct2;
         }
 
         CharacterPositionManager.ifFromEntrance = false;
