@@ -178,7 +178,7 @@ public class moveset : MonoBehaviour
             anim.SetTrigger("CombatRanged");
             StartCoroutine(DelayFire());
         }
-        Debug.Log(immunity);
+        
         ActLocator();
         //falldetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
 
