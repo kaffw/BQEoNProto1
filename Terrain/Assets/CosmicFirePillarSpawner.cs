@@ -22,13 +22,12 @@ public class CosmicFirePillarSpawner : MonoBehaviour
             Target = new Vector2(player.transform.position.x, 3);
             timer += Time.deltaTime;
         }
-        else
+        else 
         {
+            timer = 0;
             Instantiate(CosmicFirePillar, Target, transform.rotation);
             Instantiate(CosmicFirePillar, Target + new Vector2 (10, 0), transform.rotation);
             Instantiate(CosmicFirePillar, Target + new Vector2(-10, 0), transform.rotation);
-
-            timer = 0;
         }
     }
 }

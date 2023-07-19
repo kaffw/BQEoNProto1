@@ -65166,13 +65166,17 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 2aed261db67ddb8409fa96649a7c274c, type: 2}
+    - target: {fileID: 2611164972877872480, guid: 076aaa84b90f9a343b748833fe57fddc, type: 3}
+      propertyPath: m_GravityScale
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2611164972877872481, guid: 076aaa84b90f9a343b748833fe57fddc, type: 3}
       propertyPath: isDashing
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2611164972877872481, guid: 076aaa84b90f9a343b748833fe57fddc, type: 3}
       propertyPath: dashingPower
-      value: 48
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 2611164972877872481, guid: 076aaa84b90f9a343b748833fe57fddc, type: 3}
       propertyPath: wallLayer.m_Bits

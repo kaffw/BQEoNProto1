@@ -166,7 +166,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 6
   m_Material: {fileID: 6200000, guid: 2b5ad5d979204a049b0ef4a2870c0359, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -198,7 +198,7 @@ MonoBehaviour:
   LedgeDetected: 0
   offset1: {x: 0, y: 0}
   offset2: {x: 0, y: 0}
-  dashingPower: 48
+  dashingPower: 24
   dashingTime: 0.2
   dashingCooldown: 1
   isWallJumping: 0
