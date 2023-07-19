@@ -18,12 +18,12 @@ public class PseudoFirePillar : MonoBehaviour
         
         if (timer < 3.15f)
         {
-            if (timer < 1.6f)// && timer < 1.6f)
+            if (timer < 1.4f)// && timer < 1.6f)
             {
                 pillars.size = new Vector2(0.01f, 0.01f);
                 pillars.offset = new Vector2(0, -5);
             }
-            else if (timer > 1.6f && timer < 2.7f)
+            else if (timer > 1.4f && timer < 2.7f)
             {
                 pillars.offset = new Vector2(0, 0);
                 pillars.size = new Vector2(timer * (1.35f/ 10f), 1.6f); // /8

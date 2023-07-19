@@ -25,6 +25,8 @@ public class CosmicFirePillarSpawner : MonoBehaviour
         else
         {
             Instantiate(CosmicFirePillar, Target, transform.rotation);
+            Instantiate(CosmicFirePillar, Target + new Vector2 (10, 0), transform.rotation);
+            Instantiate(CosmicFirePillar, Target + new Vector2(-10, 0), transform.rotation);
 
             timer = 0;
         }
