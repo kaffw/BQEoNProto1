@@ -26,7 +26,7 @@ public class PseudoFirePillar : MonoBehaviour
             else if (timer > 1.6f && timer < 2.7f)
             {
                 pillars.offset = new Vector2(0, 0);
-                pillars.size = new Vector2(timer * 1.25f / 8, 1.6f);
+                pillars.size = new Vector2(timer * (1.35f/ 10f), 1.6f); // /8
             }
             else if (timer > 2.7f)
             {

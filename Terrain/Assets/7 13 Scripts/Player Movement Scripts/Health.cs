@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -32,7 +33,9 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float _damage)
     {
-        if (!moveset.shielded && !moveset.immunity)
+        if (moveset.shielded == true || moveset.immunity == true) { }
+
+        else
         {
             currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
             moveset.deathCounter++;

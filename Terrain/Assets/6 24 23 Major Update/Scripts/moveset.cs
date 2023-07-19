@@ -205,7 +205,7 @@ public class moveset : MonoBehaviour
 
     private IEnumerator Dash()
     {
-
+        immunity = true;
         canDash = false;
         isDashing = true;
         float originalGravity = rb.gravityScale;
@@ -413,7 +413,7 @@ public class moveset : MonoBehaviour
 
     private IEnumerator ImmunityDuration()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(6f);
         immunity = false;
     }
 }
