@@ -33,30 +33,39 @@ EditorBuildSettings:
     path: Assets/Scenes/Map7.unity
     guid: a4b49b98f2f376c4b967dbf0573ca988
   - enabled: 1
+    path: Assets/Scenes/Act2Map1.unity
+    guid: eaf041876995d324a9013a0131a3aa1a
+  - enabled: 1
+    path: Assets/Scenes/Act2Map2.unity
+    guid: 63c329ac725c4e34eb7373a88522973c
+  - enabled: 1
+    path: Assets/Scenes/Act2Map3.unity
+    guid: 122e329f88810ab46b9f50c471938984
+  - enabled: 1
+    path: Assets/Scenes/Act2Map4.unity
+    guid: 4adfd9dc961810349a69192cf50b6468
+  - enabled: 1
+    path: Assets/Scenes/Act2Map5.unity
+    guid: 2efcd7b3ddd4c7e428dd3256f786e601
+  - enabled: 1
+    path: Assets/Scenes/Act2Map6.unity
+    guid: 6b4d1d33d777fd749a0a76a3dd9cb546
+  - enabled: 1
+    path: Assets/Scenes/Act2Map7.unity
+    guid: 90c084c7fea839541ad2e6e1377e007c
+  - enabled: 1
+    path: Assets/Scenes/Act2Map8.unity
+    guid: bc818e51f830f1f489f94ddd28f80551
+  - enabled: 1
+    path: Assets/Scenes/Act2Map9.unity
+    guid: b568e15064c12de4e8eb54b44e60e6e0
+  - enabled: 1
+    path: Assets/Scenes/Act2MapEnd.unity
+    guid: ca117ca550aec3b4f9645be71faec9b1
+  - enabled: 1
     path: Assets/Scenes/MapYPreFinalBoss.unity
     guid: ebc80c3f6a8e109498c0227acd432b2a
   - enabled: 1
     path: Assets/Scenes/MapZFinalBoss.unity
     guid: 5dc8fdf47b310f742af9759d2e880aa4
-  - enabled: 0
-    path: Assets/Scenes/oldmaps/Map4.unity
-    guid: ea2aa6a60953d0547b3abe53cdf4f736
-  - enabled: 0
-    path: Assets/Scenes/oldmaps/Map5.unity
-    guid: 60d66b12e4b977349800c765ad5f2045
-  - enabled: 0
-    path: Assets/Scenes/oldmaps/Map6.unity
-    guid: c66e378ce6c62b2449d5959697c5f078
-  - enabled: 0
-    path: Assets/Scenes/oldmaps/Map3_.unity
-    guid: 47c3ae2349c27b64993a579e9211b806
-  - enabled: 0
-    path: Assets/Scenes/oldmaps/Map4_.unity
-    guid: 16221e00f13fbe44d9ee831e645d2fe2
-  - enabled: 0
-    path: Assets/Scenes/oldmaps/Map5_.unity
-    guid: 919781083889c224eb36247e3363d976
-  - enabled: 0
-    path: Assets/Scenes/oldmaps/Map6_.unity
-    guid: fa126416366a1884a9d15a193f46f1a3
   m_configObjects: {}

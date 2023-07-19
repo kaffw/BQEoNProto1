@@ -105,6 +105,7 @@ public class EnemyPatrol : MonoBehaviour
             transform.position = new Vector2(transform.position.x + (7 * Time.deltaTime), transform.position.y);
         }
 
+        enemyRB.mass = 3f;
         if (direction.x < previousPosition.x && !sprite.flipX) sprite.flipX = true;// Debug.Log("less than previous");               && !sprite.flipX)
         else if (direction.x > previousPosition.x && sprite.flipX) sprite.flipX = false; // Debug.Log("higher than previous");      && sprite.flipX)
     }

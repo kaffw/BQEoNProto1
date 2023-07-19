@@ -14,21 +14,58 @@ public class NextMap : MonoBehaviour
 
     public IEnumerator ChangeScene()
     {
+        //Debug.Log(MapSequenceInitializer.location);
         fade.FadeIn();
         yield return new WaitForSeconds(1);
-        MapSequenceInitializer.location++;
-        MapSequenceInitializer.counterToAct1End++;
 
-        if (MapSequenceInitializer.counterToAct1End == 4)
+        if (moveset.ActLocation == 1 && moveset.ActLocation != 2)
         {
-            SceneManager.LoadScene(MapSequenceInitializer.mapsequence[7]);
-            MapSequenceInitializer.entryToAct3 = true;
+            MapSequenceInitializer.location++;
+            MapSequenceInitializer.counterToAct1End++;
+            if (MapSequenceInitializer.counterToAct1End == 4)
+            {
+                MapSequenceInitializer.entryToAct2 = true;
+                moveset.ActLocation = 2;
+                SceneManager.LoadScene(8);
+            }
+            else
+            {
+                if (moveset.ActLocation == 1)
+                SceneManager.LoadScene(MapSequenceInitializer.mapsequence[MapSequenceInitializer.location]);
+            }
         }
 
-        else if (MapSequenceInitializer.entryToAct3 == true) SceneManager.LoadScene(9);
+        else if (moveset.ActLocation == 2 && moveset.ActLocation != 3)
+        {
+            MapSequenceInitializer.act2Location++;
+            MapSequenceInitializer.counterToAct2End++;
+            if (MapSequenceInitializer.counterToAct2End == 7)
+            {
+                MapSequenceInitializer.entryToAct3 = true;
+                moveset.ActLocation = 3;
+                SceneManager.LoadScene(18);
+            }
+            else
+            {
+                if (moveset.ActLocation == 2)
+                SceneManager.LoadScene(MapSequenceInitializer.mapsequence2[MapSequenceInitializer.act2Location]);
+            }
+        }
 
-        else SceneManager.LoadScene(MapSequenceInitializer.mapsequence[MapSequenceInitializer.location]);
+        else if (MapSequenceInitializer.entryToAct3 == true)
+        {
+            SceneManager.LoadScene(19);
+        }
+        /*
+        else
+        {
+            if (moveset.ActLocation == 1)
+                SceneManager.LoadScene(MapSequenceInitializer.mapsequence[MapSequenceInitializer.location]);
+            if(moveset.ActLocation == 2)
+                SceneManager.LoadScene(MapSequenceInitializer.mapsequence2[MapSequenceInitializer.act2Location]);
 
+            //if (moveset.ActLocation == 3) { SceneManager.LoadScene(9); }//SceneManager.LoadScene(MapSequenceInitializer.mapsequence[MapSequenceInitializer.location]);
+        }*/
         
     }
 

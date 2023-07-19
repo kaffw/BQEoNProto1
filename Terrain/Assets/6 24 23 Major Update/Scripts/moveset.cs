@@ -83,6 +83,8 @@ public class moveset : MonoBehaviour
     //private enum MovementState { idle, running, jumping, falling }
     //private MovementState state = MovementState.idle;
 
+    public static int ActLocation = 1;
+
     private void Awake()
     {
         if (CharacterPositionManager.ifFromEntrance == true)
@@ -165,7 +167,7 @@ public class moveset : MonoBehaviour
             StartCoroutine(DelayFire());
         }
 
-
+        ActLocator();
         //falldetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
 
     }
@@ -382,5 +384,19 @@ public class moveset : MonoBehaviour
         isFiring = false;
     }
 
-
+    private void ActLocator()
+    {
+        if (MapSequenceInitializer.entryToAct2 == true)
+        {
+            ActLocation = 2;
+        }
+        else if (MapSequenceInitializer.entryToAct3 == true)
+        {
+            ActLocation = 3;
+        }
+        /*else if (ActLocation != 1 || ActLocation != 2)
+        {
+            ActLocation = 3;
+        }*/
+    }
 }

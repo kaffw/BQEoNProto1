@@ -11,7 +11,9 @@ public class PreviousMap : MonoBehaviour
         {
             CharacterPositionManager.ifFromEntrance = true;
             MapSequenceInitializer.location--;
-            MapSequenceInitializer.counterToAct1End--;
+
+            if(moveset.ActLocation == 1) MapSequenceInitializer.counterToAct1End--;
+            if(moveset.ActLocation == 2) MapSequenceInitializer.counterToAct2End--;
             SceneManager.LoadScene(MapSequenceInitializer.mapsequence[MapSequenceInitializer.location]);
         }
     }
