@@ -9,6 +9,10 @@ public class FallingPlatform : MonoBehaviour
 
     [SerializeField] private Rigidbody2D fallingPlatformRB;
 
+    private void Start()
+    {
+        Destroy(gameObject, 10f);
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
