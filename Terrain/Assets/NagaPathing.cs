@@ -20,6 +20,10 @@ public class NagaPathing : MonoBehaviour
     //y
     public bool up = true, down = false;
 
+    //movement
+    public float movementTimer = 0f;
+    public float movementSpeed = 1.25f;
+
     //levitaion
     public float levitateTimer = 0f;
     public float floatSpeed = 1.25f;
@@ -91,7 +95,16 @@ public class NagaPathing : MonoBehaviour
 
                     if (castTime > castInterval)
                     {
-                        Instantiate(meteorSpawn, new Vector2(UnityEngine.Random.Range(5, 36), 20), transform.rotation);
+                        if (transform.rotation.y >= 0)
+                        {
+                            Instantiate(meteorSpawn, new Vector2(UnityEngine.Random.Range(5, 36), 20), transform.rotation);
+                        }
+
+                        if (transform.rotation.y < 0)
+                        {
+                            Instantiate(meteorSpawn, new Vector2(UnityEngine.Random.Range(-25, 1), 20), transform.rotation);
+                        }
+                        //Instantiate(meteorSpawn, new Vector2(UnityEngine.Random.Range(5, 36), 20), transform.rotation);
                         castTime = 0f;
                         castQuantity--;
                     }
@@ -126,8 +139,8 @@ public class NagaPathing : MonoBehaviour
             }
 
         }
-        
 
+        Movement();
         Levitator();
         UpdateAnimation();
     }
@@ -164,7 +177,10 @@ public class NagaPathing : MonoBehaviour
 
     }
     */
-
+    private void Movement()
+    {
+        
+    }
     private void Levitator()
     {
         if (levitateTimer <= 10f)
@@ -200,6 +216,7 @@ public class NagaPathing : MonoBehaviour
             transform.Rotate(0f, 180f, 0f);
         }
     }
+
     /*
     private void CastMeteor()
     {
