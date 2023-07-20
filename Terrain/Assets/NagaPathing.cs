@@ -23,6 +23,7 @@ public class NagaPathing : MonoBehaviour
     //movement
     public float movementTimer = 0f;
     public float movementSpeed = 1.25f;
+    public bool left = false, right = true;
 
     //levitaion
     public float levitateTimer = 0f;
@@ -104,7 +105,7 @@ public class NagaPathing : MonoBehaviour
                         {
                             Instantiate(meteorSpawn, new Vector2(UnityEngine.Random.Range(-25, 1), 20), transform.rotation);
                         }
-                        //Instantiate(meteorSpawn, new Vector2(UnityEngine.Random.Range(5, 36), 20), transform.rotation);
+                        
                         castTime = 0f;
                         castQuantity--;
                     }
@@ -112,7 +113,6 @@ public class NagaPathing : MonoBehaviour
                 }
                 if (castQuantity == 0)
                 {
-
                     attack = 0;
                     castQuantity = 3;
                     attackPhase = false;
@@ -144,42 +144,28 @@ public class NagaPathing : MonoBehaviour
         Levitator();
         UpdateAnimation();
     }
-    /*
-    private void AttackPattern()
-    {
-        if (attackTimer <= 10f)
-        {
-            attackTimer += Time.deltaTime;
-        }
 
-        if (attackTimer >= 5f)
-        {
-            int attack = UnityEngine.Random.Range(1, 2);
-
-            switch (attack)
-            {
-                case 1:
-                    CastMeteor();
-                break;
-
-                case 2:
-                    CastCosmicPillar();
-                break;
-
-                case 3:
-                    CastRandomExplosions();
-                break;
-            }
-        }
-        if (attackTimer > 9f) attackTimer = 0f;
-        //create timer
-        //insert attack patterns
-
-    }
-    */
     private void Movement()
     {
-        
+        if (transform.position.x > -15 && right)
+        {
+            transform.position = new Vector2(transform.position.x - (Time.deltaTime * movementSpeed), transform.position.y);
+            if (transform.position.x < -14)
+            {
+                right = false;
+                left = true;
+            }
+        }
+
+        if (transform.position.x < 25 && left)
+        {
+            transform.position = new Vector2(transform.position.x + (Time.deltaTime * movementSpeed), transform.position.y);
+            if (transform.position.x > 24)
+            {
+                right = true;
+                left = false;
+            }
+        }
     }
     private void Levitator()
     {
@@ -216,64 +202,4 @@ public class NagaPathing : MonoBehaviour
             transform.Rotate(0f, 180f, 0f);
         }
     }
-
-    /*
-    private void CastMeteor()
-    {
-        AttackPhase = true;
-        float castTime = 0f;
-        float castInterval = 1f;
-        int castQuantity = 0;
-        bool endAction = false;
-
-        while (castQuantity < 3)
-        {
-
-            if (castTime > castInterval)
-            {
-                Instantiate(meteorSpawn, new Vector2(UnityEngine.Random.Range(5, 36), 20), transform.rotation);
-                castTime = 0f;
-                castQuantity++;
-            }
-            else castTime += Time.deltaTime;
-
-        }
-        if (castQuantity == 2)
-        {
-            attackTimer = 0f;
-            castQuantity = 0;
-            AttackPhase = false;
-        }
-    }
-
-    private void CastCosmicPillar() { }
-
-    private void CastRandomExplosions() { }
-    */
 }
-/*
-        AttackPhase = true;
-        float castTime = 0f;
-        float castInterval = 1f;
-        int castQuantity = 0;
-        bool endAction = false;
-
-        while (castQuantity < 3)
-        {
-
-            if (castTime > castInterval)
-            {
-                Instantiate(meteorSpawn, new Vector2(UnityEngine.Random.Range(5, 36), 20), transform.rotation);
-                castTime = 0f;
-                castQuantity++;
-            }
-            else castTime += Time.deltaTime;
-
-        }
-        if (castQuantity == 2)
-        {
-            attackTimer = 0f;
-            castQuantity = 0;
-            AttackPhase = false;
-        }
- */
