@@ -30,16 +30,14 @@ public class NagaPathing : MonoBehaviour
     public int attack;
     //meteor
     public GameObject meteorSpawn;
-    
     float castTime = 0f;
     float castInterval = 1f;
     int castQuantity = 3;
     //bool endAction = false;
 
-
     //cosmic pillar
     public GameObject cosmicFirePillar;
-
+    float spawnTime = 0f;
     //explosion
     public List<GameObject> randomExplosions = new List<GameObject>();
 
@@ -58,7 +56,7 @@ public class NagaPathing : MonoBehaviour
                                                                                            
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Attack Patterns
-        if (attackTimer <= 10f)
+        if (attackTimer <= 20f)
         {
             attackTimer += Time.deltaTime;
         }
@@ -67,7 +65,7 @@ public class NagaPathing : MonoBehaviour
         {
             if (!attackPhase)
             {
-                attack = UnityEngine.Random.Range(1, 2);
+                attack = UnityEngine.Random.Range(1, 3);
 
                 switch (attack)
                 {
@@ -108,7 +106,20 @@ public class NagaPathing : MonoBehaviour
                     attackTimer = 0f;
                 }
 
-                else if (attack == 2) { }
+                else if (attack == 2)
+                {
+                    spawnTime += Time.deltaTime;
+                    if (spawnTime > 3f)
+                    {
+                        Instantiate(cosmicFirePillar, new Vector2(Target.transform.position.x + 0, 5.5f), transform.rotation);
+                        Instantiate(cosmicFirePillar, new Vector2(Target.transform.position.x + 15, 5.5f), transform.rotation);
+                        Instantiate(cosmicFirePillar, new Vector2(Target.transform.position.x - 15, 5.5f), transform.rotation);
+                        attack = 0;
+                        spawnTime = 0f;
+                        attackPhase = false;
+                    }
+
+                }
 
                 else if (attack == 3) { }
 
