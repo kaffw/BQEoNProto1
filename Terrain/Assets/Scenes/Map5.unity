@@ -22584,7 +22584,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2154019665495295218, guid: 58057832c7a14ae4ea19d54faaa6ca1e, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2154019665495295218, guid: 58057832c7a14ae4ea19d54faaa6ca1e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22632,7 +22632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2154019665495295220, guid: 58057832c7a14ae4ea19d54faaa6ca1e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58057832c7a14ae4ea19d54faaa6ca1e, type: 3}
@@ -22899,8 +22899,69 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &543644725
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5773065816048263369, guid: f864a551237073843b5b255a3f09b5eb, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773065816048263369, guid: f864a551237073843b5b255a3f09b5eb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.2847795
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773065816048263369, guid: f864a551237073843b5b255a3f09b5eb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.07426691
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773065816048263369, guid: f864a551237073843b5b255a3f09b5eb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.712386
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773065816048263369, guid: f864a551237073843b5b255a3f09b5eb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773065816048263369, guid: f864a551237073843b5b255a3f09b5eb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773065816048263369, guid: f864a551237073843b5b255a3f09b5eb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773065816048263369, guid: f864a551237073843b5b255a3f09b5eb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773065816048263369, guid: f864a551237073843b5b255a3f09b5eb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773065816048263369, guid: f864a551237073843b5b255a3f09b5eb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773065816048263369, guid: f864a551237073843b5b255a3f09b5eb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773065816048263370, guid: f864a551237073843b5b255a3f09b5eb, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1933510106}
+    - target: {fileID: 5773065816048263371, guid: f864a551237073843b5b255a3f09b5eb, type: 3}
+      propertyPath: m_Name
+      value: Cosmic Fire Pillar Spawner (Boss)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f864a551237073843b5b255a3f09b5eb, type: 3}
 --- !u!1001 &599701415
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23337,11 +23398,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7620407493767564199, guid: ce16583f95ab4ea42b1bbcd40aeb1c46, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7620407493767564216, guid: ce16583f95ab4ea42b1bbcd40aeb1c46, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7620407493767564216, guid: ce16583f95ab4ea42b1bbcd40aeb1c46, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23385,67 +23446,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce16583f95ab4ea42b1bbcd40aeb1c46, type: 3}
---- !u!1001 &1337467145
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3889303440798552156, guid: ac04da5e3ed80bd4096d22797885b029, type: 3}
-      propertyPath: m_Name
-      value: Cosmic Fire Pillar Spawner
-      objectReference: {fileID: 0}
-    - target: {fileID: 3889303440798552156, guid: ac04da5e3ed80bd4096d22797885b029, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3889303440798552157, guid: ac04da5e3ed80bd4096d22797885b029, type: 3}
-      propertyPath: m_RootOrder
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 3889303440798552157, guid: ac04da5e3ed80bd4096d22797885b029, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3889303440798552157, guid: ac04da5e3ed80bd4096d22797885b029, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.67
-      objectReference: {fileID: 0}
-    - target: {fileID: 3889303440798552157, guid: ac04da5e3ed80bd4096d22797885b029, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3889303440798552157, guid: ac04da5e3ed80bd4096d22797885b029, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3889303440798552157, guid: ac04da5e3ed80bd4096d22797885b029, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3889303440798552157, guid: ac04da5e3ed80bd4096d22797885b029, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3889303440798552157, guid: ac04da5e3ed80bd4096d22797885b029, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3889303440798552157, guid: ac04da5e3ed80bd4096d22797885b029, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3889303440798552157, guid: ac04da5e3ed80bd4096d22797885b029, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3889303440798552157, guid: ac04da5e3ed80bd4096d22797885b029, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ac04da5e3ed80bd4096d22797885b029, type: 3}
 --- !u!1001 &1339930986
 PrefabInstance:
   m_ObjectHideFlags: 0

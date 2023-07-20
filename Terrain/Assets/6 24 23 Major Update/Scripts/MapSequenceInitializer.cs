@@ -11,6 +11,9 @@ public class MapSequenceInitializer : MonoBehaviour
     public static int location = 0;
     public static int act2Location = 0;
 
+
+    public static bool NagasLairEntry = false;
+
     public static int counterToAct1End = 0;
     public static int counterToAct2End = 0;
 

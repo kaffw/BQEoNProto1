@@ -18,9 +18,17 @@ public class NextMap : MonoBehaviour
         fade.FadeIn();
         yield return new WaitForSeconds(1);
 
+        Debug.Log(MapSequenceInitializer.NagasLairEntry);
+
+        if(MapSequenceInitializer.NagasLairEntry) SceneManager.LoadScene(20);
+
         if (moveset.ActLocation == 3 || MapSequenceInitializer.entryToAct3 == true)
         {
-            SceneManager.LoadScene(19);
+            if (MapSequenceInitializer.NagasLairEntry == false)
+            {
+                SceneManager.LoadScene(19);
+                MapSequenceInitializer.NagasLairEntry = true;
+            }
         }
 
         else if (moveset.ActLocation == 1 && moveset.ActLocation != 2)
@@ -46,6 +54,7 @@ public class NextMap : MonoBehaviour
             MapSequenceInitializer.counterToAct2End++;
             if (MapSequenceInitializer.counterToAct2End == 7)
             {
+                Debug.Log(MapSequenceInitializer.entryToAct3);
                 MapSequenceInitializer.entryToAct3 = true;
                 moveset.ActLocation = 3;
                 SceneManager.LoadScene(18);

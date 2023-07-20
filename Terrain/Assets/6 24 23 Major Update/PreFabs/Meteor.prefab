@@ -292,6 +292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitBoxDamageDeleter: {fileID: 408738300126698332}
   objToDel: {fileID: 4608620388030607652}
+  mainHitbox: {fileID: 5769875321686762219}
 --- !u!1001 &201909517885752173
 PrefabInstance:
   m_ObjectHideFlags: 0

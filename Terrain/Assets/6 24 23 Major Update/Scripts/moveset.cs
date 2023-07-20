@@ -132,53 +132,58 @@ public class moveset : MonoBehaviour
         }
 
         dirX = Input.GetAxisRaw("Horizontal");
-       horizontalMove = Input.GetAxisRaw("Horizontal");
-        if (!Dialogue.inDialogue && !shielded) rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
-        if(Input.GetButtonDown("Jump") && IsGrounded()){
-            doubleJump = false;
 
-        }
-        if (Input.GetButtonDown("Jump") && !Dialogue.inDialogue  ) //&& IsGrounded()
+        if (!Dialogue.inDialogue && !shielded)
         {
-            if(IsGrounded()|| doubleJump){
-            rb.velocity = new Vector2(rb.velocity.x, doubleJump ? doubleJumpingPower : jumpForce);
-            doubleJump = !doubleJump;
+            horizontalMove = Input.GetAxisRaw("Horizontal");
+            rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
+            if (Input.GetButtonDown("Jump") && IsGrounded())
+            {
+                doubleJump = false;
+
             }
-        }   
+            if (Input.GetButtonDown("Jump") && !Dialogue.inDialogue) //&& IsGrounded()
+            {
+                if (IsGrounded() || doubleJump)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, doubleJump ? doubleJumpingPower : jumpForce);
+                    doubleJump = !doubleJump;
+                }
+            }
 
-        // newly added
-        if (Input.GetKeyDown("z") && canDash)
-        {
-            immunity = true;
-            StartCoroutine(Dash());
-            anim.SetTrigger("dash");
-        }
+            // newly added
+            if (Input.GetKeyDown("z") && canDash)
+            {
+                immunity = true;
+                StartCoroutine(Dash());
+                anim.SetTrigger("dash");
+            }
 
-        if (horizontalMove > 0f)
-        {
-            anim.SetInteger("state", 1);
+            if (horizontalMove > 0f)
+            {
+                anim.SetInteger("state", 1);
+            }
+            else if (horizontalMove < 0f)
+            {
+                anim.SetInteger("state", 1);
+            }
+            else if (IsGrounded())
+            {
+                anim.SetInteger("state", 4);
+            }
+            else
+            {
+                anim.SetInteger("state", 0);
+            }
+            UpdateAnimationState();
+            fireRateTimer += Time.deltaTime;
+            if (Input.GetKeyDown("j") && fireRateTimer >= fireRate && !isFiring)
+            {
+                isFiring = true;
+                anim.SetTrigger("CombatRanged");
+                StartCoroutine(DelayFire());
+            }
         }
-        else if (horizontalMove< 0f)
-        {
-            anim.SetInteger("state", 1);
-        }
-        else if (IsGrounded())
-        {
-            anim.SetInteger("state", 4);
-        }
-        else
-        {
-            anim.SetInteger("state", 0);
-        }
-        UpdateAnimationState();
-        fireRateTimer += Time.deltaTime;
-        if (Input.GetKeyDown("j") && fireRateTimer >= fireRate && !isFiring)
-        {
-            isFiring = true;
-            anim.SetTrigger("CombatRanged");
-            StartCoroutine(DelayFire());
-        }
-        
         ActLocator();
         //falldetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
 
@@ -242,7 +247,7 @@ public class moveset : MonoBehaviour
             anim.SetBool("Shield", true);
             shield.SetActive(true);
             shielded = true;
-            Invoke("notShielded", 3f);
+            Invoke("notShielded", 2f); //3f prev
         }
 
     }
@@ -406,15 +411,12 @@ public class moveset : MonoBehaviour
         {
             ActLocation = 3;
         }
-        /*else if (ActLocation != 1 || ActLocation != 2)
-        {
-            ActLocation = 3;
-        }*/
+
     }
 
     private IEnumerator ImmunityDuration()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f); //3 f prev
         immunity = false;
     }
 }

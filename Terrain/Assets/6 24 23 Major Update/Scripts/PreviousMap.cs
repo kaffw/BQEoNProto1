@@ -24,7 +24,10 @@ public class PreviousMap : MonoBehaviour
             {
                 MapSequenceInitializer.act2Location--;
                 MapSequenceInitializer.counterToAct2End--;
-                SceneManager.LoadScene(MapSequenceInitializer.mapsequence2[MapSequenceInitializer.act2Location]);
+                if (MapSequenceInitializer.counterToAct2End != 0)
+                {
+                    SceneManager.LoadScene(MapSequenceInitializer.mapsequence2[MapSequenceInitializer.act2Location]);
+                }
             }
         }
     }
