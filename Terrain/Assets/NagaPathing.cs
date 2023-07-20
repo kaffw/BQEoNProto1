@@ -98,12 +98,12 @@ public class NagaPathing : MonoBehaviour
                     {
                         if (transform.rotation.y >= 0)
                         {
-                            Instantiate(meteorSpawn, new Vector2(UnityEngine.Random.Range(5, 36), 20), transform.rotation);
+                            Instantiate(meteorSpawn, new Vector2(UnityEngine.Random.Range(5, 25), 20), transform.rotation);
                         }
 
                         if (transform.rotation.y < 0)
                         {
-                            Instantiate(meteorSpawn, new Vector2(UnityEngine.Random.Range(-25, 1), 20), transform.rotation);
+                            Instantiate(meteorSpawn, new Vector2(UnityEngine.Random.Range(-30, -6), 20), transform.rotation);
                         }
                         
                         castTime = 0f;
@@ -147,7 +147,7 @@ public class NagaPathing : MonoBehaviour
 
     private void Movement()
     {
-        if (transform.position.x > -15 && right)
+        if (transform.position.x > -20 && right)
         {
             transform.position = new Vector2(transform.position.x - (Time.deltaTime * movementSpeed), transform.position.y);
             if (transform.position.x < -14)
@@ -157,7 +157,7 @@ public class NagaPathing : MonoBehaviour
             }
         }
 
-        if (transform.position.x < 25 && left)
+        if (transform.position.x < 20 && left)
         {
             transform.position = new Vector2(transform.position.x + (Time.deltaTime * movementSpeed), transform.position.y);
             if (transform.position.x > 24)
