@@ -1,15 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
+using UnityEditor;
 using UnityEngine;
 
 public class NagaPathing : MonoBehaviour
 {
+    //naga
     private Rigidbody2D nagaRB;
     private Animator nagaAnim;
 
+    //player
     public GameObject Target;
     public Vector2 TargetPos;
 
+    //direction based on player's position
     public bool faceDirection = true;
 
     //y
@@ -18,6 +23,27 @@ public class NagaPathing : MonoBehaviour
     //levitaion
     public float levitateTimer = 0f;
     public float floatSpeed = 1.25f;
+
+    //attack pattern
+    public bool attackPhase = false;
+    public float attackTimer = 0f;
+    public int attack;
+    //meteor
+    public GameObject meteorSpawn;
+    
+    float castTime = 0f;
+    float castInterval = 1f;
+    int castQuantity = 3;
+    //bool endAction = false;
+
+
+    //cosmic pillar
+    public GameObject cosmicFirePillar;
+
+    //explosion
+    public List<GameObject> randomExplosions = new List<GameObject>();
+
+
     void Start()
     {
         nagaRB = GetComponent<Rigidbody2D>();
@@ -28,12 +54,105 @@ public class NagaPathing : MonoBehaviour
 
     void Update()
     {
-        TargetPos = new Vector2(Target.transform.position.x, Target.transform.position.y); //Debug.Log(TargetPos);   
+        TargetPos = new Vector2(Target.transform.position.x, Target.transform.position.y); //Debug.Log(TargetPos);
+                                                                                           
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //Attack Patterns
+        if (attackTimer <= 10f)
+        {
+            attackTimer += Time.deltaTime;
+        }
 
+        if (attackTimer > 5f)
+        {
+            if (!attackPhase)
+            {
+                attack = UnityEngine.Random.Range(1, 2);
+
+                switch (attack)
+                {
+                    case 1:
+                        attackPhase = true;
+                        break;
+
+                    case 2:
+                        attackPhase = true;
+                        break;
+
+                    case 3:
+                        attackPhase = true;
+                        break;
+                }
+            }
+
+            if (attackPhase)
+            {
+                if (attack == 1 && castQuantity != 0)
+                {
+                    castTime += Time.deltaTime;
+
+                    if (castTime > castInterval)
+                    {
+                        Instantiate(meteorSpawn, new Vector2(UnityEngine.Random.Range(5, 36), 20), transform.rotation);
+                        castTime = 0f;
+                        castQuantity--;
+                    }
+
+                }
+                if (castQuantity == 0)
+                {
+
+                    attack = 0;
+                    castQuantity = 3;
+                    attackPhase = false;
+                    attackTimer = 0f;
+                }
+
+                else if (attack == 2) { }
+
+                else if (attack == 3) { }
+
+            }
+
+        }
+        
 
         Levitator();
         UpdateAnimation();
     }
+    /*
+    private void AttackPattern()
+    {
+        if (attackTimer <= 10f)
+        {
+            attackTimer += Time.deltaTime;
+        }
+
+        if (attackTimer >= 5f)
+        {
+            int attack = UnityEngine.Random.Range(1, 2);
+
+            switch (attack)
+            {
+                case 1:
+                    CastMeteor();
+                break;
+
+                case 2:
+                    CastCosmicPillar();
+                break;
+
+                case 3:
+                    CastRandomExplosions();
+                break;
+            }
+        }
+        if (attackTimer > 9f) attackTimer = 0f;
+        //create timer
+        //insert attack patterns
+
+    }
+    */
 
     private void Levitator()
     {
@@ -70,5 +189,63 @@ public class NagaPathing : MonoBehaviour
             transform.Rotate(0f, 180f, 0f);
         }
     }
+    /*
+    private void CastMeteor()
+    {
+        AttackPhase = true;
+        float castTime = 0f;
+        float castInterval = 1f;
+        int castQuantity = 0;
+        bool endAction = false;
 
+        while (castQuantity < 3)
+        {
+
+            if (castTime > castInterval)
+            {
+                Instantiate(meteorSpawn, new Vector2(UnityEngine.Random.Range(5, 36), 20), transform.rotation);
+                castTime = 0f;
+                castQuantity++;
+            }
+            else castTime += Time.deltaTime;
+
+        }
+        if (castQuantity == 2)
+        {
+            attackTimer = 0f;
+            castQuantity = 0;
+            AttackPhase = false;
+        }
+    }
+
+    private void CastCosmicPillar() { }
+
+    private void CastRandomExplosions() { }
+    */
 }
+/*
+        AttackPhase = true;
+        float castTime = 0f;
+        float castInterval = 1f;
+        int castQuantity = 0;
+        bool endAction = false;
+
+        while (castQuantity < 3)
+        {
+
+            if (castTime > castInterval)
+            {
+                Instantiate(meteorSpawn, new Vector2(UnityEngine.Random.Range(5, 36), 20), transform.rotation);
+                castTime = 0f;
+                castQuantity++;
+            }
+            else castTime += Time.deltaTime;
+
+        }
+        if (castQuantity == 2)
+        {
+            attackTimer = 0f;
+            castQuantity = 0;
+            AttackPhase = false;
+        }
+ */

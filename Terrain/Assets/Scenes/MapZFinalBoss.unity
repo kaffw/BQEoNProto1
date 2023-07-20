@@ -10373,6 +10373,14 @@ MonoBehaviour:
   Target: {fileID: 0}
   TargetPos: {x: 0, y: 0}
   faceDirection: 1
+  up: 1
+  down: 0
+  levitateTimer: 0
+  floatSpeed: 2
+  attackTimer: 0
+  meteorSpawn: {fileID: 1491005998725891757, guid: 9339af6559ec65b41b9a5606efaad7c9, type: 3}
+  cosmicFirePillar: {fileID: 5272557924716945110, guid: 9f3ea44b42b21784caab1d57d5ac35e6, type: 3}
+  randomExplosions: []
 --- !u!95 &1571174927
 Animator:
   serializedVersion: 5
