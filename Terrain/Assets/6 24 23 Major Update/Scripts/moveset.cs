@@ -266,10 +266,6 @@ public class moveset : MonoBehaviour
         //MovementState state;
         if (dirX > 0f && !FacingRight && !isWallJumping)// && !isWallJumping)
         {
-            //state = MovementState.running;
-            /*sprite.flipX = true;
-            FacingRight = !FacingRight;
-            dirFire = true;*/
             FacingRight = !FacingRight;
             transform.Rotate(0f, 180f, 0f);
             dirFire = true;
@@ -277,16 +273,10 @@ public class moveset : MonoBehaviour
 
         else if (dirX < 0f && FacingRight && !isWallJumping)// && !isWallJumping)
         {
-            //state = MovementState.running;
-            /*sprite.flipX = false;
-            FacingRight = !FacingRight;
-            dirFire = false;*/
             FacingRight = !FacingRight;
             transform.Rotate(0f, 180f, 0f);
             dirFire = false;
         }
-
-        //else state = MovementState.idle;
 
         if (rb.velocity.y > 0.1f)
         {
@@ -307,7 +297,7 @@ public class moveset : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "FallDetector" && !shielded)
+        if (collision.tag == "FallDetector" && !shielded && !immunity)
         {
             deathCounter++;
             transform.position = respawnPoint;
@@ -340,19 +330,22 @@ public class moveset : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && wallJumpingCounter > 0f)
         {
-            isWallJumping = true;
-            rb.velocity = new Vector2(wallJumpingDirection * 8f, 8f);
-            wallJumpingCounter = 0f;
+            if (IsGrounded() || doubleJump)                                 // recently added
+            {                                                               //
+                isWallJumping = true;
+                rb.velocity = new Vector2(wallJumpingDirection * 8f, 8f);
+                wallJumpingCounter = 0f;
 
-            if (transform.localScale.x != wallJumpingDirection)
-            {
+                if (transform.localScale.x != wallJumpingDirection)
+                {
 
-                FacingRight = !FacingRight;
-                Vector3 localScale = transform.localScale;
-                localScale.x *= -1f;
-                transform.localScale = localScale;
-            }
-            Invoke(nameof(StopWallJumping), wallJumpingDuration);
+                    FacingRight = !FacingRight;
+                    Vector3 localScale = transform.localScale;
+                    localScale.x *= -1f;
+                    transform.localScale = localScale;
+                }
+                Invoke(nameof(StopWallJumping), wallJumpingDuration);
+            }                                                                //
         }
     }
 
