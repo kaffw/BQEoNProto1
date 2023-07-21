@@ -390,12 +390,12 @@ public class moveset : MonoBehaviour
         yield return new WaitForSeconds(0.25f);
         if (dirFire && fireRateTimer >= fireRate)
         {
-            Instantiate(PseudoBulletProjectile, new Vector2(rb.transform.position.x + 1, rb.transform.position.y), transform.rotation);
+            Instantiate(PseudoBulletProjectile, new Vector2(rb.transform.position.x + 1, rb.transform.position.y), Quaternion.identity); //transform.rotation
             fireRateTimer = 0f;
         }
         else
         {
-            Instantiate(PseudoBulletProjectile, new Vector2(rb.transform.position.x - 1, rb.transform.position.y), transform.rotation);
+            Instantiate(PseudoBulletProjectile, new Vector2(rb.transform.position.x - 1, rb.transform.position.y), Quaternion.identity); //transform.rotation
             fireRateTimer = 0f;
         }
 
