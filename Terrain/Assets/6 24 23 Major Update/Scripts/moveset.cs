@@ -300,6 +300,8 @@ public class moveset : MonoBehaviour
             anim.SetInteger("state", 3);
         }
 
+        //if (rb.velocity.x == 0 && rb.velocity.y == 0 && CombatMelee.inAttack == false) anim.SetInteger("state", 0);
+        //else anim.SetInteger("state", 0);
         //anim.SetInteger("state", (int)state);
     }
 
