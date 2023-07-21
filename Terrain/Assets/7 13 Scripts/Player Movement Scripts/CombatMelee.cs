@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class CombatMelee : MonoBehaviour
 {
-    private float timeBtwAttack;
-    private float startTimeBtwAttack;
+    public float startTimeBtwAttack = 0.5f; // Adjust the time between attacks here
+    public float comboResetTime = 1f; // Time before the combo resets if no attack input
 
+    private int comboCountTemp = 0; //last attack
     private int comboCount = 0; // Tracks the current combo count
     private bool isAttacking = false; // Flag to prevent attacking during combo
 
@@ -19,6 +20,11 @@ public class CombatMelee : MonoBehaviour
     public GameObject AttackProjectile;
     public bool AttackProjectileState = false;
 
+    private float timeBtwAttack;
+    private float comboResetTimer;
+
+    private float AttackTimer;
+    
     void Start()
     {
         DeactivateAttackProjectile();
@@ -26,12 +32,30 @@ public class CombatMelee : MonoBehaviour
 
     void Update()
     {
-        if (timeBtwAttack <= 0)
+        if (comboCount > 2) comboCount = 0;
+        if (AttackTimer > 1f)
         {
-            if (!isAttacking && Input.GetKeyDown("g"))
+            AttackTimer = 0f;
+            comboCount = 0;
+        }
+        else AttackTimer += Time.deltaTime;
+
+        if (isAttacking)
+            return;
+
+        if (timeBtwAttack > 0)
+        {
+            timeBtwAttack -= Time.deltaTime;
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.G) && comboCount < 3)
             {
-                isAttacking = true; // Set attacking flag to prevent further attacks until combo is complete
                 comboCount++;
+                if (comboCount > 2) comboCount = 0;
+
+                if (AttackTimer < 1f) comboCount++;
+                else comboCount = 0;
 
                 AttackProjectile.SetActive(true);
                 AttackProjectileState = true;
@@ -44,32 +68,56 @@ public class CombatMelee : MonoBehaviour
                     enemiesToDamage[i].GetComponent<EnemyBehaviour>().TakeHit(damage);
                 }
 
+                if (comboCount == 1)
+                {
+                    anim.SetTrigger("melee attack 1");
+                    StartCoroutine(ComboSequence());
+                }
+
+                if (comboCount == 2)
+                {
+                    anim.SetTrigger("melee attack 2");
+                    StartCoroutine(ComboSequence());
+                }
+
+                if (comboCount == 3)
+                {
+                    anim.SetTrigger("melee attack 3");
+                    StartCoroutine(ComboSequence());
+
+                }
+
+
+                /*
                 // Trigger the appropriate animation based on the combo count
                 switch (comboCount)
                 {
                     case 1:
                         anim.SetTrigger("melee attack 1");
-
                         break;
                     case 2:
                         anim.SetTrigger("melee attack 2");
-
                         break;
                     case 3:
                         anim.SetTrigger("melee attack 3");
-
                         break;
                 }
-
-                Invoke("EndCombo", 0.25f); // Call EndCombo after a short delay to allow the next attack
+                
+                StartCoroutine(ComboResetCoroutine()); // Start the coroutine to reset the combo
+                */
             }
-
-            timeBtwAttack = startTimeBtwAttack;
         }
-        else
+        
+        // Reset combo if no attacks are performed within the comboResetTime
+        /*if (comboCount > 0)
         {
-            timeBtwAttack -= Time.deltaTime;
+            comboResetTimer -= Time.deltaTime;
+            if (comboResetTimer <= 0f)
+            {
+                comboCount = 0;
+            }
         }
+        */
     }
 
     void OnDrawGizmosSelected()
@@ -82,13 +130,26 @@ public class CombatMelee : MonoBehaviour
     {
         AttackProjectile.SetActive(false);
     }
-
-    void EndCombo()
+    /*
+    IEnumerator ComboResetCoroutine()
     {
+        isAttacking = true;
+        yield return new WaitForSeconds(0.25f); // Delay between combo attacks
         isAttacking = false;
-        if (comboCount >= 3) // Reset the combo count after the third attack
+
+        AttackProjectile.SetActive(false); // Disable the AttackProjectile after the attack
+
+        if (comboCount >= 3)
         {
-            comboCount = 0;
+            comboCount = 0; // Reset the combo count after the third attack
         }
+
+        comboResetTimer = comboResetTime; // Reset the combo timer
+    }
+    */
+    private IEnumerator ComboSequence()
+    {
+        yield return new WaitForSeconds(0.25f);
+        AttackProjectile.SetActive(false);
     }
 }

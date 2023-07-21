@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4236677832352603127}
   - component: {fileID: 149299197616154621}
   m_Layer: 0
-  m_Name: Rocc
+  m_Name: Rocc 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

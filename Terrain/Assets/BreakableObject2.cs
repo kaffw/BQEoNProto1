@@ -31,7 +31,7 @@ public class BreakableObject2 : MonoBehaviour
     {
         Destroy(this.gameObject);
         GameObject broke = (GameObject)
-        Instantiate(brokenbit, Target + new Vector2(3, 0), Quaternion.identity);
+        Instantiate(brokenbit, Target + new Vector2(4, 0), Quaternion.identity);
         Instantiate(drop, Target + new Vector2(1, 2), Quaternion.identity);
 
         foreach (Transform child in broke.transform)
