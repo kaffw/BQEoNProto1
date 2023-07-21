@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -120,6 +121,12 @@ public class moveset : MonoBehaviour
         isShielded();
         WallSlide();
         WallJump();
+
+        if (FallTrap.fell == true)
+        {
+            transform.position = respawnPoint;
+            FallTrap.fell = false;
+        }
 
         if (immunity == true)
         {
@@ -300,7 +307,6 @@ public class moveset : MonoBehaviour
     {
         if (collision.tag == "FallDetector" && !shielded && !immunity)
         {
-            deathCounter++;
             transform.position = respawnPoint;
         }
         else if (collision.tag == "Checkpoint")
@@ -410,7 +416,7 @@ public class moveset : MonoBehaviour
 
     private IEnumerator ImmunityDuration()
     {
-        yield return new WaitForSeconds(2f); //3 f prev
+        yield return new WaitForSeconds(1f); //3 f prev
         immunity = false;
     }
 }

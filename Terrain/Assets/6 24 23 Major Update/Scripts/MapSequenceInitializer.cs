@@ -35,6 +35,7 @@ public class MapSequenceInitializer : MonoBehaviour
         if (moveset.deathCounter == 5)
         {
             mapsequence.Clear();
+            mapsequence2.Clear();
             MapSequenceUpdate();
             moveset.deathCounter = 0;
             if(moveset.ActLocation == 1) SceneManager.LoadScene(1);
@@ -48,7 +49,9 @@ public class MapSequenceInitializer : MonoBehaviour
     public void MapSequenceUpdate()
     {
         location = 0;
+        act2Location = 0;
         counterToAct1End = 0;
+        counterToAct2End = 0;
         entryToAct2 = false;
         entryToAct3 = false;
 

@@ -17,6 +17,7 @@ public class Health : MonoBehaviour
 
     public static bool damaged = false;
     private bool dashIFrame = false;
+
     private void Awake()
     {
         if (MapSequenceInitializer.oneInstance == 0) currentHealth = startingHealth;
@@ -45,6 +46,31 @@ public class Health : MonoBehaviour
 
         else dashIFrame = false;
 
+        if (FallTrap.fell && dashIFrame)
+        {
+                currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
+                moveset.deathCounter++;
+                if (currentHealth > 0)
+                {
+                    anim.SetTrigger("hurt");
+                    Debug.Log("hurt");
+                    //Debug.Log(moveset.deathCounter);
+                }
+                else
+                {
+                    if (!dead)
+                    {
+                        anim.SetTrigger("die");
+                        playerRB.velocity = Vector2.right * 0;
+                        dead = true;
+                        //Debug.Log(moveset.deathCounter);
+                        Debug.Log("died");
+                    }
+                }
+
+                damaged = true;
+        }
+
         if (dashIFrame == false)
         {
             currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
@@ -68,7 +94,6 @@ public class Health : MonoBehaviour
             }
 
             damaged = true;
-
                 
         }
         dashIFrame = false;
