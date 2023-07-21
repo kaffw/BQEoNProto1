@@ -48,27 +48,24 @@ public class Health : MonoBehaviour
 
         if (FallTrap.fell && dashIFrame)
         {
-                currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
-                moveset.deathCounter++;
-                if (currentHealth > 0)
+            currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
+            moveset.deathCounter++;
+            if (currentHealth > 0)
+            {
+                anim.SetTrigger("hurt");
+            }
+            else
+            {
+                if (!dead)
                 {
-                    anim.SetTrigger("hurt");
-                    Debug.Log("hurt");
-                    //Debug.Log(moveset.deathCounter);
-                }
-                else
-                {
-                    if (!dead)
-                    {
-                        anim.SetTrigger("die");
-                        playerRB.velocity = Vector2.right * 0;
-                        dead = true;
-                        //Debug.Log(moveset.deathCounter);
-                        Debug.Log("died");
-                    }
-                }
+                    anim.SetTrigger("die");
+                    playerRB.velocity = Vector2.right * 0;
+                    dead = true;
 
-                damaged = true;
+                }
+            }
+
+            damaged = true;
         }
 
         if (dashIFrame == false)
@@ -78,8 +75,6 @@ public class Health : MonoBehaviour
             if (currentHealth > 0)
             {
                 anim.SetTrigger("hurt");
-                Debug.Log("hurt");
-                //Debug.Log(moveset.deathCounter);
             }
             else
             {
@@ -88,8 +83,6 @@ public class Health : MonoBehaviour
                     anim.SetTrigger("die");
                     playerRB.velocity = Vector2.right * 0;
                     dead = true;
-                    //Debug.Log(moveset.deathCounter);
-                    Debug.Log("died");
                 }
             }
 
@@ -99,6 +92,4 @@ public class Health : MonoBehaviour
         dashIFrame = false;
         moveset.immunity = true;
     }
-
-
 }

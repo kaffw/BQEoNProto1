@@ -50,7 +50,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - glow
   m_SortingLayers:
   - name: Background
     uniqueID: 992127533

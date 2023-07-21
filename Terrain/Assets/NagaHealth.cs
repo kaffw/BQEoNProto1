@@ -1,26 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NagaHealth : MonoBehaviour
 {
+    [SerializeField] private float startingHealth = 25f;
+    public float nagaCurrentHealth { get; private set; }
+    private bool dead = false;
 
-    public float Hitpoints;
-    public float Maxhitpoints = 5;
-
-
-    void Start()
+    private void Awake()
     {
-        Hitpoints = Maxhitpoints;
+        nagaCurrentHealth = startingHealth;
     }
-
-    public void TakeHit(float damage)
+    public void TakeDamage(float _damage)
     {
 
-        Hitpoints -= damage;
-        if (Hitpoints <= 0)
+        nagaCurrentHealth = Mathf.Clamp(nagaCurrentHealth - 1, 0, startingHealth);//_damage, 0, startingHealth);
+        if (nagaCurrentHealth > 0)
         {
-            Destroy(gameObject);
+            //anim.SetTrigger("hurt");
+        }
+        else
+        {
+            if (!dead)
+            {
+                //anim.SetTrigger("die");
+                dead = true;
+            }
         }
     }
 }

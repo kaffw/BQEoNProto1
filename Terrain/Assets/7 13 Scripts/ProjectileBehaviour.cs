@@ -23,7 +23,12 @@ public class ProjectileBehaviour : MonoBehaviour
 
     private void Update()
     {
-        if (freezeMotion) bulletrb.velocity *= 0f;
+        if (freezeMotion)
+        {
+            bulletrb.velocity *= 0f;
+            bulletrb.rotation *= 0f;
+        }
+        
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

@@ -31,13 +31,13 @@ public class BreakableObject : MonoBehaviour
     {
         Destroy(this.gameObject);
         GameObject broke = (GameObject)
-        Instantiate(brokenbit, Target + new Vector2(1, 3), Quaternion.identity);
-        Instantiate(drop, Target + new Vector2(1, 3), Quaternion.identity);
+        Instantiate(brokenbit, Target + new Vector2(0, 0), Quaternion.identity);
+        Instantiate(drop, Target + new Vector2(1, 2), Quaternion.identity);
 
         foreach (Transform child in broke.transform)
         {
-            child.GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(-2f, 2f), Random.Range(3f, 7f));
-            drop.GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(-2f, 2f), Random.Range(3f, 7f));
+            child.GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(-3f, 3f), Random.Range(5f, 9f));
+            drop.GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(-3f, 3f), Random.Range(3f, 7f));
         }
 
     }
