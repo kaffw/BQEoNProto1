@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEditor;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class NagaPathing : MonoBehaviour
@@ -33,6 +34,8 @@ public class NagaPathing : MonoBehaviour
     public bool attackPhase = false;
     public float attackTimer = 0f;
     public int attack;
+    public float attackCastTimer=0f;
+    public float attackCastInterval = 10f;
     //meteor
     public GameObject meteorSpawn;
     float castTime = 0f;
@@ -43,8 +46,14 @@ public class NagaPathing : MonoBehaviour
     //cosmic pillar
     public GameObject cosmicFirePillar;
     float spawnTime = 0f;
+
     //explosion
+    public static bool explosions = false;
+    /*
     public List<GameObject> randomExplosions = new List<GameObject>();
+    public List<int> posX = new List<int>();
+    public List<int> posY = new List<int>();
+    public float bombTime;*/
 
 
     void Start()
@@ -70,8 +79,8 @@ public class NagaPathing : MonoBehaviour
         {
             if (!attackPhase)
             {
-                attack = UnityEngine.Random.Range(1, 3);
-
+                attack = UnityEngine.Random.Range(1, 4);
+                Debug.Log(attack);
                 switch (attack)
                 {
                     case 1:
@@ -88,7 +97,7 @@ public class NagaPathing : MonoBehaviour
                 }
             }
 
-            if (attackPhase)
+            if (attackPhase && attackCastTimer < attackCastInterval)
             {
                 if (attack == 1 && castQuantity != 0)
                 {
@@ -134,10 +143,13 @@ public class NagaPathing : MonoBehaviour
 
                 }
 
-                else if (attack == 3) { }
+                else if (attack == 3)
+                {
+                    explosions = true;
+                    attackPhase = false;
+                }
 
             }
-
         }
 
         Movement();

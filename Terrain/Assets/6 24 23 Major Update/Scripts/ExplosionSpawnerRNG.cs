@@ -20,38 +20,42 @@ public class ExplosionSpawnerRNG : MonoBehaviour
 
     void Update()
     {
-
-        if (timer < 7) //10
+        if (NagaPathing.explosions)
         {
-            Target = new Vector2(player.transform.position.x, player.transform.position.y);
-        }
-        else if (timer == 5) //8
-        {
-            for(int i=0; i<5; i++) Destroy(ToddlerModeTouhouBombs[i]);
-        }
-        else
-        {
-            for (int i = 0; i < 4; i++)
+            if (timer <5) //10
             {
-                int num = UnityEngine.Random.Range(-10, 11);
-                posX.Add(num);
+                Target = new Vector2(player.transform.position.x, player.transform.position.y);
+            }
+            else if (timer == 3) //8
+            {
+                for (int i = 0; i < 5; i++) Destroy(ToddlerModeTouhouBombs[i]);
+            }
+            else
+            {
+                for (int i = 0; i < 4; i++)
+                {
+                    int num = UnityEngine.Random.Range(-10, 11);
+                    posX.Add(num);
 
-                num = UnityEngine.Random.Range(-10, 11);
-                posY.Add(num);
+                    num = UnityEngine.Random.Range(-10, 11);
+                    posY.Add(num);
+                }
+
+                Instantiate(ToddlerModeTouhouBombs[0], Target, transform.rotation);
+
+                for (int i = 0; i < 4; i++)
+                {
+                    Instantiate(ToddlerModeTouhouBombs[i + 1], Target + new Vector2(posX[i], posY[i]), transform.rotation);
+                    if (i == 3) NagaPathing.explosions = false;
+                }
+
+                timer = 0;
+               
             }
 
-            Instantiate(ToddlerModeTouhouBombs[0], Target, transform.rotation);
-
-            for (int i = 0; i < 4; i++)
-            {
-                Instantiate(ToddlerModeTouhouBombs[i + 1], Target + new Vector2(posX[i], posY[i]), transform.rotation);
-            }
-
-            timer = 0;
+            posX.Clear();
+            posY.Clear();
+            timer += Time.deltaTime;
         }
-
-        posX.Clear();
-        posY.Clear();
-        timer += Time.deltaTime;
     }
 }

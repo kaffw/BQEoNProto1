@@ -20,7 +20,7 @@ public class MeteorExplodeTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player" || collision.tag == "Terrain" || collision.tag == "Untagged")
+        if (collision.tag == "Player" || collision.tag == "Terrain" )//|| collision.tag == "Untagged")
         {
             meteorFallingDisabler.enabled = false;
             meteorSprite.color = new Color(255, 255, 255, 255);
