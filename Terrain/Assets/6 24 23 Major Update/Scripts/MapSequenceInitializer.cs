@@ -34,11 +34,12 @@ public class MapSequenceInitializer : MonoBehaviour
     {
         if (moveset.deathCounter == 5)
         {
-
             mapsequence.Clear();
             MapSequenceUpdate();
             moveset.deathCounter = 0;
-            SceneManager.LoadScene(1);
+            if(moveset.ActLocation == 1) SceneManager.LoadScene(1);
+            if(moveset.ActLocation == 2) SceneManager.LoadScene(8);
+            if(moveset.ActLocation == 3) SceneManager.LoadScene(18);
         }
 
         if (Health.damaged) { savedCurrentHealth--; Health.damaged = false; }

@@ -63,6 +63,8 @@ public class PillarSpawner : MonoBehaviour
 
     void Update()
     {
+        moveset.ActLocation = 3;
+        MapSequenceInitializer.entryToAct3 = true;
         if (!ifExit)
         {
             if (timer <= 120f) //condition to change scene

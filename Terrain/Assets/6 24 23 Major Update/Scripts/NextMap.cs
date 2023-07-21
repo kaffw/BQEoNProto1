@@ -58,6 +58,7 @@ public class NextMap : MonoBehaviour
                 MapSequenceInitializer.entryToAct3 = true;
                 moveset.ActLocation = 3;
                 SceneManager.LoadScene(18);
+                Debug.Log(moveset.ActLocation);
             }
             else
             {

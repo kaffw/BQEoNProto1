@@ -66,6 +66,7 @@ public class NagaPathing : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(moveset.ActLocation);
         TargetPos = new Vector2(Target.transform.position.x, Target.transform.position.y); //Debug.Log(TargetPos);
                                                                                            
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -80,7 +81,7 @@ public class NagaPathing : MonoBehaviour
             if (!attackPhase)
             {
                 attack = UnityEngine.Random.Range(1, 4);
-                Debug.Log(attack);
+                //Debug.Log(attack);
                 switch (attack)
                 {
                     case 1:

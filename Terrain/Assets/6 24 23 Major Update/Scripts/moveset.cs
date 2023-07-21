@@ -185,6 +185,7 @@ public class moveset : MonoBehaviour
             }
         }
         ActLocator();
+        Debug.Log(ActLocation);
         //falldetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
 
     }
@@ -400,7 +401,7 @@ public class moveset : MonoBehaviour
         {
             ActLocation = 2;
         }
-        else if (MapSequenceInitializer.entryToAct3 == true)
+        if (MapSequenceInitializer.entryToAct3 == true)
         {
             ActLocation = 3;
         }
