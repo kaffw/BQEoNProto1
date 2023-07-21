@@ -33,12 +33,12 @@ public class CombatMelee : MonoBehaviour
         if (isAttacking)
             return;
 
-        if (timeBtwAttack > 0)
+        /*if (timeBtwAttack > 0)
         {
             timeBtwAttack -= Time.deltaTime;
         }
         else
-        {
+        {*/
             if (Input.GetKeyDown(KeyCode.G))
             {
                 timeBtwAttack = startTimeBtwAttack;
@@ -71,7 +71,7 @@ public class CombatMelee : MonoBehaviour
 
                 StartCoroutine(ComboResetCoroutine()); // Start the coroutine to reset the combo
             }
-        }
+        //}
 
         // Reset combo if no attacks are performed within the comboResetTime
         if (comboCount > 0)
