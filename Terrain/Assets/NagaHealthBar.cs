@@ -15,6 +15,6 @@ public class NagaHealthBar : MonoBehaviour
 
     void Update()
     {
-       nagacurrenthealthBar.fillAmount = nagaHealth.Hitpoints / 25f;
+       nagacurrenthealthBar.fillAmount = nagaHealth.Hitpoints / 200f;
     }
 }

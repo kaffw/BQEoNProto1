@@ -66,7 +66,6 @@ public class NagaPathing : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(moveset.ActLocation);
         TargetPos = new Vector2(Target.transform.position.x, Target.transform.position.y); //Debug.Log(TargetPos);
                                                                                            
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -165,7 +164,8 @@ public class NagaPathing : MonoBehaviour
 
     private void Movement()
     {
-        if (transform.position.x > -20 && right)
+        
+        if (right) //transform.position.x >= -20 && 
         {
             transform.position = new Vector2(transform.position.x - (Time.deltaTime * movementSpeed), transform.position.y);
             if (transform.position.x < -14)
@@ -175,7 +175,7 @@ public class NagaPathing : MonoBehaviour
             }
         }
 
-        if (transform.position.x < 20 && left)
+        if (left) //transform.position.x <= 20 && 
         {
             transform.position = new Vector2(transform.position.x + (Time.deltaTime * movementSpeed), transform.position.y);
             if (transform.position.x > 24)

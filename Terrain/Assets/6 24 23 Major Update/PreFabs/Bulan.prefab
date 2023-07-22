@@ -363,6 +363,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090e10b5bd075bf42b9dd150948bd084, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startTimeBtwAttack: 0.5
+  comboResetTime: 1
   attackPos: {fileID: 915371648236534254}
   whatIsEnemies:
     serializedVersion: 2
@@ -482,6 +484,7 @@ GameObject:
   m_Component:
   - component: {fileID: 915371648236534254}
   - component: {fileID: 7213759558255214094}
+  - component: {fileID: 4439533413999982424}
   m_Layer: 7
   m_Name: AttackPoint
   m_TagString: Projectile
@@ -514,9 +517,31 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.021569949, y: 0.01657359}
   m_Size: {x: 0.25663647, y: 0.29436398}
   m_Direction: 0
+--- !u!114 &4439533413999982424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7992620329124778148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090e10b5bd075bf42b9dd150948bd084, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTimeBtwAttack: 0.5
+  comboResetTime: 1
+  attackPos: {fileID: 0}
+  whatIsEnemies:
+    serializedVersion: 2
+    m_Bits: 0
+  damage: 0
+  anim: {fileID: 2611164972877872476}
+  AttackProjectile: {fileID: 7992620329124778148}
+  AttackProjectileState: 0

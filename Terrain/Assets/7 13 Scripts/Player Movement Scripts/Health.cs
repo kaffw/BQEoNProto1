@@ -46,7 +46,7 @@ public class Health : MonoBehaviour
 
         else dashIFrame = false;
 
-        if (FallTrap.fell && dashIFrame)
+        if (FallTrap.fell == true)
         {
             currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
             moveset.deathCounter++;
@@ -66,6 +66,7 @@ public class Health : MonoBehaviour
             }
 
             damaged = true;
+            //FallTrap.fell = false;
         }
 
         if (dashIFrame == false)

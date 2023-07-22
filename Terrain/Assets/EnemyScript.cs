@@ -32,10 +32,10 @@ public class EnemyScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D enemy)
     {
-        if (enemy.tag == "bullet") Debug.Log("enemy hp -1");
+        if (enemy.tag == "bullet" || enemy.tag == "projectile") Debug.Log("enemy hp -1");
 
 
-        if (enemy.tag == "bullet" && immunity == false) //enemyHitBox.isTrigger == false
+        if (enemy.tag == "bullet" || enemy.tag == "projectile" && immunity == false) //enemyHitBox.isTrigger == false
         {
             Debug.Log("Hit");
             enemyHealth -= 1;

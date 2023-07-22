@@ -29,7 +29,7 @@ public class CombatMelee : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(timeBtwAttack);
+        //Debug.Log(timeBtwAttack);
         if (isAttacking)
             return;
 

@@ -114,6 +114,9 @@ public class moveset : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         respawnPoint = transform.position;
+
+        isFiring = false;
+        fireRateTimer = 0;
     }
 
     private void Update()
@@ -192,7 +195,7 @@ public class moveset : MonoBehaviour
             }
         }
         ActLocator();
-        Debug.Log(ActLocation);
+        //Debug.Log(ActLocation);
         //falldetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
 
     }
@@ -219,6 +222,7 @@ public class moveset : MonoBehaviour
 
     private IEnumerator Dash()
     {
+        immunity = true;
 
         canDash = false;
         isDashing = true;
@@ -251,6 +255,8 @@ public class moveset : MonoBehaviour
 
         if (Input.GetKeyDown("e") && !shielded)
         {
+            immunity = true;
+
             rb.velocity = new Vector2(0, 0);
             anim.SetBool("Shield", true);
             shield.SetActive(true);
@@ -314,6 +320,7 @@ public class moveset : MonoBehaviour
         else if (collision.tag == "Checkpoint")
         {
             respawnPoint = transform.position;
+            immunity = true;
         }
     }
 
@@ -418,7 +425,9 @@ public class moveset : MonoBehaviour
 
     private IEnumerator ImmunityDuration()
     {
-        yield return new WaitForSeconds(1f); //3 f prev
+        Debug.Log("Start of Iframe");
+        yield return new WaitForSeconds(3f); //3 f prev
+        Debug.Log("End of Iframe");
         immunity = false;
     }
 }
