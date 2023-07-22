@@ -39,13 +39,6 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float _damage)
     {
-        if (moveset.shielded == true || moveset.immunity == true)
-        {
-            dashIFrame = true;
-        }
-
-        else dashIFrame = false;
-
         if (FallTrap.fell == true)
         {
             currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
@@ -66,11 +59,11 @@ public class Health : MonoBehaviour
             }
 
             damaged = true;
-            //FallTrap.fell = false;
         }
 
-        if (dashIFrame == false)
+        if (moveset.immunity == false)
         {
+            moveset.immunity = true;
             currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
             moveset.deathCounter++;
             if (currentHealth > 0)
@@ -88,9 +81,6 @@ public class Health : MonoBehaviour
             }
 
             damaged = true;
-                
         }
-        dashIFrame = false;
-        moveset.immunity = true;
     }
 }

@@ -12,8 +12,13 @@ public class EnemyTrap : MonoBehaviour
 
         if (collision.tag == "Player")
         {
-            collision.GetComponent<Health>().TakeDamage(damage);
-            hit = true;
+            if (moveset.immunity == false)
+            {
+                collision.GetComponent<Health>().TakeDamage(damage);
+                hit = true;
+                moveset.immunity = true;
+            }
+
         }
     }
 }

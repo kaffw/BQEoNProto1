@@ -35,7 +35,7 @@ public class moveset : MonoBehaviour
     //dash
     public bool FacingRight = true;
     public bool canDash = true;
-    public bool isDashing;
+    public static bool isDashing;
     public bool isWallSliding;
 
     //variables for LedgeClimb
@@ -223,7 +223,6 @@ public class moveset : MonoBehaviour
     private IEnumerator Dash()
     {
         immunity = true;
-
         canDash = false;
         isDashing = true;
         float originalGravity = rb.gravityScale;
@@ -256,7 +255,6 @@ public class moveset : MonoBehaviour
         if (Input.GetKeyDown("e") && !shielded)
         {
             immunity = true;
-
             rb.velocity = new Vector2(0, 0);
             anim.SetBool("Shield", true);
             shield.SetActive(true);
