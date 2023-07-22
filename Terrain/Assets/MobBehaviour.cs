@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MobHP : MonoBehaviour
+public class MobBehaviour : MonoBehaviour
 {
     public float Hitpoints;
     public float Maxhitpoints = 5;
@@ -13,7 +13,7 @@ public class MobHP : MonoBehaviour
         Hitpoints = Maxhitpoints;
     }
 
-    public void TakeHit(float damage)
+    public void MobTakeHit(float damage)
     {
         Hitpoints -= damage;
         if (Hitpoints <= 0)

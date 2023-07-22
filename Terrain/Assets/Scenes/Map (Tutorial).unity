@@ -64083,7 +64083,8 @@ GameObject:
   - component: {fileID: 1535703740}
   - component: {fileID: 1535703743}
   - component: {fileID: 1535703742}
-  - component: {fileID: 1535703744}
+  - component: {fileID: 1535703746}
+  - component: {fileID: 1535703747}
   m_Layer: 9
   m_Name: Idle (32x32)_0
   m_TagString: Untagged
@@ -64205,7 +64206,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1535703744
+--- !u!70 &1535703746
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535703739}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 2, y: 2}
+  m_Direction: 0
+--- !u!114 &1535703747
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -64214,10 +64231,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1535703739}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d41e05ef511a8dc4aa78db355fe679bb, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a28649c24db8924dbfe981e1fa6eb1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NagaAnim: {fileID: 0}
   Hitpoints: 0
   Maxhitpoints: 5
 --- !u!1 &1582856927
@@ -65345,6 +65361,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bulan
       objectReference: {fileID: 0}
+    - target: {fileID: 4439533413999982424, guid: 076aaa84b90f9a343b748833fe57fddc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6037270472102130976, guid: 076aaa84b90f9a343b748833fe57fddc, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -65380,6 +65400,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 8622542398818561426, guid: 076aaa84b90f9a343b748833fe57fddc, type: 3}
     - {fileID: 6037270472102130976, guid: 076aaa84b90f9a343b748833fe57fddc, type: 3}
+    - {fileID: 4439533413999982424, guid: 076aaa84b90f9a343b748833fe57fddc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 076aaa84b90f9a343b748833fe57fddc, type: 3}
 --- !u!4 &2611164973302756286 stripped
 Transform:

@@ -53,10 +53,19 @@ public class CombatMelee : MonoBehaviour
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
                     enemiesToDamage[i].GetComponent<EnemyBehaviour>().TakeHit(damage);
+                    
                 }
 
-                // Trigger the appropriate animation based on the combo count
-                switch (comboCount)
+                Collider2D[] mobEnemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
+                AttackDetails[0] = damage;
+                AttackDetails[1] = transform.position.x;
+                for (int i = 0; i < enemiesToDamage.Length; i++)
+                {
+                    mobEnemiesToDamage[i].GetComponent<MobBehaviour>().MobTakeHit(damage);
+
+                }
+            // Trigger the appropriate animation based on the combo count
+            switch (comboCount)
                 {
                     case 1:
                         anim.SetTrigger("melee attack 1");
@@ -102,7 +111,6 @@ public class CombatMelee : MonoBehaviour
         isAttacking = false;
 
         AttackProjectile.SetActive(false); // Disable the AttackProjectile after the attack
-
         if (comboCount >= 3)
         {
             comboCount = 0; // Reset the combo count after the third attack
