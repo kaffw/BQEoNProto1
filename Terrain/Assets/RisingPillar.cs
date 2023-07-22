@@ -36,4 +36,12 @@ public class RisingPillar : MonoBehaviour
         if (destroyTimer <= 15f) destroyTimer += Time.deltaTime;
         else Destroy(gameObject);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "PillarDeleter")
+        {
+            Destroy(gameObject);
+        }
+    }
 }
