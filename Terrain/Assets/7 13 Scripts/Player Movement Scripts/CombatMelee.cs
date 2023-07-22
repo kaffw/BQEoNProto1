@@ -53,7 +53,6 @@ public class CombatMelee : MonoBehaviour
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
                     enemiesToDamage[i].GetComponent<EnemyBehaviour>().TakeHit(damage);
-                    
                 }
 
             // Trigger the appropriate animation based on the combo count

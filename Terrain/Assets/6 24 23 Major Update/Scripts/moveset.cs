@@ -23,7 +23,7 @@ public class moveset : MonoBehaviour
     [SerializeField] private float jumpForce = 17.5f;
 
     private Vector3 respawnPoint;
-    public GameObject fallDetector;
+    //public GameObject fallDetector;
 
     public static int deathCounter = 0;
     public static bool immunity = false;
