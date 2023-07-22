@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 4536505671221413536}
   - component: {fileID: 4536505671221413537}
   - component: {fileID: 5861972897908256339}
+  - component: {fileID: 8033538326799900351}
   m_Layer: 0
   m_Name: BREAKABLES_ROCK B_piece_03
   m_TagString: Untagged
@@ -150,6 +151,27 @@ PolygonCollider2D:
       - {x: 0, y: -0.03}
       - {x: -0.06, y: -0.03}
       - {x: -0.16, y: -0.06}
+--- !u!50 &8033538326799900351
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4536505671221413542}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &4536505671736707744
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,6 +183,7 @@ GameObject:
   - component: {fileID: 4536505671736707746}
   - component: {fileID: 4536505671736707747}
   - component: {fileID: 2243975511379540616}
+  - component: {fileID: 1012978444022551105}
   m_Layer: 0
   m_Name: BREAKABLES_ROCK B_piece_01
   m_TagString: Untagged
@@ -269,6 +292,27 @@ PolygonCollider2D:
       - {x: 0.02, y: -0.07}
       - {x: -0.01, y: -0.01}
       - {x: 0.089999996, y: 0.049999997}
+--- !u!50 &1012978444022551105
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4536505671736707744}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &4536505671750311526
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,6 +324,7 @@ GameObject:
   - component: {fileID: 4536505671750311520}
   - component: {fileID: 4536505671750311521}
   - component: {fileID: 2329369834768158180}
+  - component: {fileID: 4074233007758556693}
   m_Layer: 0
   m_Name: BREAKABLES_ROCK B_piece_02
   m_TagString: Untagged
@@ -386,3 +431,24 @@ PolygonCollider2D:
       - {x: 0.16, y: -0.16}
       - {x: 0.16, y: -0.01}
       - {x: 0.08, y: 0.07}
+--- !u!50 &4074233007758556693
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4536505671750311526}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

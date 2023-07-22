@@ -166,7 +166,7 @@ public class moveset : MonoBehaviour
             }
 
             // newly added
-            if (Input.GetKeyDown("z") && canDash)
+            if (Input.GetKeyDown("k") && canDash)
             {
                 isImmune = true;
                 hitImmunityDuration = 3f;
@@ -192,7 +192,7 @@ public class moveset : MonoBehaviour
             }
             UpdateAnimationState();
             fireRateTimer += Time.deltaTime;
-            if (Input.GetKeyDown("j") && fireRateTimer >= fireRate && !isFiring)
+            if (Input.GetKeyDown("u") && fireRateTimer >= fireRate && !isFiring)
             {
                 isFiring = true;
                 anim.SetTrigger("CombatRanged");

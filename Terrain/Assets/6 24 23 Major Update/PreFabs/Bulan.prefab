@@ -190,10 +190,8 @@ MonoBehaviour:
   horizontalMove: 0
   moveSpeed: 14
   jumpForce: 17.5
-  fallDetector: {fileID: 0}
   FacingRight: 1
   canDash: 1
-  isDashing: 0
   isWallSliding: 0
   LedgeDetected: 0
   offset1: {x: 0, y: 0}
@@ -530,7 +528,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7992620329124778148}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 090e10b5bd075bf42b9dd150948bd084, type: 3}
   m_Name: 

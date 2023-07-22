@@ -39,7 +39,7 @@ public class CombatMelee : MonoBehaviour
         }
         else
         {*/
-            if (Input.GetKeyDown(KeyCode.G))
+            if (Input.GetKeyDown(KeyCode.J))
             {
                 timeBtwAttack = startTimeBtwAttack;
                 comboCount++;
