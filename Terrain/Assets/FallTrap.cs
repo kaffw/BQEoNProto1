@@ -14,11 +14,13 @@ public class FallTrap : MonoBehaviour
 
         if (collision.tag == "Player")
         {
-            collision.GetComponent<Health>().TakeDamage(damage);
             hit = true;
             fell = true;
-            moveset.isImmune = true;
+            collision.GetComponent<Health>().TakeDamage(damage);
+
+            /*moveset.isImmune = true;
             moveset.hitImmunityDuration = 3f;
+            */
         }
     }
 }

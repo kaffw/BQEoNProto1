@@ -80,10 +80,10 @@ public class MainMenu : MonoBehaviour
     private IEnumerator ExitWait()
     {
         ExitImage.color = new Color(255, 255, 0, 255);
-        ExitImage.rectTransform.sizeDelta = new Vector2(140, 40);
+        ExitImage.rectTransform.sizeDelta = new Vector2(90, 40);
 
         yield return new WaitForSeconds(0.25f);
-        ExitImage.rectTransform.sizeDelta = new Vector2(150, 50);
+        ExitImage.rectTransform.sizeDelta = new Vector2(100, 50);
         ExitImage.color = new Color(255, 255, 255, 255);
 
         yield return new WaitForSeconds(0.25f);

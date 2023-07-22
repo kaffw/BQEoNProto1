@@ -336,7 +336,6 @@ public class moveset : MonoBehaviour
         else if (collision.tag == "Checkpoint")
         {
             respawnPoint = transform.position;
-            immunity = true;
         }
     }
 
