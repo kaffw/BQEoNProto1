@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8013331513843592343}
   - component: {fileID: 8013331513843592340}
   - component: {fileID: 8013331513843592345}
-  - component: {fileID: 6335663422995714195}
   m_Layer: 0
   m_Name: Rocc
   m_TagString: Untagged
@@ -136,19 +135,3 @@ PolygonCollider2D:
       - {x: 0.16368976, y: -0.09727368}
       - {x: 0.16, y: 0.06695251}
       - {x: 0.09449281, y: 0.13893063}
---- !u!114 &6335663422995714195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8013331513843592338}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 392dddc0617310042abc4bc0f1fa4bd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  brokenbit: {fileID: 0}
-  FixedCrate: {fileID: 0}
-  drop: {fileID: 0}
-  Target: {x: 0, y: 0}

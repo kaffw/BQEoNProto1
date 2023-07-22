@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6136673295409110347}
   - component: {fileID: 6136673295409110346}
   - component: {fileID: 6136673295409110340}
-  - component: {fileID: 7921841673124127054}
   - component: {fileID: 6837264478558496310}
   m_Layer: 0
   m_Name: Rocc 2
@@ -125,22 +124,6 @@ PolygonCollider2D:
       - {x: 0.08953047, y: 0.017315526}
       - {x: 0.06912008, y: 0.07847247}
       - {x: 0.020892993, y: 0.1517306}
---- !u!114 &7921841673124127054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6136673295409110351}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 392dddc0617310042abc4bc0f1fa4bd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  brokenbit: {fileID: 4536505670934088138, guid: 32c0850fcc791044b98a6526d7f70b2b, type: 3}
-  FixedCrate: {fileID: 4236677832352603132, guid: aec1ebd16c5ff1b46a929460df6aa706, type: 3}
-  drop: {fileID: 3502930585737589307, guid: 61b1683f33997d5469fe3da916a06d3f, type: 3}
-  Target: {x: 0, y: 0}
 --- !u!114 &6837264478558496310
 MonoBehaviour:
   m_ObjectHideFlags: 0
