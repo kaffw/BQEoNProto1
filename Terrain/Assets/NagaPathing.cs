@@ -40,7 +40,7 @@ public class NagaPathing : MonoBehaviour
     public GameObject meteorSpawn;
     float castTime = 0f;
     float castInterval = 1f;
-    int castQuantity = 3;
+    int castQuantity = 10; // 3
     //bool endAction = false;
 
     //cosmic pillar
