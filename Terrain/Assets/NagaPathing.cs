@@ -121,6 +121,10 @@ public class NagaPathing : MonoBehaviour
                     }
 
                 }
+
+                //attack cast
+                
+
                 if (castQuantity == 0)
                 {
                     attack = 0;
@@ -131,6 +135,7 @@ public class NagaPathing : MonoBehaviour
 
                 else if (attack == 2)
                 {
+                    nagaAnim.SetTrigger("NagaCasting");
                     spawnTime += Time.deltaTime;
                     if (spawnTime > 3f)
                     {
