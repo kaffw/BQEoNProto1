@@ -28,7 +28,7 @@ public class Unhidden : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             // Hidden.SetActive(true);
-            hiderTilemap.color = originalColor; // Revert to the original color
+            hiderTilemap.color = new Color(255f, 255f, 255f, 255f); // Revert to the original color
         }
     }
 }
