@@ -144,6 +144,7 @@ public class NagaPathing : MonoBehaviour
                         attack = 0;
                         spawnTime = 0f;
                         attackPhase = false;
+                        attackTimer = 0f;
                     }
 
                 }
@@ -152,6 +153,7 @@ public class NagaPathing : MonoBehaviour
                 {
                     explosions = true;
                     attackPhase = false;
+                    attackTimer = 0f;
                 }
 
             }

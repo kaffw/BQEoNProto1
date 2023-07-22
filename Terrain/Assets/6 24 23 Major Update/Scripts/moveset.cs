@@ -87,6 +87,10 @@ public class moveset : MonoBehaviour
 
     public static int ActLocation = 1;
 
+    //hit immunity
+    public static float hitImmunityDuration = 1.5f;
+    public static bool isImmune = false;
+
     private void Awake()
     {
         if (CharacterPositionManager.ifFromEntrance == true)
@@ -164,7 +168,8 @@ public class moveset : MonoBehaviour
             // newly added
             if (Input.GetKeyDown("z") && canDash)
             {
-                immunity = true;
+                isImmune = true;
+                hitImmunityDuration = 3f;
                 StartCoroutine(Dash());
                 anim.SetTrigger("dash");
             }
@@ -195,6 +200,17 @@ public class moveset : MonoBehaviour
             }
         }
         ActLocator();
+
+        if (isImmune)
+        {
+            hitImmunityDuration -= Time.deltaTime;
+
+            if (hitImmunityDuration <= 0f)
+            {
+                isImmune = false;
+                // Re-enable collision and damage processing here
+            }
+        }
         //Debug.Log(ActLocation);
         //falldetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
 
@@ -222,7 +238,7 @@ public class moveset : MonoBehaviour
 
     private IEnumerator Dash()
     {
-        immunity = true;
+
         canDash = false;
         isDashing = true;
         float originalGravity = rb.gravityScale;
@@ -254,7 +270,9 @@ public class moveset : MonoBehaviour
 
         if (Input.GetKeyDown("e") && !shielded)
         {
-            immunity = true;
+            isImmune = true;
+            hitImmunityDuration = 3f;
+
             rb.velocity = new Vector2(0, 0);
             anim.SetBool("Shield", true);
             shield.SetActive(true);

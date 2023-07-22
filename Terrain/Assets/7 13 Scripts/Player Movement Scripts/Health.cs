@@ -61,19 +61,23 @@ public class Health : MonoBehaviour
             damaged = true;
         }
 
-        if (moveset.immunity == false)
+        if (moveset.isImmune == false)
         {
-            moveset.immunity = true;
+            moveset.isImmune = true;
+            moveset.hitImmunityDuration = 3f;
+
             currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
             moveset.deathCounter++;
             if (currentHealth > 0)
             {
+                moveset.immunity = true;
                 anim.SetTrigger("hurt");
             }
             else
             {
                 if (!dead)
                 {
+                    moveset.immunity = true;
                     anim.SetTrigger("die");
                     playerRB.velocity = Vector2.right * 0;
                     dead = true;

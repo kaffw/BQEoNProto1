@@ -17,6 +17,8 @@ public class FallTrap : MonoBehaviour
             collision.GetComponent<Health>().TakeDamage(damage);
             hit = true;
             fell = true;
+            moveset.isImmune = true;
+            moveset.hitImmunityDuration = 3f;
         }
     }
 }
