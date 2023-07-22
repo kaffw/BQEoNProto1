@@ -11721,6 +11721,7 @@ GameObject:
   - component: {fileID: 1571174931}
   - component: {fileID: 1571174930}
   - component: {fileID: 1571174932}
+  - component: {fileID: 1571174933}
   m_Layer: 9
   m_Name: Naga
   m_TagString: Enemy
@@ -12017,9 +12018,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d41e05ef511a8dc4aa78db355fe679bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NagaAnim: {fileID: 0}
+  NagaAnim: {fileID: 1571174927}
   Hitpoints: 0
   Maxhitpoints: 200
+  type: {fileID: 0}
+  boss: {fileID: 1571174933}
+  whatType: 0
+--- !u!114 &1571174933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571174925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 472528878297066459f9b8e3b9c681aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Naga: 1
 --- !u!1001 &1632569471
 PrefabInstance:
   m_ObjectHideFlags: 0

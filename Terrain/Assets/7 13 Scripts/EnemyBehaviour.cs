@@ -6,18 +6,27 @@ public class EnemyBehaviour : MonoBehaviour
 {
     public Animator NagaAnim;
     public float Hitpoints;
-    public float Maxhitpoints = 5;
-
-
+    public float Maxhitpoints;
+    public mobType type;
+    public ifBoss boss;
+    public bool whatType;
     void Start()
     {
-        Hitpoints = Maxhitpoints;
         NagaAnim = GetComponent<Animator>();
+        Hitpoints = Maxhitpoints;
+        whatType = type.isNaga;
+        if (boss)
+        {
+            NagaAnim = GetComponent<Animator>();
+            Maxhitpoints = 200f;
+        }
+            
+        if(type) Maxhitpoints = 5f;
     }
 
     public void TakeHit(float damage)
     {
-        NagaAnim.SetTrigger("NagaHurt");
+        if(boss == true) NagaAnim.SetTrigger("NagaHurt");
         Hitpoints -= damage;
         if (Hitpoints <= 0)
         {

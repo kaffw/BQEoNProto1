@@ -56,14 +56,6 @@ public class CombatMelee : MonoBehaviour
                     
                 }
 
-                Collider2D[] mobEnemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
-                AttackDetails[0] = damage;
-                AttackDetails[1] = transform.position.x;
-                for (int i = 0; i < enemiesToDamage.Length; i++)
-                {
-                    mobEnemiesToDamage[i].GetComponent<MobBehaviour>().MobTakeHit(damage);
-
-                }
             // Trigger the appropriate animation based on the combo count
             switch (comboCount)
                 {
