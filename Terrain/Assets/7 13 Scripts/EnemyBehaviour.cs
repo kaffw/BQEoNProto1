@@ -6,7 +6,7 @@ public class EnemyBehaviour : MonoBehaviour
 {
     public Animator NagaAnim;
     public float Hitpoints;
-    public float Maxhitpoints;
+    [SerializeField] public float Maxhitpoints;
 
     void Start()
     {

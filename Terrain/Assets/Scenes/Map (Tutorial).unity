@@ -64106,6 +64106,8 @@ GameObject:
   - component: {fileID: 1535703742}
   - component: {fileID: 1535703746}
   - component: {fileID: 1535703747}
+  - component: {fileID: 1535703748}
+  - component: {fileID: 1535703749}
   m_Layer: 9
   m_Name: Idle (32x32)_0
   m_TagString: Untagged
@@ -64250,13 +64252,49 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1535703739}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a28649c24db8924dbfe981e1fa6eb1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Hitpoints: 0
   Maxhitpoints: 5
+--- !u!114 &1535703748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535703739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d41e05ef511a8dc4aa78db355fe679bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NagaAnim: {fileID: 1535703749}
+  Hitpoints: 0
+  Maxhitpoints: 5
+--- !u!95 &1535703749
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535703739}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1582856927
 GameObject:
   m_ObjectHideFlags: 0
@@ -65076,7 +65114,7 @@ PrefabInstance:
       objectReference: {fileID: 972345051}
     - target: {fileID: 1843109915601764252, guid: c680d1b07ab3fde4db07539e06cbb9fe, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1843109915601764252, guid: c680d1b07ab3fde4db07539e06cbb9fe, type: 3}
       propertyPath: patrolPoints.Array.data[0]
@@ -65118,6 +65156,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7211527805480979442, guid: c680d1b07ab3fde4db07539e06cbb9fe, type: 3}
+      propertyPath: NagaAnim
+      value: 
+      objectReference: {fileID: 1334495335}
     - target: {fileID: 7211527805480979442, guid: c680d1b07ab3fde4db07539e06cbb9fe, type: 3}
       propertyPath: m_Enabled
       value: 1
