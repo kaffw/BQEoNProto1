@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 public class Health : MonoBehaviour
 {
     [SerializeField] private float startingHealth = 5f;
-    public float currentHealth { get; private set; }
+    //public float currentHealth { get; private set; }
+    public static float currentHealth;
     private Animator anim;
     private bool dead;
 

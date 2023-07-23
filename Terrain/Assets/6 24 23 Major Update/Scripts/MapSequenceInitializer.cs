@@ -44,6 +44,7 @@ public class MapSequenceInitializer : MonoBehaviour
         }
 
         if (Health.damaged) { savedCurrentHealth--; Health.damaged = false; }
+
     }
 
     public void MapSequenceUpdate()
