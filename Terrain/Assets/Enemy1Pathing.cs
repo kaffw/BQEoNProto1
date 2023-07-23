@@ -21,9 +21,11 @@ public class Enemy1Pathing : MonoBehaviour
     [SerializeField] public GameObject PatrolPointA, PatrolPointB;
     public bool currentDirection = false; //true = left, false = right;
     [SerializeField] public GameObject Aggro;
+    public Vector2 AggroPos;
 
     private void Start()
     {
+        AggroPos = new Vector2(Aggro.transform.position.x, Aggro.transform.position.y);
         Enemy1RB = GetComponent<Rigidbody2D>();   
         Enemy1Anim = GetComponent<Animator>();
         target = GameObject.Find("Bulan");
@@ -31,7 +33,7 @@ public class Enemy1Pathing : MonoBehaviour
 
     private void Update()
     {
-        Aggro.transform.position = new Vector2(50, -2);
+        Aggro.transform.position = AggroPos;
         targetPos = new Vector2(target.transform.position.x, target.transform.position.y);
         
         HorizontalMove();
