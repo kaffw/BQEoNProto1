@@ -277,9 +277,9 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.19
+  m_FalloffIntensity: 0.472
   m_Color: {r: 0.6132076, g: 0.43145585, b: 0.2805714, a: 1}
-  m_Intensity: 3
+  m_Intensity: 5
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 2daa223bbbe1092a000000008db897ff07fadc55a7294f24e7ef730d2fc93411
@@ -23354,7 +23354,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 25
-      m_TileSpriteIndex: 20
+      m_TileSpriteIndex: 26
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -77059,8 +77059,8 @@ Tilemap:
     m_Data: {fileID: -1840215059, guid: 5b7ec6b02400a8442968df54110ba767, type: 3}
   - m_RefCount: 48
     m_Data: {fileID: -1692844856, guid: 5b7ec6b02400a8442968df54110ba767, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -2007361113, guid: 5b7ec6b02400a8442968df54110ba767, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 297
     m_Data: {fileID: -1403936426, guid: 5b7ec6b02400a8442968df54110ba767, type: 3}
   - m_RefCount: 0
@@ -77071,8 +77071,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -2007361113, guid: 5b7ec6b02400a8442968df54110ba767, type: 3}
   - m_RefCount: 6616
     m_Data: {fileID: 346280516, guid: 5b7ec6b02400a8442968df54110ba767, type: 3}
   m_TileMatrixArray:
@@ -81279,9 +81279,9 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.19
+  m_FalloffIntensity: 0.472
   m_Color: {r: 0.6132076, g: 0.43145585, b: 0.2805714, a: 1}
-  m_Intensity: 5.63
+  m_Intensity: 5
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 2daa223bbbe1092a000000008db897ff07fadc55a7294f24e7ef730d2fc93411
@@ -85025,9 +85025,9 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.19
+  m_FalloffIntensity: 0.472
   m_Color: {r: 0.6132076, g: 0.43145585, b: 0.2805714, a: 1}
-  m_Intensity: 5.63
+  m_Intensity: 5
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 2daa223bbbe1092a000000008db897ff07fadc55a7294f24e7ef730d2fc93411
@@ -85448,9 +85448,9 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.19
+  m_FalloffIntensity: 0.472
   m_Color: {r: 0.6132076, g: 0.43145585, b: 0.2805714, a: 1}
-  m_Intensity: 3
+  m_Intensity: 5
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 2daa223bbbe1092a000000008db897ff07fadc55a7294f24e7ef730d2fc93411
@@ -86250,9 +86250,9 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.19
+  m_FalloffIntensity: 0.472
   m_Color: {r: 0.6132076, g: 0.43145585, b: 0.2805714, a: 1}
-  m_Intensity: 3
+  m_Intensity: 5
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 2daa223bbbe1092a000000008db897ff07fadc55a7294f24e7ef730d2fc93411
