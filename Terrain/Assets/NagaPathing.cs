@@ -138,9 +138,9 @@ public class NagaPathing : MonoBehaviour
                     spawnTime += Time.deltaTime;
                     if (spawnTime > 3f)
                     {
-                        Instantiate(cosmicFirePillar, new Vector2(Target.transform.position.x + 0, 5.5f), transform.rotation);
-                        Instantiate(cosmicFirePillar, new Vector2(Target.transform.position.x + 15, 5.5f), transform.rotation);
-                        Instantiate(cosmicFirePillar, new Vector2(Target.transform.position.x - 15, 5.5f), transform.rotation);
+                        Instantiate(cosmicFirePillar, new Vector2(Target.transform.position.x + 0, 12f), transform.rotation);
+                        Instantiate(cosmicFirePillar, new Vector2(Target.transform.position.x + 15, 12f), transform.rotation);
+                        Instantiate(cosmicFirePillar, new Vector2(Target.transform.position.x - 15, 12f), transform.rotation);
                         attack = 0;
                         spawnTime = 0f;
                         attackPhase = false;
