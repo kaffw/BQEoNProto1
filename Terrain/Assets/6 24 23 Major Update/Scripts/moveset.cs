@@ -169,7 +169,7 @@ public class moveset : MonoBehaviour
             if (Input.GetKeyDown("k") && canDash)
             {
                 isImmune = true;
-                hitImmunityDuration = 3f;
+                hitImmunityDuration = 1f;
                 StartCoroutine(Dash());
                 anim.SetTrigger("dash");
             }

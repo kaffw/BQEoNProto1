@@ -174,6 +174,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6523015570306645973, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d10949f6fc1f894428e68da041efa383, type: 3}
     - target: {fileID: 6523015570306645978, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
       propertyPath: m_Name
       value: Stalactites (5)
@@ -236,6 +240,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6523015570306645973, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d10949f6fc1f894428e68da041efa383, type: 3}
     - target: {fileID: 6523015570306645978, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
       propertyPath: m_Name
       value: Stalactites (3)
@@ -15734,6 +15742,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6523015570306645973, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d10949f6fc1f894428e68da041efa383, type: 3}
     - target: {fileID: 6523015570306645978, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
       propertyPath: m_Name
       value: Stalactites (2)
@@ -16173,6 +16185,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stalagmite
       objectReference: {fileID: 0}
+    - target: {fileID: 7483613854455682575, guid: 8701a25f071fdb8409f4d51c79cd7070, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d10949f6fc1f894428e68da041efa383, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8701a25f071fdb8409f4d51c79cd7070, type: 3}
 --- !u!4 &1116471677 stripped
@@ -16231,6 +16247,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6523015570306645973, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d10949f6fc1f894428e68da041efa383, type: 3}
     - target: {fileID: 6523015570306645978, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
       propertyPath: m_Name
       value: Stalactites (4)
@@ -16628,6 +16648,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6523015570306645973, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d10949f6fc1f894428e68da041efa383, type: 3}
     - target: {fileID: 6523015570306645978, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
       propertyPath: m_Name
       value: Stalactites (1)
