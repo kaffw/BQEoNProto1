@@ -39,7 +39,7 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float _damage)
     {
-        if (FallTrap.fell == true)// && moveset.isImmune == true ||)
+        if (FallTrap.fell == true && moveset.isImmune == true)
         {
             Debug.Log("Fell");
             currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
