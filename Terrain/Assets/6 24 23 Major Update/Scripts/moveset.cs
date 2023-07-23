@@ -309,7 +309,7 @@ public class moveset : MonoBehaviour
             dirFire = false;
         }
 
-        if (rb.velocity.y > 0.1f)
+        if (rb.velocity.y > 0.1)
         {
             //state = MovementState.jumping;
             //PlayerVariable.isJumping = true;
@@ -317,7 +317,7 @@ public class moveset : MonoBehaviour
             anim.SetInteger("state", 2);
         }
 
-        else if (rb.velocity.y < -0.1f)
+        else if (rb.velocity.y < -0.1)
         {
             //state = MovementState.falling;
             anim.SetInteger("state", 3);
@@ -342,15 +342,15 @@ public class moveset : MonoBehaviour
 
     private bool IsWalled()
     {
-        return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
+        return Physics2D.OverlapCircle(wallCheck.position,0.2f,wallLayer);
     }
 
     private void WallJump()
     {
-        if (isWallSliding)
+        if(isWallSliding)
         {
             isWallJumping = false;
-            wallJumpingDirection = -transform.localScale.x;
+            wallJumpingDirection = - transform.localScale.x;
             wallJumpingCounter = wallJumpingTime;
             CancelInvoke(nameof(StopWallJumping));
         }
@@ -360,40 +360,36 @@ public class moveset : MonoBehaviour
             wallJumpingCounter = -Time.deltaTime;
         }
 
-        if (Input.GetButtonDown("Jump") && wallJumpingCounter > 0f)
+        if(Input.GetButtonDown("Jump")&&wallJumpingCounter > 0f)
         {
-            if (IsGrounded() || doubleJump)                                 // recently added
-            {                                                               //
-                isWallJumping = true;
-                //rb.velocity = new Vector2(wallJumpingDirection * 8f, 8f);
-                rb.velocity = new Vector2(wallJumpingDirection*8f,17.5f);
-                wallJumpingCounter = 0f;
+            isWallJumping = true;
+            rb.velocity = new Vector2(wallJumpingDirection*8f,17.5f);
+            wallJumpingCounter = 0f;
 
-                if (transform.localScale.x != wallJumpingDirection)
-                {
+            if(transform.localScale.x !=wallJumpingDirection)
+            {
 
-                    FacingRight = !FacingRight;
-                    Vector3 localScale = transform.localScale;
-                    localScale.x *= -1f;
-                    transform.localScale = localScale;
-                }
-                Invoke(nameof(StopWallJumping), wallJumpingDuration);
-            }                                                                //
+                FacingRight = !FacingRight;
+                Vector3 localScale = transform.localScale;
+                localScale.x *=-1f;
+                transform.localScale =localScale;
+            }
+            Invoke(nameof(StopWallJumping),wallJumpingDuration);
         }
     }
 
     private void StopWallJumping()
     {
-        isWallJumping = false;
+        isWallJumping= false;
     }
 
     private void WallSlide()
     {
-        if (IsWalled() && !IsGrounded() && horizontalMove != 0f)
+        if(IsWalled()&& !IsGrounded()&& horizontalMove != 0f)
         {
-            isWallSliding = true;
-            rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
-            if (isWallSliding == true) { anim.SetTrigger("WallSliding"); }
+            isWallSliding= true;
+            rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed,float.MaxValue));
+            if(isWallSliding == true) {anim.SetTrigger("WallSliding");}
 
         }
 
@@ -403,6 +399,7 @@ public class moveset : MonoBehaviour
         }
 
     }
+    
 
     private bool IsGrounded()
     {
