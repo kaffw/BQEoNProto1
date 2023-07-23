@@ -81362,6 +81362,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6523015570306645973, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 6523015570306645975, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
       propertyPath: m_Size.y
       value: 1.8468926
@@ -82457,6 +82461,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stalagmite (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7483613854455682575, guid: 8701a25f071fdb8409f4d51c79cd7070, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8701a25f071fdb8409f4d51c79cd7070, type: 3}
 --- !u!1 &912968606
@@ -82743,6 +82751,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stalagmite
       objectReference: {fileID: 0}
+    - target: {fileID: 7483613854455682575, guid: 8701a25f071fdb8409f4d51c79cd7070, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8701a25f071fdb8409f4d51c79cd7070, type: 3}
 --- !u!1 &977766472
@@ -84099,6 +84111,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6523015570306645973, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 6523015570306645975, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
       propertyPath: m_Size.y
       value: 1.0865026
@@ -84589,6 +84605,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stalagmite (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7483613854455682575, guid: 8701a25f071fdb8409f4d51c79cd7070, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8701a25f071fdb8409f4d51c79cd7070, type: 3}
 --- !u!1 &1514938623
@@ -85770,6 +85790,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stalagmite (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7483613854455682575, guid: 8701a25f071fdb8409f4d51c79cd7070, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8701a25f071fdb8409f4d51c79cd7070, type: 3}
 --- !u!1001 &1879372466

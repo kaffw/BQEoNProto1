@@ -365,7 +365,8 @@ public class moveset : MonoBehaviour
             if (IsGrounded() || doubleJump)                                 // recently added
             {                                                               //
                 isWallJumping = true;
-                rb.velocity = new Vector2(wallJumpingDirection * 8f, 8f);
+                //rb.velocity = new Vector2(wallJumpingDirection * 8f, 8f);
+                rb.velocity = new Vector2(wallJumpingDirection*8f,17.5f);
                 wallJumpingCounter = 0f;
 
                 if (transform.localScale.x != wallJumpingDirection)

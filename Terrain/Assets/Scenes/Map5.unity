@@ -84296,6 +84296,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3450047575431762537, guid: de5f4f8153e22db48a4a5594ce4e557f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 3450047575431762539, guid: de5f4f8153e22db48a4a5594ce4e557f, type: 3}
       propertyPath: m_Name
       value: LAVA_01_0 1
@@ -84561,6 +84565,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6523015570306645973, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 6523015570306645978, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
       propertyPath: m_Name
       value: Stalactites (4)
@@ -84977,6 +84985,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3450047575431762537, guid: de5f4f8153e22db48a4a5594ce4e557f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 3450047575431762539, guid: de5f4f8153e22db48a4a5594ce4e557f, type: 3}
       propertyPath: m_Name
       value: LAVA_01_0 1 (4)
@@ -85038,6 +85050,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3450047575431762537, guid: de5f4f8153e22db48a4a5594ce4e557f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 3450047575431762539, guid: de5f4f8153e22db48a4a5594ce4e557f, type: 3}
       propertyPath: m_Name
       value: LAVA_01_0 1 (4)
@@ -85099,6 +85115,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3450047575431762537, guid: de5f4f8153e22db48a4a5594ce4e557f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 3450047575431762539, guid: de5f4f8153e22db48a4a5594ce4e557f, type: 3}
       propertyPath: m_Name
       value: LAVA_01_0 1 (7)
@@ -85156,6 +85176,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6523015570306645973, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 6523015570306645978, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
       propertyPath: m_Name
       value: Stalactites (8)
@@ -85217,6 +85241,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stalagmite (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7483613854455682575, guid: 8701a25f071fdb8409f4d51c79cd7070, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8701a25f071fdb8409f4d51c79cd7070, type: 3}
 --- !u!1001 &665333696
@@ -85270,6 +85298,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6523015570306645973, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 6523015570306645975, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
       propertyPath: m_Size.y
       value: 0.9369943
@@ -85526,6 +85558,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stalagmite
       objectReference: {fileID: 0}
+    - target: {fileID: 7483613854455682575, guid: 8701a25f071fdb8409f4d51c79cd7070, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8701a25f071fdb8409f4d51c79cd7070, type: 3}
 --- !u!1001 &792486701
@@ -85681,6 +85717,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6523015570306645973, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 6523015570306645975, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
       propertyPath: m_Size.y
       value: 1.2929358
@@ -85803,6 +85843,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6523015570306645973, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 6523015570306645978, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
       propertyPath: m_Name
       value: Stalactites (6)
@@ -86146,6 +86190,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6523015570306645973, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 6523015570306645978, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
       propertyPath: m_Name
       value: Stalactites (3)
@@ -86207,6 +86255,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stalagmite (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7483613854455682575, guid: 8701a25f071fdb8409f4d51c79cd7070, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8701a25f071fdb8409f4d51c79cd7070, type: 3}
 --- !u!1001 &1097531654
@@ -86260,6 +86312,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6523015570306645973, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 6523015570306645978, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
       propertyPath: m_Name
       value: Stalactites (7)
@@ -86321,6 +86377,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3450047575431762537, guid: de5f4f8153e22db48a4a5594ce4e557f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 3450047575431762539, guid: de5f4f8153e22db48a4a5594ce4e557f, type: 3}
       propertyPath: m_Name
       value: LAVA_01_0 1 (6)
@@ -86378,6 +86438,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6523015570306645973, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 6523015570306645975, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
       propertyPath: m_Size.y
       value: 1.205262
@@ -86676,6 +86740,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3450047575431762537, guid: de5f4f8153e22db48a4a5594ce4e557f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 3450047575431762539, guid: de5f4f8153e22db48a4a5594ce4e557f, type: 3}
       propertyPath: m_Name
       value: LAVA_01_0 1 (6)
@@ -86992,6 +87060,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3450047575431762537, guid: de5f4f8153e22db48a4a5594ce4e557f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 3450047575431762539, guid: de5f4f8153e22db48a4a5594ce4e557f, type: 3}
       propertyPath: m_Name
       value: LAVA_01_0 1 (5)
@@ -87053,6 +87125,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3450047575431762537, guid: de5f4f8153e22db48a4a5594ce4e557f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 3450047575431762539, guid: de5f4f8153e22db48a4a5594ce4e557f, type: 3}
       propertyPath: m_Name
       value: LAVA_01_0 1 (6)
@@ -87283,6 +87359,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3450047575431762537, guid: de5f4f8153e22db48a4a5594ce4e557f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 3450047575431762539, guid: de5f4f8153e22db48a4a5594ce4e557f, type: 3}
       propertyPath: m_Name
       value: LAVA_01_0 1
@@ -87440,6 +87520,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3450047575431762537, guid: de5f4f8153e22db48a4a5594ce4e557f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 3450047575431762539, guid: de5f4f8153e22db48a4a5594ce4e557f, type: 3}
       propertyPath: m_Name
       value: LAVA_01_0 1 (5)
@@ -87501,6 +87585,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3450047575431762537, guid: de5f4f8153e22db48a4a5594ce4e557f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 3450047575431762539, guid: de5f4f8153e22db48a4a5594ce4e557f, type: 3}
       propertyPath: m_Name
       value: LAVA_01_0 1
@@ -87648,6 +87736,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3450047575431762537, guid: de5f4f8153e22db48a4a5594ce4e557f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 3450047575431762539, guid: de5f4f8153e22db48a4a5594ce4e557f, type: 3}
       propertyPath: m_Name
       value: LAVA_01_0 1 (4)
@@ -87798,6 +87890,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3450047575431762537, guid: de5f4f8153e22db48a4a5594ce4e557f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 3450047575431762539, guid: de5f4f8153e22db48a4a5594ce4e557f, type: 3}
       propertyPath: m_Name
       value: LAVA_01_0 1 (5)
@@ -87941,6 +88037,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6523015570306645973, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 6523015570306645978, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
       propertyPath: m_Name
       value: Stalactites (5)
