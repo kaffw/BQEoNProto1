@@ -55,6 +55,16 @@ public class CombatMelee : MonoBehaviour
                     enemiesToDamage[i].GetComponent<EnemyBehaviour>().TakeHit(damage);
                 }
 
+                Collider2D[] GroundEnemies = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
+                for (int i = 0; i < GroundEnemies.Length; i++)
+                {
+                    Enemy1Pathing enemyPathing = GroundEnemies[i].GetComponent<Enemy1Pathing>();
+                    if (enemyPathing != null)
+                    {
+                        enemyPathing.GroundTakeDamage();
+                    }
+                }
+
             // Trigger the appropriate animation based on the combo count
             switch (comboCount)
                 {
