@@ -19,6 +19,8 @@ TagManager:
   - Projectile
   - Terrain
   - PillarDeleter
+  - Portal
+  - PortalExit
   layers:
   - Default
   - TransparentFX

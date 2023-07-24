@@ -24,6 +24,7 @@ public class moveset : MonoBehaviour
     [SerializeField] private float jumpForce = 17.5f;
 
     private Vector3 respawnPoint;
+    private Vector2 portalExit;
     //public GameObject fallDetector;
 
     public static int deathCounter = 0;
@@ -337,6 +338,15 @@ public class moveset : MonoBehaviour
         else if (collision.tag == "Checkpoint")
         {
             respawnPoint = transform.position;
+        }
+
+        if (collision.tag == "Portal")
+        {
+            transform.position = portalExit;
+        }
+        else if (collision.tag == "PortalExit")
+        {
+            portalExit = new Vector2(transform.position.x, transform.position.y + 20);
         }
     }
 
