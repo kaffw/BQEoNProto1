@@ -23,7 +23,7 @@ public class NagaPathing : MonoBehaviour
 
     //movement
     public float movementTimer = 0f;
-    public float movementSpeed = 1.25f;
+    public float movementSpeed = 3f;
     public bool left = false, right = true;
 
     //levitaion
