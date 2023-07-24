@@ -21,7 +21,7 @@ public class moveset : MonoBehaviour
     public static float dirX = 0f;
     public float horizontalMove = 0f;                   //from Playermovement.cs
     [SerializeField] private float moveSpeed = 14f;
-    [SerializeField] private float jumpForce = 17.5f;
+    [SerializeField] private float jumpForce = 17.5f;//17.5f;
 
     private Vector3 respawnPoint;
     private Vector2 portalExit;
@@ -346,7 +346,7 @@ public class moveset : MonoBehaviour
         }
         else if (collision.tag == "PortalExit")
         {
-            portalExit = new Vector2(transform.position.x, transform.position.y + 20);
+            portalExit = new Vector2(transform.position.x, transform.position.y + 30);
         }
     }
 
