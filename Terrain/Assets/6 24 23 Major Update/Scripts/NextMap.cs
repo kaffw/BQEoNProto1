@@ -14,59 +14,44 @@ public class NextMap : MonoBehaviour
 
     public IEnumerator ChangeScene()
     {
-        Debug.Log("current Act location: " + moveset.ActLocation);
+        //Debug.Log("current Act location: " + moveset.ActLocation);
         fade.FadeIn();
         yield return new WaitForSeconds(1);
 
-        Debug.Log(MapSequenceInitializer.NagasLairEntry);
-
-        if(MapSequenceInitializer.NagasLairEntry) SceneManager.LoadScene(20);
-
-        if (moveset.ActLocation == 3 || MapSequenceInitializer.entryToAct3 == true)
+        if (moveset.ActLocation == 0)
         {
-            if (MapSequenceInitializer.NagasLairEntry == false)
-            {
-                SceneManager.LoadScene(19);
-                MapSequenceInitializer.NagasLairEntry = true;
-            }
+            //In NextAct...
         }
 
-        else if (moveset.ActLocation == 1 && moveset.ActLocation != 2)
+        else if (moveset.ActLocation == 1)
         {
             MapSequenceInitializer.location++;
             MapSequenceInitializer.counterToAct1End++;
-            if (MapSequenceInitializer.counterToAct1End == 4)
+            if (MapSequenceInitializer.location == 4)
             {
-                MapSequenceInitializer.entryToAct2 = true;
-                moveset.ActLocation = 2;
-                SceneManager.LoadScene(8);
+                SceneManager.LoadScene(9);
+                //go End act 1.. 9
             }
-            else
-            {
-                if (moveset.ActLocation == 1)
-                SceneManager.LoadScene(MapSequenceInitializer.mapsequence[MapSequenceInitializer.location]);
-            }
+            else SceneManager.LoadScene(MapSequenceInitializer.location);
         }
 
-        else if (moveset.ActLocation == 2 && moveset.ActLocation != 3)
+        else if (moveset.ActLocation == 2)
         {
             MapSequenceInitializer.act2Location++;
             MapSequenceInitializer.counterToAct2End++;
-            if (MapSequenceInitializer.counterToAct2End == 7)
+            if (MapSequenceInitializer.act2Location == 7)
             {
-                Debug.Log(MapSequenceInitializer.entryToAct3);
-                MapSequenceInitializer.entryToAct3 = true;
-                moveset.ActLocation = 3;
-                SceneManager.LoadScene(18);
-                Debug.Log(moveset.ActLocation);
+                SceneManager.LoadScene(20);    
+                //go end act 2.. 20
             }
-            else
-            {
-                if (moveset.ActLocation == 2)
-                SceneManager.LoadScene(MapSequenceInitializer.mapsequence2[MapSequenceInitializer.act2Location]);
-            }
+            SceneManager.LoadScene(MapSequenceInitializer.act2Location);
         }
-        
+
+        else if (moveset.ActLocation == 3)
+        {
+
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
