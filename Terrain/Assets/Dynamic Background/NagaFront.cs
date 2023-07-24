@@ -15,6 +15,6 @@ public class NagaFront : MonoBehaviour
 
     void Update()
     {
-        transform.position = new Vector2(Target.transform.position.x / -8, 10);
+        transform.position = new Vector2((Target.transform.position.x / -8) + 7, 4);
     }
 }
