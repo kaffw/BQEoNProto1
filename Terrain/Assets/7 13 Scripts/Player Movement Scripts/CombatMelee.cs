@@ -71,6 +71,12 @@ public class CombatMelee : MonoBehaviour
                     {
                         breakRocks.BreakIt();
                     }
+
+                    EnemyHealth mobHealth = enemiesToDamage[i].GetComponent<EnemyHealth>();
+                    if (mobHealth != null)
+                    {
+                        mobHealth.GroundTakeDamage();
+                    }
                 }
 
             // Trigger the appropriate animation based on the combo count
