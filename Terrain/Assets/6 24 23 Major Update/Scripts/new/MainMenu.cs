@@ -47,7 +47,7 @@ public class MainMenu : MonoBehaviour
         PlayImage.color = new Color(255, 255, 255, 255);
 
         yield return new WaitForSeconds(0.25f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(22);
     }
     private IEnumerator OptionWait()
     {

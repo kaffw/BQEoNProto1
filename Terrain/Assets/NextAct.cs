@@ -18,24 +18,6 @@ public class NextAct : MonoBehaviour
         fade.FadeIn();
         yield return new WaitForSeconds(1);
 
-        if (moveset.ActLocation == 0)
-        {
-            moveset.ActLocation = 1;
-            SceneManager.LoadScene(2); //RP
-        }
-
-        else if (moveset.ActLocation == 1)
-        {
-            moveset.ActLocation = 2;
-            SceneManager.LoadScene(10); //RP
-        }
-
-        else if (moveset.ActLocation == 2)
-        {
-            moveset.ActLocation = 3;
-            SceneManager.LoadScene(22); //RP
-        }
-        /*
         if(moveset.ActLocation == 1 || MapSequenceInitializer.entryToAct2 == true)
         {
             SceneManager.LoadScene(8);
@@ -48,7 +30,7 @@ public class NextAct : MonoBehaviour
         {
             //SceneManager.LoadScene(18);
         }
-        */
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)

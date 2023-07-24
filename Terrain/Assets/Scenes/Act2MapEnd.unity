@@ -67444,7 +67444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1203713767248611837, guid: 7427a84d6d4ec4d4ba66d7046ed9f03b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8770047018542885959, guid: 7427a84d6d4ec4d4ba66d7046ed9f03b, type: 3}
       propertyPath: canvasgroup
@@ -67567,6 +67567,10 @@ PrefabInstance:
     - target: {fileID: 5356610017662567095, guid: 764ef5ad0980b9040a569c452569c676, type: 3}
       propertyPath: m_Name
       value: Next Act
+      objectReference: {fileID: 0}
+    - target: {fileID: 5356610017662567095, guid: 764ef5ad0980b9040a569c452569c676, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 764ef5ad0980b9040a569c452569c676, type: 3}

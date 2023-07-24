@@ -12,7 +12,7 @@ public class StartGameIntro : MonoBehaviour
 
         if (timer > 6f)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
     }
 }

@@ -27,7 +27,7 @@ public class OpeningSceneManager : MonoBehaviour
         }
         if (timer > 43f)
         {
-            SceneManager.LoadScene(22);
+            SceneManager.LoadScene(0);
         }
     }
 }

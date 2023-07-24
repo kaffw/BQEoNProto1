@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Map (Tutorial).unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Map0(Act 1 Rest Point).unity
-    guid: 2298163f5313edf40a7acfd4b20b2467
-  - enabled: 1
     path: Assets/Scenes/Map1.unity
     guid: 17df482768483ba45a4ead79703ef62d
   - enabled: 1
@@ -35,9 +32,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Map7(End of Act1).unity
     guid: a4b49b98f2f376c4b967dbf0573ca988
-  - enabled: 1
-    path: Assets/Scenes/Act2Map0(Rest Point).unity
-    guid: 980d41fde9f0e734a9a5b5f05a9b0e65
   - enabled: 1
     path: Assets/Scenes/Act2Map1.unity
     guid: 2a3fa8ab36d5c664d87e0808f47fba82
@@ -69,9 +63,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Act2MapEnd.unity
     guid: ca117ca550aec3b4f9645be71faec9b1
   - enabled: 1
-    path: Assets/Scenes/MapX(Act3 Rest Point).unity
-    guid: efaae8767d6630242a0d2e208936da83
-  - enabled: 1
     path: Assets/Scenes/MapYPreFinalBoss.unity
     guid: ebc80c3f6a8e109498c0227acd432b2a
   - enabled: 1
@@ -89,4 +80,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PreBossScene.unity
     guid: c0e4c85033ad04842b71d9432b437ba5
+  - enabled: 1
+    path: Assets/Scenes/Map0(Act 1 Rest Point).unity
+    guid: 2298163f5313edf40a7acfd4b20b2467
+  - enabled: 1
+    path: Assets/Scenes/Act2Map0(Rest Point).unity
+    guid: 980d41fde9f0e734a9a5b5f05a9b0e65
+  - enabled: 1
+    path: Assets/Scenes/MapX(Act3 Rest Point).unity
+    guid: efaae8767d6630242a0d2e208936da83
   m_configObjects: {}

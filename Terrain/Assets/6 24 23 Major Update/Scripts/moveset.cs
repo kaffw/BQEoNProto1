@@ -87,7 +87,7 @@ public class moveset : MonoBehaviour
     //private enum MovementState { idle, running, jumping, falling }
     //private MovementState state = MovementState.idle;
 
-    public static int ActLocation = 0;
+    public static int ActLocation = 1;
 
     //hit immunity
     public static float hitImmunityDuration = 1.5f;
@@ -225,6 +225,7 @@ public class moveset : MonoBehaviour
             canGrabLedge = false;
 
             Vector2 ledgePosition = GetComponentInChildren<LedgeDetection>().transform.position;
+
 
             climbBegunPosition = ledgePosition + offset1;
             climbOverPosition = ledgePosition + offset2;
@@ -435,7 +436,7 @@ public class moveset : MonoBehaviour
 
     private void ActLocator()
     {
-        /*if (MapSequenceInitializer.entryToAct2 == true)
+        if (MapSequenceInitializer.entryToAct2 == true)
         {
             ActLocation = 2;
         }
@@ -443,7 +444,7 @@ public class moveset : MonoBehaviour
         {
             ActLocation = 3;
         }
-        */
+
     }
 
     private IEnumerator ImmunityDuration()

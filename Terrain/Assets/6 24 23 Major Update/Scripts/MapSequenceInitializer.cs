@@ -38,30 +38,30 @@ public class MapSequenceInitializer : MonoBehaviour
             mapsequence2.Clear();
             MapSequenceUpdate();
             moveset.deathCounter = 0;
-            if(moveset.ActLocation == 1) SceneManager.LoadScene(2); //Act 1 Rest Point
-            if(moveset.ActLocation == 2) SceneManager.LoadScene(10); //Act 2 Rest Point
-            if(moveset.ActLocation == 3) SceneManager.LoadScene(21); //Act 3 Rest Point
+            if(moveset.ActLocation == 1) SceneManager.LoadScene(1);
+            if(moveset.ActLocation == 2) SceneManager.LoadScene(8);
+            if(moveset.ActLocation == 3) SceneManager.LoadScene(18);
         }
 
         if (Health.damaged) { savedCurrentHealth--; Health.damaged = false; }
+
     }
 
     public void MapSequenceUpdate()
     {
         location = 0;
         act2Location = 0;
-
         counterToAct1End = 0;
         counterToAct2End = 0;
-
         entryToAct2 = false;
         entryToAct3 = false;
 
-        mapsequence.Add(1);
+        //mapsequence.Add(1);
+        mapsequence.Add(25); //Act 1 Rest Point
 
         while (mapsequence.Count < 7)
         {
-            int num = UnityEngine.Random.Range(3, 9);
+            int num = UnityEngine.Random.Range(2, 8);
             dupeChecker = false;
 
             foreach (int numInSequence in mapsequence)
@@ -80,11 +80,12 @@ public class MapSequenceInitializer : MonoBehaviour
             }
         }
 
-        mapsequence.Add(8);
+        mapsequence.Add(8); // End of Act 1
 
-        while(mapsequence2.Count < 9)
+        mapsequence2.Add(26);
+        while(mapsequence2.Count < 10)
         {
-            int num = UnityEngine.Random.Range(11, 20);
+            int num = UnityEngine.Random.Range(9, 18);
             dupeChecker = false;
 
             foreach (int numInSequence in mapsequence2)
@@ -102,6 +103,7 @@ public class MapSequenceInitializer : MonoBehaviour
                 mapsequence2.Add(num);
             }
         }
+        mapsequence2.Add(8);
         /*
         for (int y = 0; y < 10; y++)
         {
