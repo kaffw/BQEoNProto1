@@ -36,7 +36,7 @@ public class ProjectileBehaviour : MonoBehaviour
         var enemy = collision.collider.GetComponent<EnemyBehaviour>();
         if (enemy)
         {
-            enemy.TakeHit(1);
+            enemy.TakeHit(5);
         }
 
         bulletAnim.SetTrigger("ProjectileBurst");

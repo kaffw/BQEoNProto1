@@ -18,11 +18,11 @@ public class NextAct : MonoBehaviour
         fade.FadeIn();
         yield return new WaitForSeconds(1);
 
-        if(moveset.ActLocation == 1)
+        if(moveset.ActLocation == 1 || MapSequenceInitializer.entryToAct2 == true)
         {
             SceneManager.LoadScene(8);
         }
-        if(moveset.ActLocation == 2)
+        if(moveset.ActLocation == 2 || MapSequenceInitializer.entryToAct3 == true)
         {
             SceneManager.LoadScene(18);
         }
