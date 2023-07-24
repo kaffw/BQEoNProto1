@@ -9,6 +9,7 @@ public class Entity : MonoBehaviour
     public D_Entity entityData;
 
     public int facingDirection { get; private set; }
+    public bool hit { get; private set; }
     public Rigidbody2D rb { get; private set; }
     public Animator anim { get; private set; }
     public GameObject aliveGO { get; private set; }
@@ -20,11 +21,11 @@ public class Entity : MonoBehaviour
     [SerializeField] private Transform minAgroRange;
     [SerializeField] private Transform maxAgroRange;
 
-
     private Vector2 velocityWorkSpace;
 
     public virtual void Start(){
         facingDirection = 1;
+        hit = false; 
 
         aliveGO = transform.Find("Alive").gameObject;
         rb = aliveGO.GetComponent<Rigidbody2D>();
@@ -72,6 +73,21 @@ public class Entity : MonoBehaviour
     public virtual void Flip(){
         facingDirection *= -1;
         aliveGO.transform.Rotate(0f, 180f, 0f);
+    }
+
+    public virtual void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.tag == "Player")
+        {
+            if (moveset.immunity == false)
+            {
+                collision.GetComponent<Health>().TakeDamage(entityData.bodyDamage);
+                hit = true;
+                moveset.immunity = true;
+            }
+
+        }
     }
 
     public virtual void OnDrawGizmos(){

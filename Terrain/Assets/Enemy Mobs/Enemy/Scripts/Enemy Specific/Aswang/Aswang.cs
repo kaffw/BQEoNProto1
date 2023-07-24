@@ -33,6 +33,7 @@ public class Aswang : Entity
         meleeAttackState = new Aswang_MeleeAttackState(this, stateMachine, "meleeAttack", meleeAttackPosition, meleeAttackStateData, this);
         followPlayerState = new Aswang_FollowPlayerState(this, stateMachine, "followPlayer", followPlayerStateData, this);
 
+
         stateMachine.Initialize(moveState);
     }
 
