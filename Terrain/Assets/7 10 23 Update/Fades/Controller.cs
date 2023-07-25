@@ -13,9 +13,4 @@ public class Controller : MonoBehaviour
         fade.FadeOut();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

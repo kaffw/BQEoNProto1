@@ -20,7 +20,7 @@ public class Relic2NextScene : MonoBehaviour
         {
             //MapSequenceInitializer.act2Location++;
             //MapSequenceInitializer.counterToAct2End++;
-            SceneManager.LoadScene(27);
+            SceneManager.LoadScene(25);
         }
     }
 }

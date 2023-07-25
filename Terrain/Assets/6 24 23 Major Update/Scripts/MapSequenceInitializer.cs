@@ -38,9 +38,9 @@ public class MapSequenceInitializer : MonoBehaviour
             mapsequence2.Clear();
             MapSequenceUpdate();
             moveset.deathCounter = 0;
-            if(moveset.ActLocation == 1) SceneManager.LoadScene(1);
-            if(moveset.ActLocation == 2) SceneManager.LoadScene(8);
-            if(moveset.ActLocation == 3) SceneManager.LoadScene(18);
+            if(moveset.ActLocation == 1) SceneManager.LoadScene(26); //1 //25
+            if(moveset.ActLocation == 2) SceneManager.LoadScene(25); //8 //26
+            if(moveset.ActLocation == 3) SceneManager.LoadScene(27); //18
         }
 
         if (Health.damaged) { savedCurrentHealth--; Health.damaged = false; }
@@ -104,11 +104,5 @@ public class MapSequenceInitializer : MonoBehaviour
             }
         }
         mapsequence2.Add(8);
-        /*
-        for (int y = 0; y < 10; y++)
-        {
-            Debug.Log(mapsequence2[y]);
-        }
-        */
     }
 }

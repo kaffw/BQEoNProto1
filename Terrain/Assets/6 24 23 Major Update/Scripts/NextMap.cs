@@ -29,25 +29,57 @@ public class NextMap : MonoBehaviour
                 MapSequenceInitializer.NagasLairEntry = true;
             }
         }
-
+        //act 1 and act 2 swapped
         else if (moveset.ActLocation == 1 && moveset.ActLocation != 2)
+        {
+            MapSequenceInitializer.act2Location++;
+            MapSequenceInitializer.counterToAct2End++;
+            if (MapSequenceInitializer.counterToAct2End == 7)
+            {
+                Debug.Log(MapSequenceInitializer.entryToAct3);
+                MapSequenceInitializer.entryToAct3 = true;
+                moveset.ActLocation = 2;
+                SceneManager.LoadScene(18);
+                Debug.Log(moveset.ActLocation);
+            }
+            else
+            {
+                if (moveset.ActLocation == 1)
+                    SceneManager.LoadScene(MapSequenceInitializer.mapsequence2[MapSequenceInitializer.act2Location]);
+            }
+
+        }
+
+        else if (moveset.ActLocation == 2 && moveset.ActLocation != 3)
         {
             MapSequenceInitializer.location++;
             MapSequenceInitializer.counterToAct1End++;
             if (MapSequenceInitializer.counterToAct1End == 4)
             {
                 MapSequenceInitializer.entryToAct2 = true;
-                moveset.ActLocation = 2;
+                moveset.ActLocation = 3;
                 SceneManager.LoadScene(8);
             }
             else
             {
-                if (moveset.ActLocation == 1)
-                SceneManager.LoadScene(MapSequenceInitializer.mapsequence[MapSequenceInitializer.location]);
+                if (moveset.ActLocation == 2)
+                    SceneManager.LoadScene(MapSequenceInitializer.mapsequence[MapSequenceInitializer.location]);
             }
         }
 
-        else if (moveset.ActLocation == 2 && moveset.ActLocation != 3)
+        Debug.Log(MapSequenceInitializer.location);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            StartCoroutine(ChangeScene());
+        }
+    }
+}
+/*
+         else if (moveset.ActLocation == 1 && moveset.ActLocation != 2)
         {
             MapSequenceInitializer.act2Location++;
             MapSequenceInitializer.counterToAct2End++;
@@ -64,16 +96,23 @@ public class NextMap : MonoBehaviour
                 if (moveset.ActLocation == 2)
                 SceneManager.LoadScene(MapSequenceInitializer.mapsequence2[MapSequenceInitializer.act2Location]);
             }
+
         }
 
-        Debug.Log(MapSequenceInitializer.location);
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
+        else if (moveset.ActLocation == 2 && moveset.ActLocation != 3)
         {
-            StartCoroutine(ChangeScene());
+            MapSequenceInitializer.location++;
+            MapSequenceInitializer.counterToAct1End++;
+            if (MapSequenceInitializer.counterToAct1End == 4)
+            {
+                MapSequenceInitializer.entryToAct2 = true;
+                moveset.ActLocation = 2;
+                SceneManager.LoadScene(8);
+            }
+            else
+            {
+                if (moveset.ActLocation == 1)
+                SceneManager.LoadScene(MapSequenceInitializer.mapsequence[MapSequenceInitializer.location]);
+            }
         }
-    }
-}
+ */
