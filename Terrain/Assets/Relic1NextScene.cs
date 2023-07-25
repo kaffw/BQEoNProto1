@@ -18,7 +18,7 @@ public class Relic1NextScene : MonoBehaviour
 
         if (timer > 6.1f)
         {
-            SceneManager.LoadScene(MapSequenceInitializer.mapsequence2[0]);
+            SceneManager.LoadScene(26);
         }
     }
 }
