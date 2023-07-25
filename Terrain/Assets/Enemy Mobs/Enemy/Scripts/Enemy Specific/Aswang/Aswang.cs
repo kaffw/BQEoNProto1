@@ -10,14 +10,16 @@ public class Aswang : Entity
     public Aswang_ChargeState chargeState { get; private set; }
     public Aswang_LookForPlayerState lookForPlayerState { get; private set; }
     public Aswang_MeleeAttackState meleeAttackState { get; private set; }
+    public Aswang_StunState stunState { get; private set; }
     public Aswang_FollowPlayerState followPlayerState { get; private set;  }
-
+    
     [SerializeField] private D_IdleState idleStateData;
     [SerializeField] private D_MoveState moveStateData;
     [SerializeField] private D_PlayerDetected playerDetectedData;
     [SerializeField] private D_ChargeState chargeStateData;
     [SerializeField] private D_LookForPlayer lookForPlayerStateData;
     [SerializeField] private D_MeleeAttackState meleeAttackStateData;
+    [SerializeField] private D_StunState stunStateData;
     [SerializeField] private D_FollowPlayerState followPlayerStateData;
 
     [SerializeField] private Transform meleeAttackPosition;
@@ -31,8 +33,8 @@ public class Aswang : Entity
         chargeState = new Aswang_ChargeState(this, stateMachine, "charge", chargeStateData, this);
         lookForPlayerState = new Aswang_LookForPlayerState(this, stateMachine, "lookForPlayer", lookForPlayerStateData, this);
         meleeAttackState = new Aswang_MeleeAttackState(this, stateMachine, "meleeAttack", meleeAttackPosition, meleeAttackStateData, this);
+        stunState = new Aswang_StunState(this, stateMachine, "stun", stunStateData, this);
         followPlayerState = new Aswang_FollowPlayerState(this, stateMachine, "followPlayer", followPlayerStateData, this);
-
 
         stateMachine.Initialize(moveState);
     }
@@ -42,6 +44,15 @@ public class Aswang : Entity
         base.OnDrawGizmos();
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(meleeAttackPosition.position, meleeAttackStateData.attackRadius);
+    }
 
+    public override void Damage(AttackDetails attackDetails)
+    {
+        base.Damage(attackDetails);
+
+        if (isStunned && stateMachine.currentState != stunState)
+        {
+            stateMachine.ChangeState(stunState);
+        }
     }
 }

@@ -10,12 +10,13 @@ public class CombatMelee : MonoBehaviour
     private int comboCount = 0; // Tracks the current combo count
     private bool isAttacking = false; // Flag to prevent attacking during combo
 
+    [SerializeField] private float stunDamageAmount = 1f;
     private float attackRange;
     public Transform attackPos;
     public LayerMask whatIsEnemies;
     public float damage;
     public Animator anim;
-    private float[] AttackDetails = new float[2];
+    private AttackDetails attackDetails;
     public GameObject AttackProjectile;
     public bool AttackProjectileState = false;
 
@@ -48,15 +49,14 @@ public class CombatMelee : MonoBehaviour
                 AttackProjectileState = true;
 
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
-                AttackDetails[0] = damage;
-                AttackDetails[1] = transform.position.x;
+                
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
                     // Check for Regular Enemies with EnemyBehaviour
                     EnemyBehaviour enemyBehaviour = enemiesToDamage[i].GetComponent<EnemyBehaviour>();
                     if (enemyBehaviour != null)
                     {
-                        enemyBehaviour.TakeHit(damage);
+                        enemyBehaviour.TakeHit(attackDetails.damageAmount);
                     }
 
                     // Check for Ground Enemies with Enemy1Pathing
@@ -105,6 +105,19 @@ public class CombatMelee : MonoBehaviour
             {
                 comboCount = 0;
             }
+        }
+    }
+
+    private void CheckAttackHitBox()
+    {
+        Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
+        attackDetails.damageAmount = damage;
+        attackDetails.position = transform.position;
+        attackDetails.stunDamageAmount = stunDamageAmount;
+
+        foreach (Collider2D collider in detectedObjects)
+        {
+            collider.transform.parent.SendMessage("Damage", attackDetails);
         }
     }
 
