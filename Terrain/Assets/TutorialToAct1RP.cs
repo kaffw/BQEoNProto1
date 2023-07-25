@@ -17,7 +17,7 @@ public class TutorialToAct1RP : MonoBehaviour
         fade.FadeIn();
         yield return new WaitForSeconds(1);
 
-        SceneManager.LoadScene(26);
+        SceneManager.LoadScene(25);
     }
     
     
