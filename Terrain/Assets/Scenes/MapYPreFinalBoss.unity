@@ -37020,6 +37020,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bulan
       objectReference: {fileID: 0}
+    - target: {fileID: 4092064503731193496, guid: 076aaa84b90f9a343b748833fe57fddc, type: 3}
+      propertyPath: m_FalloffIntensity
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092064503731193496, guid: 076aaa84b90f9a343b748833fe57fddc, type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 076aaa84b90f9a343b748833fe57fddc, type: 3}
 --- !u!1 &1910648451 stripped
