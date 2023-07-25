@@ -23,6 +23,6 @@ public class TutorialBG : MonoBehaviour
         float offsetX = (Target.transform.position.x - initialPosition.x) / 15f;
 
         // Use the calculated offset to update the background's position
-        transform.position = new Vector3(initialPosition.x + offsetX, initialPosition.y, initialPosition.z);
+        transform.position = new Vector3(initialPosition.x - offsetX, initialPosition.y, initialPosition.z);
     }
 }
