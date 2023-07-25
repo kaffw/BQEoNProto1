@@ -9,7 +9,6 @@ public class EnemyTrap : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (collision.tag == "Player")
         {
             if (moveset.immunity == false)
@@ -18,7 +17,8 @@ public class EnemyTrap : MonoBehaviour
                 hit = true;
                 moveset.immunity = true;
             }
-
         }
+        else if (collision.tag == "Terrain") { Debug.Log("hit terrain"); }
+        else { Debug.Log("hit nothing"); }
     }
 }

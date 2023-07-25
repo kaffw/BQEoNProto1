@@ -26,8 +26,8 @@ public class MeteorExplodeTrigger : MonoBehaviour
             meteorSprite.color = new Color(255, 255, 255, 255);
             explosionMainSprite.color = new Color(0, 0, 0, 0);
             meteorExp.SetTrigger("MeteorExplosion");
-            Destroy(gameObject, 1.5f);
-            Destroy(explosionMain, 1.5f);
+            Destroy(gameObject, 1.25f);
+            Destroy(explosionMain, 1.25f);
         }
     }
 

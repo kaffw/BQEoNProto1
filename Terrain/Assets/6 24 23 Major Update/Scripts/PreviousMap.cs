@@ -14,17 +14,23 @@ public class PreviousMap : MonoBehaviour
 
             if (moveset.ActLocation == 1)
             {
-                MapSequenceInitializer.location--;
-                MapSequenceInitializer.counterToAct1End--;
-                SceneManager.LoadScene(MapSequenceInitializer.mapsequence[MapSequenceInitializer.location]);
+                if (MapSequenceInitializer.location != 1)
+                {
+                    MapSequenceInitializer.location--;
+                    MapSequenceInitializer.counterToAct1End--;
+                    SceneManager.LoadScene(MapSequenceInitializer.mapsequence[MapSequenceInitializer.location]);
+                }
             }
 
             //MapSequenceInitializer.act2Location--;
             if (moveset.ActLocation == 2)
             {
-                MapSequenceInitializer.act2Location--;
-                MapSequenceInitializer.counterToAct2End--;
-                SceneManager.LoadScene(MapSequenceInitializer.mapsequence2[MapSequenceInitializer.act2Location]);
+                if (MapSequenceInitializer.act2Location != 1)
+                {
+                    MapSequenceInitializer.act2Location--;
+                    MapSequenceInitializer.counterToAct2End--;
+                    SceneManager.LoadScene(MapSequenceInitializer.mapsequence2[MapSequenceInitializer.act2Location]);
+                }
             }
         }
     }

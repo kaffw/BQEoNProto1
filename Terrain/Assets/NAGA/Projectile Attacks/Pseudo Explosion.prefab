@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6052580699668216232}
   - component: {fileID: 6052580699668216233}
   - component: {fileID: 4175859531448009499}
+  - component: {fileID: 8354513522637559949}
   m_Layer: 0
   m_Name: Pseudo Explosion
   m_TagString: Untagged
@@ -161,6 +162,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8354513522637559949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6052580699668216228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e945c1acff849a644b8508859a06de98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  hit: 0
 --- !u!1 &8955952364676729757
 GameObject:
   m_ObjectHideFlags: 0

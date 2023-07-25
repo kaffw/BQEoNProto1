@@ -21,6 +21,8 @@ TagManager:
   - PillarDeleter
   - Portal
   - PortalExit
+  - Clouds
+  - CloudResetter
   layers:
   - Default
   - TransparentFX

@@ -14,13 +14,12 @@ public class NextMap : MonoBehaviour
 
     public IEnumerator ChangeScene()
     {
-        Debug.Log("current Act location: " + moveset.ActLocation);
+        Debug.Log(MapSequenceInitializer.location);
+        //Debug.Log("current Act location: " + moveset.ActLocation);
         fade.FadeIn();
         yield return new WaitForSeconds(1);
 
-        Debug.Log(MapSequenceInitializer.NagasLairEntry);
-
-        if(MapSequenceInitializer.NagasLairEntry) SceneManager.LoadScene(20);
+        if (MapSequenceInitializer.NagasLairEntry) SceneManager.LoadScene(20);
 
         if (moveset.ActLocation == 3 || MapSequenceInitializer.entryToAct3 == true)
         {
@@ -66,7 +65,8 @@ public class NextMap : MonoBehaviour
                 SceneManager.LoadScene(MapSequenceInitializer.mapsequence2[MapSequenceInitializer.act2Location]);
             }
         }
-        
+
+        Debug.Log(MapSequenceInitializer.location);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
