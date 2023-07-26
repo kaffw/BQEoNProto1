@@ -11,8 +11,10 @@ public class Healthbar : MonoBehaviour
     [SerializeField] private Image totalMana;
     [SerializeField] private Image currentMana;
 
+    [SerializeField] private List<Image> moonPhases = new List<Image>();
+    public int moonIndex = 0;
     public float timer = 0f;
-
+    public int HPinInt;
     void Start()
     {
         totalhealthBar.fillAmount = 1;
@@ -22,6 +24,50 @@ public class Healthbar : MonoBehaviour
     {
         //currenthealthBar.fillAmount = playerHealth.currentHealth / 5;
         currenthealthBar.fillAmount = Health.currentHealth / 5;
+        HPinInt = (int)Health.currentHealth;
+        switch (HPinInt)
+        {
+            case 1:
+                moonPhases[0].enabled = true;
+                moonPhases[1].enabled = false;
+                moonPhases[2].enabled = false;
+                moonPhases[3].enabled = false;
+                moonPhases[4].enabled = false;
+                break;
+
+            case 2:
+                moonPhases[0].enabled = false;
+                moonPhases[1].enabled = true;
+                moonPhases[2].enabled = false;
+                moonPhases[3].enabled = false;
+                moonPhases[4].enabled = false;
+                break;
+
+            case 3:
+                moonPhases[0].enabled = false;
+                moonPhases[1].enabled = false;
+                moonPhases[2].enabled = true;
+                moonPhases[3].enabled = false;
+                moonPhases[4].enabled = false;
+                break;
+
+            case 4:
+                moonPhases[0].enabled = false;
+                moonPhases[1].enabled = false;
+                moonPhases[2].enabled = false;
+                moonPhases[3].enabled = true;
+                moonPhases[4].enabled = false;
+                break;
+
+            case 5:
+                moonPhases[4].enabled = true;
+                moonPhases[0].enabled = false;
+                moonPhases[1].enabled = false;
+                moonPhases[2].enabled = false;
+                moonPhases[3].enabled = false;
+                break;
+
+        }
         if (moveset.isFiring == true)
         {
             timer += Time.deltaTime;
