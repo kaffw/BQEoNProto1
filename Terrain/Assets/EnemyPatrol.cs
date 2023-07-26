@@ -152,6 +152,7 @@ public class EnemyPatrol : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Projectile"))
         {
+            enemyAnim.SetTrigger("enemyHit");
             enemyHealth--;
         }
     }
