@@ -34,11 +34,11 @@ public class NextMap : MonoBehaviour
         {
             MapSequenceInitializer.location++;
             MapSequenceInitializer.counterToAct1End++;
-            if (MapSequenceInitializer.counterToAct1End == 4)
+            if (MapSequenceInitializer.counterToAct1End == 7)
             {
                 MapSequenceInitializer.entryToAct2 = true;
                 moveset.ActLocation = 2;
-                SceneManager.LoadScene(8);
+                SceneManager.LoadScene(18);
             }
             else
             {
@@ -52,12 +52,12 @@ public class NextMap : MonoBehaviour
         {
             MapSequenceInitializer.act2Location++;
             MapSequenceInitializer.counterToAct2End++;
-            if (MapSequenceInitializer.counterToAct2End == 7)
+            if (MapSequenceInitializer.counterToAct2End == 4)
             {
                 Debug.Log(MapSequenceInitializer.entryToAct3);
                 MapSequenceInitializer.entryToAct3 = true;
                 moveset.ActLocation = 3;
-                SceneManager.LoadScene(18);
+                SceneManager.LoadScene(8);
                 Debug.Log(moveset.ActLocation);
             }
             else

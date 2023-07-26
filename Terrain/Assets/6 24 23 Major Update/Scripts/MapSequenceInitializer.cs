@@ -57,11 +57,11 @@ public class MapSequenceInitializer : MonoBehaviour
         entryToAct3 = false;
 
         //mapsequence.Add(1);
-        mapsequence.Add(25); //Act 1 Rest Point
+        mapsequence.Add(26); //Act 1 Rest Point
 
-        while (mapsequence.Count < 7)
+        while (mapsequence.Count < 10)
         {
-            int num = UnityEngine.Random.Range(2, 8);
+            int num = UnityEngine.Random.Range(9, 18);
             dupeChecker = false;
 
             foreach (int numInSequence in mapsequence)
@@ -82,10 +82,10 @@ public class MapSequenceInitializer : MonoBehaviour
 
         mapsequence.Add(8); // End of Act 1
 
-        mapsequence2.Add(26);
-        while(mapsequence2.Count < 10)
+        mapsequence2.Add(25);
+        while(mapsequence2.Count < 7)
         {
-            int num = UnityEngine.Random.Range(9, 18);
+            int num = UnityEngine.Random.Range(2, 8);
             dupeChecker = false;
 
             foreach (int numInSequence in mapsequence2)
