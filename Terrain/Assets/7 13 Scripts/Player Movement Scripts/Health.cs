@@ -65,7 +65,7 @@ public class Health : MonoBehaviour
         if (moveset.isImmune == false)
         {
             moveset.isImmune = true;
-            moveset.hitImmunityDuration = 3f;
+            moveset.hitImmunityDuration = 1.5f;
 
             currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
             moveset.deathCounter++;
