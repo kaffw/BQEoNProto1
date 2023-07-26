@@ -25332,6 +25332,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2154019665495295221, guid: 58057832c7a14ae4ea19d54faaa6ca1e, type: 3}
+      propertyPath: ToddlerModeTouhouBombs.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154019665495295221, guid: 58057832c7a14ae4ea19d54faaa6ca1e, type: 3}
+      propertyPath: ToddlerModeTouhouBombs.Array.data[5]
+      value: 
+      objectReference: {fileID: 6052580699668216228, guid: bfc2cc2f23c773c4e8dccfded8cb21b9, type: 3}
+    - target: {fileID: 2154019665495295221, guid: 58057832c7a14ae4ea19d54faaa6ca1e, type: 3}
+      propertyPath: ToddlerModeTouhouBombs.Array.data[6]
+      value: 
+      objectReference: {fileID: 6052580699668216228, guid: bfc2cc2f23c773c4e8dccfded8cb21b9, type: 3}
+    - target: {fileID: 2154019665495295221, guid: 58057832c7a14ae4ea19d54faaa6ca1e, type: 3}
+      propertyPath: ToddlerModeTouhouBombs.Array.data[7]
+      value: 
+      objectReference: {fileID: 6052580699668216228, guid: bfc2cc2f23c773c4e8dccfded8cb21b9, type: 3}
+    - target: {fileID: 2154019665495295221, guid: 58057832c7a14ae4ea19d54faaa6ca1e, type: 3}
+      propertyPath: ToddlerModeTouhouBombs.Array.data[8]
+      value: 
+      objectReference: {fileID: 6052580699668216228, guid: bfc2cc2f23c773c4e8dccfded8cb21b9, type: 3}
+    - target: {fileID: 2154019665495295221, guid: 58057832c7a14ae4ea19d54faaa6ca1e, type: 3}
+      propertyPath: ToddlerModeTouhouBombs.Array.data[9]
+      value: 
+      objectReference: {fileID: 6052580699668216228, guid: bfc2cc2f23c773c4e8dccfded8cb21b9, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58057832c7a14ae4ea19d54faaa6ca1e, type: 3}
 --- !u!1 &1241141244
@@ -26188,6 +26212,9 @@ MonoBehaviour:
   attackCastInterval: 10
   meteorSpawn: {fileID: 1491005998725891757, guid: 9339af6559ec65b41b9a5606efaad7c9, type: 3}
   cosmicFirePillar: {fileID: 5272557924716945110, guid: 9f3ea44b42b21784caab1d57d5ac35e6, type: 3}
+  enemyBehaviour: {fileID: 1571174932}
+  attackLimiter: 2
+  HPpercentage: 75
 --- !u!95 &1571174927
 Animator:
   serializedVersion: 5
@@ -26452,6 +26479,7 @@ MonoBehaviour:
   NagaAnim: {fileID: 1571174927}
   Hitpoints: 0
   Maxhitpoints: 200
+  isAlive: 1
 --- !u!70 &1571174933
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

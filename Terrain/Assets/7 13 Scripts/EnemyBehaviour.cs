@@ -7,6 +7,7 @@ public class EnemyBehaviour : MonoBehaviour
     public Animator NagaAnim;
     public float Hitpoints;
     [SerializeField] public float Maxhitpoints;
+    public bool isAlive = true;
 
     void Start()
     {
@@ -21,7 +22,9 @@ public class EnemyBehaviour : MonoBehaviour
         Hitpoints -= damage;
         if (Hitpoints <= 0)
         {
-            Destroy(gameObject);
+            isAlive = false;
+            Debug.Log("Naga died!");
+            //Destroy(gameObject);
         }
     }
 }

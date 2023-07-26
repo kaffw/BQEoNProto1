@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyTrap : MonoBehaviour
+public class ExplosionDamage : MonoBehaviour
 {
     [SerializeField] private float damage;
     public bool hit = false;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player")) // Use "gameObject.CompareTag" instead of "tag" directly
         {
