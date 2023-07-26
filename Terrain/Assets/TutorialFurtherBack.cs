@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TutorialBG : MonoBehaviour
+public class TutorialFurtherBack : MonoBehaviour
 {
     public GameObject dynamicBackground;
     public Rigidbody2D dynamicBackgroundRB;
@@ -20,7 +20,7 @@ public class TutorialBG : MonoBehaviour
     void Update()
     {
         // Calculate the offset from the initial position to the target position
-        float offsetX = (Target.transform.position.x - initialPosition.x) / 30f;
+        float offsetX = (Target.transform.position.x - initialPosition.x) / 60f;
 
         // Use the calculated offset to update the background's position
         transform.position = new Vector3(initialPosition.x - offsetX, initialPosition.y, initialPosition.z);

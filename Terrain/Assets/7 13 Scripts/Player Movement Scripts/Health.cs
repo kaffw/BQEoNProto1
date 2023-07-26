@@ -17,7 +17,6 @@ public class Health : MonoBehaviour
     public int timer = 0;
 
     public static bool damaged = false;
-    private bool dashIFrame = false;
 
     private void Awake()
     {
@@ -35,7 +34,7 @@ public class Health : MonoBehaviour
 
     private void Update()
     {
-        if (moveset.immunity == true) dashIFrame = true;
+
     }
 
     public void TakeDamage(float _damage)

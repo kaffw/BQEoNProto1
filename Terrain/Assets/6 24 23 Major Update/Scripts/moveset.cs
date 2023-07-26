@@ -50,8 +50,7 @@ public class moveset : MonoBehaviour
     private bool canGrabLedge = true;
     private bool canClimb; 
 
-
-
+    //wall sliding
     private float wallSlidingSpeed = 2f;
     public float dashingPower = 24f;
     public float dashingTime = 0.2f;
@@ -64,12 +63,9 @@ public class moveset : MonoBehaviour
     public float wallJumpingCounter;
     public float wallJumpingDuration = 0.4f;
 
-
     //double jump
     private bool doubleJump;
     [SerializeField] private float doubleJumpingPower = 17.5f;
-
-
 
     //ground
     [SerializeField] private LayerMask jumpableGround;
@@ -77,15 +73,11 @@ public class moveset : MonoBehaviour
     [SerializeField] private LayerMask wallLayer;
     [SerializeField] private Transform wallCheck;
 
-
     //shield
     public static bool shielded;
     [SerializeField] private GameObject shield;
 
     public static bool isJumping, isGrabbing; //from PlayerVariable.cs moved to moveset.cs
-
-    //private enum MovementState { idle, running, jumping, falling }
-    //private MovementState state = MovementState.idle;
 
     public static int ActLocation = 1;
 
@@ -142,6 +134,17 @@ public class moveset : MonoBehaviour
             StartCoroutine(ImmunityDuration());
         }
 
+        if (isImmune)
+        {
+            hitImmunityDuration -= Time.deltaTime;
+
+            if (hitImmunityDuration <= 0f)
+            {
+                isImmune = false;
+                // Re-enable collision and damage processing here
+            }
+        }
+
         if (isDashing)
         {
             return;
@@ -167,7 +170,6 @@ public class moveset : MonoBehaviour
                 }
             }
 
-            // newly added
             if (Input.GetKeyDown("k") && canDash)
             {
                 isImmune = true;
@@ -193,26 +195,17 @@ public class moveset : MonoBehaviour
                 anim.SetInteger("state", 0);
             }
             UpdateAnimationState();
+
             fireRateTimer += Time.deltaTime;
-            if (Input.GetKeyDown("u") && fireRateTimer >= fireRate && !isFiring)
+            if (Input.GetKeyDown("l") && fireRateTimer >= fireRate && !isFiring)
             {
                 isFiring = true;
                 anim.SetTrigger("CombatRanged");
                 StartCoroutine(DelayFire());
             }
         }
+
         ActLocator();
-
-        if (isImmune)
-        {
-            hitImmunityDuration -= Time.deltaTime;
-
-            if (hitImmunityDuration <= 0f)
-            {
-                isImmune = false;
-                // Re-enable collision and damage processing here
-            }
-        }
         //Debug.Log(ActLocation);
         //falldetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
 

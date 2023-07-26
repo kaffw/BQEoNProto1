@@ -59,8 +59,8 @@ public class CombatMelee : MonoBehaviour
                         enemyBehaviour.TakeHit(attackDetails.damageAmount);
                     }
 
-                    // Check for Ground Enemies with Enemy1Pathing
-                    Enemy1Pathing enemyPathing = enemiesToDamage[i].GetComponent<Enemy1Pathing>();
+                    // Check for Ground Enemies with EnemyPatrol
+                    EnemyPatrol enemyPathing = enemiesToDamage[i].GetComponent<EnemyPatrol>();
                     if (enemyPathing != null)
                     {
                         enemyPathing.GroundTakeDamage();
