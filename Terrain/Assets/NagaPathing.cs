@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEditor;
-using UnityEditor.Experimental.GraphView;
+//using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class NagaPathing : MonoBehaviour
@@ -55,7 +55,11 @@ public class NagaPathing : MonoBehaviour
     public List<int> posY = new List<int>();
     public float bombTime;*/
 
-
+    public EnemyBehaviour enemyBehaviour;
+    public int attackLimiter = 2;
+    public float HPpercentage = 150;
+    private int limit = 0;
+    private float attackSpeed = 5f;
     void Start()
     {
         nagaRB = GetComponent<Rigidbody2D>();
@@ -67,19 +71,49 @@ public class NagaPathing : MonoBehaviour
     void Update()
     {
         TargetPos = new Vector2(Target.transform.position.x, Target.transform.position.y); //Debug.Log(TargetPos);
-                                                                                           
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        Debug.Log(enemyBehaviour.Hitpoints);
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Attack Patterns
+        //atackLimiter updater
+        /*if (enemyBehaviour.Hitpoints <= 150 && limit < 2)//HPpercentage && limit < 2)
+        {
+            if(limit < 1) attackLimiter++;
+            if (enemyBehaviour.Hitpoints <= 100 && limit < 2)
+            {
+                attackLimiter++;
+            }
+            Debug.Log("25% HP reduced" + limit);
+        }*/
+        if (enemyBehaviour.Hitpoints <= 100 && limit < 2)
+        {
+            limit++;
+            attackSpeed--;
+            Debug.Log("25% HP reduced" + limit + attackLimiter);
+            attackLimiter++;
+        }
+        else if (enemyBehaviour.Hitpoints <= 150 && limit < 1)
+        {
+            limit++;
+            attackSpeed -= 2;
+            Debug.Log("25% HP reduced" + limit + attackLimiter);
+            attackLimiter++;
+        }
+        else if (enemyBehaviour.Hitpoints <= 0)
+        {
+            Debug.Log("Naga Died");
+            Destroy(gameObject);
+        }
+        
         if (attackTimer <= 20f)
         {
             attackTimer += Time.deltaTime;
         }
 
-        if (attackTimer > 5f)
+        if (attackTimer > attackSpeed)
         {
             if (!attackPhase)
             {
-                attack = UnityEngine.Random.Range(1, 4);
+                attack = UnityEngine.Random.Range(1, attackLimiter); //4
                 //Debug.Log(attack);
                 switch (attack)
                 {
@@ -107,11 +141,13 @@ public class NagaPathing : MonoBehaviour
                     {
                         if (transform.rotation.y >= 0)
                         {
+                            nagaAnim.SetTrigger("NagaCasting");
                             Instantiate(meteorSpawn, new Vector2(UnityEngine.Random.Range(5, 25), 20), transform.rotation);
                         }
 
                         if (transform.rotation.y < 0)
                         {
+                            nagaAnim.SetTrigger("NagaCasting");
                             Instantiate(meteorSpawn, new Vector2(UnityEngine.Random.Range(-30, -6), 20), transform.rotation);
                         }
                         

@@ -7,18 +7,29 @@ public class EnemyTrap : MonoBehaviour
     [SerializeField] private float damage;
     public bool hit = false;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.gameObject.CompareTag("Player")) // Use "gameObject.CompareTag" instead of "tag" directly
         {
             if (moveset.immunity == false)
             {
-                collision.GetComponent<Health>().TakeDamage(damage);
-                hit = true;
-                moveset.immunity = true;
+                // Assuming there's a "Health" script on the player with a "TakeDamage" method
+                Health playerHealth = collision.gameObject.GetComponent<Health>();
+                if (playerHealth != null)
+                {
+                    playerHealth.TakeDamage(damage);
+                    hit = true;
+                    moveset.immunity = true;
+                }
             }
         }
-        else if (collision.tag == "Terrain") { Debug.Log("hit terrain"); }
-        else { Debug.Log("hit nothing"); }
+        else if (collision.gameObject.CompareTag("Terrain")) // Use "gameObject.CompareTag" here as well
+        {
+            Debug.Log("hit terrain");
+        }
+        else
+        {
+            Debug.Log("hit nothing");
+        }
     }
 }
