@@ -29,6 +29,10 @@ public class Aswang_PlayerDetectedState : PlayerDetectedState
         else if (!isPlayerInMaxAgroRange)
         {
             stateMachine.ChangeState(enemy.lookForPlayerState);
+        } else if (isDetectingLedge)
+        {
+            entity.Flip();
+            stateMachine.ChangeState(enemy.moveState);
         }
     }
 

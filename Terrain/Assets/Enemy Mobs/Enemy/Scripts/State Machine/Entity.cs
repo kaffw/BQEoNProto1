@@ -30,6 +30,7 @@ public class Entity : MonoBehaviour
     private Vector2 velocityWorkSpace;
 
     protected bool isStunned;
+    protected bool isDead;
 
     public virtual void Start(){
         facingDirection = 1;
@@ -118,6 +119,8 @@ public class Entity : MonoBehaviour
 
         DamageHop(entityData.damageHopSpeed);
 
+        Instantiate(entityData.hitParticle, aliveGO.transform.position, Quaternion.Euler(0f, 0f, Random.Range(0f, 360f)));
+
         if(attackDetails.position.x > aliveGO.transform.position.x)
         {
             lastDamageDirection = -1;
@@ -130,6 +133,11 @@ public class Entity : MonoBehaviour
         {
             isStunned = true;
         }
+
+        if(currentHealth <= 0)
+        {
+            isDead = true;
+        }
     }
 
     public virtual void Flip(){
@@ -137,7 +145,7 @@ public class Entity : MonoBehaviour
         aliveGO.transform.Rotate(0f, 180f, 0f);
     }
 
-    /*public virtual void OnTriggerEnter2D(Collider2D collision)
+    public virtual void OnTriggerEnter2D(Collider2D collision)
     {
 
         if (collision.tag == "Player")
@@ -150,7 +158,7 @@ public class Entity : MonoBehaviour
             }
 
         }
-    }*/
+    }
 
     public virtual void OnDrawGizmos(){
         Gizmos.color = Color.blue;

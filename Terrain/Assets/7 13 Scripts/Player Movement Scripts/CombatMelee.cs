@@ -23,6 +23,9 @@ public class CombatMelee : MonoBehaviour
     private float timeBtwAttack;
     private float comboResetTimer;
 
+    private Health health;
+    private moveset moveSet;
+
     void Start()
     {
         DeactivateAttackProjectile();
@@ -47,32 +50,34 @@ public class CombatMelee : MonoBehaviour
 
                 AttackProjectile.SetActive(true);
                 AttackProjectileState = true;
+                    
+                CheckAttackHitBox();
 
-                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
+                Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
                 
-                for (int i = 0; i < enemiesToDamage.Length; i++)
+                for (int i = 0; i < detectedObjects.Length; i++)
                 {
                     // Check for Regular Enemies with EnemyBehaviour
-                    EnemyBehaviour enemyBehaviour = enemiesToDamage[i].GetComponent<EnemyBehaviour>();
+                    EnemyBehaviour enemyBehaviour = detectedObjects[i].GetComponent<EnemyBehaviour>();
                     if (enemyBehaviour != null)
                     {
                         enemyBehaviour.TakeHit(attackDetails.damageAmount);
                     }
 
                     // Check for Ground Enemies with EnemyPatrol
-                    EnemyPatrol enemyPathing = enemiesToDamage[i].GetComponent<EnemyPatrol>();
+                    EnemyPatrol enemyPathing = detectedObjects[i].GetComponent<EnemyPatrol>();
                     if (enemyPathing != null)
                     {
                         enemyPathing.GroundTakeDamage();
                     }
 
-                    BreakableObject breakRocks = enemiesToDamage[i].GetComponent<BreakableObject>();
+                    BreakableObject breakRocks = detectedObjects[i].GetComponent<BreakableObject>();
                     if (breakRocks != null)
                     {
                         breakRocks.BreakIt();
                     }
 
-                    EnemyHealth mobHealth = enemiesToDamage[i].GetComponent<EnemyHealth>();
+                    EnemyHealth mobHealth = detectedObjects[i].GetComponent<EnemyHealth>();
                     if (mobHealth != null)
                     {
                         mobHealth.GroundTakeDamage();
@@ -118,6 +123,26 @@ public class CombatMelee : MonoBehaviour
         foreach (Collider2D collider in detectedObjects)
         {
             collider.transform.parent.SendMessage("Damage", attackDetails);
+        }
+    }
+
+    private void Damage(AttackDetails attack)
+    {
+        if (!moveSet.GetDashStatus())
+        {
+            int direction;
+
+            health.TakeDamage(attackDetails.damageAmount);
+
+            /*if (attackDetails.position.x < transform.position.x)
+            {
+                direction = 1;
+            } else
+            {
+                direction = -1;
+            }
+
+            moveSet.Knockback(direction);*/
         }
     }
 

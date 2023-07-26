@@ -440,6 +440,11 @@ public class moveset : MonoBehaviour
 
     }
 
+    public bool GetDashStatus()
+    {
+        return isDashing;
+    }
+
     private IEnumerator ImmunityDuration()
     {
         Debug.Log("Start of Iframe");
