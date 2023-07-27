@@ -18,7 +18,7 @@ public class Relic1NextScene : MonoBehaviour
 
         if (timer > 6.1f)
         {
-            SceneManager.LoadScene(27);
+            SceneManager.LoadScene(27); //27
         }
     }
 }

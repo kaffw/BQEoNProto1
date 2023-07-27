@@ -96,7 +96,7 @@ public class PillarSpawner : MonoBehaviour
             //timer += Time.deltaTime; //timer to End
             spawnRate += Time.deltaTime; //spawnRate
         }
-        else SceneManager.LoadScene(24);
+        else SceneManager.LoadScene(29);
     }
 
 }
