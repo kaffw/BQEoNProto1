@@ -75,7 +75,7 @@ EditorBuildSettings:
     path: Assets/Scenes/StartGameIntro.unity
     guid: ba00f3beeb46d2d4c967ee7bb70e7372
   - enabled: 1
-    path: Assets/Jar Relic Claimed.unity
+    path: Assets/Scenes/Jar Relic Claimed.unity
     guid: c2eeda245f2ebe0469ebc1ac9ed549a7
   - enabled: 1
     path: Assets/Scenes/PreBossScene.unity

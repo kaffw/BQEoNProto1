@@ -25,49 +25,54 @@ public class Healthbar : MonoBehaviour
         //currenthealthBar.fillAmount = playerHealth.currentHealth / 5;
         currenthealthBar.fillAmount = Health.currentHealth / 5;
         HPinInt = (int)Health.currentHealth;
-        switch (HPinInt)
-        {
-            case 1:
-                moonPhases[0].enabled = true;
-                moonPhases[1].enabled = false;
-                moonPhases[2].enabled = false;
-                moonPhases[3].enabled = false;
-                moonPhases[4].enabled = false;
-                break;
+switch (HPinInt)
+{
+    case 1:
+        currenthealthBar.color = new Color(1f, 1f, 1f, 0.2f); // Opacity: 0.2 (out of 1)
+        moonPhases[0].enabled = true;
+        moonPhases[1].enabled = false;
+        moonPhases[2].enabled = false;
+        moonPhases[3].enabled = false;
+        moonPhases[4].enabled = false;
+        break;
 
-            case 2:
-                moonPhases[0].enabled = false;
-                moonPhases[1].enabled = true;
-                moonPhases[2].enabled = false;
-                moonPhases[3].enabled = false;
-                moonPhases[4].enabled = false;
-                break;
+    case 2:
+        currenthealthBar.color = new Color(1f, 1f, 1f, 0.4f); // Opacity: 0.39 (out of 1)
+        moonPhases[0].enabled = false;
+        moonPhases[1].enabled = true;
+        moonPhases[2].enabled = false;
+        moonPhases[3].enabled = false;
+        moonPhases[4].enabled = false;
+        break;
 
-            case 3:
-                moonPhases[0].enabled = false;
-                moonPhases[1].enabled = false;
-                moonPhases[2].enabled = true;
-                moonPhases[3].enabled = false;
-                moonPhases[4].enabled = false;
-                break;
+    case 3:
+        currenthealthBar.color = new Color(1f, 1f, 1f, 0.6f); // Opacity: 0.59 (out of 1)
+        moonPhases[0].enabled = false;
+        moonPhases[1].enabled = false;
+        moonPhases[2].enabled = true;
+        moonPhases[3].enabled = false;
+        moonPhases[4].enabled = false;
+        break;
 
-            case 4:
-                moonPhases[0].enabled = false;
-                moonPhases[1].enabled = false;
-                moonPhases[2].enabled = false;
-                moonPhases[3].enabled = true;
-                moonPhases[4].enabled = false;
-                break;
+    case 4:
+        currenthealthBar.color = new Color(1f, 1f, 1f, 0.8f); // Opacity: 0.98 (out of 1)
+        moonPhases[0].enabled = false;
+        moonPhases[1].enabled = false;
+        moonPhases[2].enabled = false;
+        moonPhases[3].enabled = true;
+        moonPhases[4].enabled = false;
+        break;
 
-            case 5:
-                moonPhases[4].enabled = true;
-                moonPhases[0].enabled = false;
-                moonPhases[1].enabled = false;
-                moonPhases[2].enabled = false;
-                moonPhases[3].enabled = false;
-                break;
+    case 5:
+        currenthealthBar.color = new Color(1f, 1f, 1f, 1f); // Opacity: 1 (fully opaque)
+        moonPhases[4].enabled = true;
+        moonPhases[0].enabled = false;
+        moonPhases[1].enabled = false;
+        moonPhases[2].enabled = false;
+        moonPhases[3].enabled = false;
+        break;
+}
 
-        }
         if (moveset.isFiring == true)
         {
             timer += Time.deltaTime;
