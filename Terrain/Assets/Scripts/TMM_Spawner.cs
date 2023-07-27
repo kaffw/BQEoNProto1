@@ -5,14 +5,20 @@ using UnityEngine;
 public class TMM_Spawner : MonoBehaviour
 {
     public GameObject Melee;
+    public GameObject Spawner;
+    public Vector2 SpawnerLoc;
     public bool isCreated = false;
     public static bool is_TM_M_Exit = false;
 
+    private void Start()
+    {
+        SpawnerLoc = new Vector2(Spawner.transform.position.x - 2, Spawner.transform.position.y);
+    }
     private void Update()
     {
         if (isCreated == true)
         {
-            Instantiate(Melee, new Vector2(22, 1), transform.rotation);
+            Instantiate(Melee, SpawnerLoc, transform.rotation);
             isCreated = false;
         }
     }

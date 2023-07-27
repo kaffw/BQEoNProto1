@@ -11,11 +11,13 @@ public class PickUp : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log(MapSequenceInitializer.savedCurrentHealth);
-            MapSequenceInitializer.savedCurrentHealth++;
-            Health.currentHealth += 1f;
-            moveset.deathCounter--;
-            Destroy(pickedUp, 1f);
+            if (Health.currentHealth < 5)
+            {
+                MapSequenceInitializer.savedCurrentHealth++;
+                Health.currentHealth += 1f;
+                moveset.deathCounter--;
+            }
+            Destroy(pickedUp);
         }
     }
 }

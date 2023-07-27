@@ -49555,7 +49555,7 @@ PrefabInstance:
     - target: {fileID: 6523015570306645973, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d10949f6fc1f894428e68da041efa383, type: 3}
+      objectReference: {fileID: 21300000, guid: e03f6c8ed5d1f7348bfb82e87040e419, type: 3}
     - target: {fileID: 6523015570306645978, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
       propertyPath: m_Name
       value: Stalactites (3)
@@ -50282,7 +50282,7 @@ PrefabInstance:
     - target: {fileID: 6523015570306645973, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d10949f6fc1f894428e68da041efa383, type: 3}
+      objectReference: {fileID: 21300000, guid: e03f6c8ed5d1f7348bfb82e87040e419, type: 3}
     - target: {fileID: 6523015570306645978, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
       propertyPath: m_Name
       value: Stalactites
@@ -51058,7 +51058,7 @@ PrefabInstance:
     - target: {fileID: 6523015570306645973, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d10949f6fc1f894428e68da041efa383, type: 3}
+      objectReference: {fileID: 21300000, guid: e03f6c8ed5d1f7348bfb82e87040e419, type: 3}
     - target: {fileID: 6523015570306645978, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
       propertyPath: m_Name
       value: Stalactites (2)
@@ -51866,7 +51866,7 @@ PrefabInstance:
     - target: {fileID: 6523015570306645973, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d10949f6fc1f894428e68da041efa383, type: 3}
+      objectReference: {fileID: 21300000, guid: e03f6c8ed5d1f7348bfb82e87040e419, type: 3}
     - target: {fileID: 6523015570306645978, guid: 6514084e272099f48bcda691f46f7c9c, type: 3}
       propertyPath: m_Name
       value: Stalactites (1)

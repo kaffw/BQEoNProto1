@@ -5,14 +5,20 @@ using UnityEngine;
 public class TMJ_Spawner : MonoBehaviour
 {
     public GameObject Jump;
+    public GameObject Spawner;
+    public Vector2 SpawnerLoc;
     public bool isCreated = false;
     public static bool is_TM_J_Exit = false;
 
+    private void Start()
+    {
+        SpawnerLoc = new Vector2(Spawner.transform.position.x, Spawner.transform.position.y);
+    }
     private void Update()
     {
         if(isCreated==true)
         {
-            Instantiate(Jump, new Vector2(12,1), transform.rotation);
+            Instantiate(Jump, SpawnerLoc, transform.rotation);
             isCreated  = false;
         }
     }
