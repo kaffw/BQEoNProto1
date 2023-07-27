@@ -1,0 +1,355 @@
+fileFormatVersion: 2
+guid: 758d4f525c8cd92499489caa8d652935
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Manananggal Attack SS_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 45
+        height: 40
+      alignment: 9
+      pivot: {x: 0.362256, y: 0.44039908}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ad8144984035bb409fcd15d864654f8
+      internalID: -1326731376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manananggal Attack SS_1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 2
+        width: 45
+        height: 35
+      alignment: 9
+      pivot: {x: 0.34371355, y: 0.4897826}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6b9fb5408b2b94dbd15e3b92525e92
+      internalID: 1606840189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manananggal Attack SS_2
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 3
+        width: 44
+        height: 35
+      alignment: 9
+      pivot: {x: 0.38079834, y: 0.46253657}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eaf47ebff5d54745a2feac1b9275412
+      internalID: 1442270553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manananggal Attack SS_3
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 1
+        width: 44
+        height: 35
+      alignment: 9
+      pivot: {x: 0.37538007, y: 0.49999985}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83075339375300149adb76fdae9220d5
+      internalID: 1047159076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manananggal Attack SS_4
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 0
+        width: 45
+        height: 34
+      alignment: 9
+      pivot: {x: 0.35430908, y: 0.5175296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fba920a25fd9ec4e8c2c941ebc7826a
+      internalID: -690763174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manananggal Attack SS_5
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 0
+        width: 45
+        height: 40
+      alignment: 9
+      pivot: {x: 0.33841553, y: 0.44039908}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8abf14d7d2f301418cce5b3e49f8fd0
+      internalID: 405392143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manananggal Attack SS_6
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 2
+        width: 53
+        height: 35
+      alignment: 9
+      pivot: {x: 0.41228557, y: 0.49659413}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 232338b486ec8ea4b8e993ae5a1c8891
+      internalID: 392646424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manananggal Attack SS_7
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 3
+        width: 51
+        height: 35
+      alignment: 9
+      pivot: {x: 0.45792884, y: 0.4931884}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af6bbbb0205f6784db9358ee8b2815fa
+      internalID: 349348561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manananggal Attack SS_8
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 1
+        width: 44
+        height: 35
+      alignment: 9
+      pivot: {x: 0.35641688, y: 0.49999985}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86cc72ffa8d8b46408c922f903e77218
+      internalID: -604195422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manananggal Attack SS_9
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 0
+        width: 45
+        height: 34
+      alignment: 9
+      pivot: {x: 0.3357666, y: 0.50701183}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f5be1a05ef5434485dcae70d8ad05a
+      internalID: 1102415081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Manananggal Attack SS_0: -1326731376
+      Manananggal Attack SS_1: 1606840189
+      Manananggal Attack SS_2: 1442270553
+      Manananggal Attack SS_3: 1047159076
+      Manananggal Attack SS_4: -690763174
+      Manananggal Attack SS_5: 405392143
+      Manananggal Attack SS_6: 392646424
+      Manananggal Attack SS_7: 349348561
+      Manananggal Attack SS_8: -604195422
+      Manananggal Attack SS_9: 1102415081
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
