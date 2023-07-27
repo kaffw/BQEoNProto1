@@ -85,6 +85,7 @@ public class moveset : MonoBehaviour
     public static float hitImmunityDuration = 1.5f;
     public static bool isImmune = false;
 
+    public Vector2 playerPos;
     private void Awake()
     {
         if (CharacterPositionManager.ifFromEntrance == true)
@@ -119,6 +120,7 @@ public class moveset : MonoBehaviour
 
     private void Update()
     {
+        playerPos = new Vector2(rb.transform.position.x, rb.transform.position.y);
         isShielded();
         WallSlide();
         WallJump();
@@ -340,6 +342,12 @@ public class moveset : MonoBehaviour
         else if (collision.tag == "PortalExit")
         {
             portalExit = new Vector2(transform.position.x, transform.position.y + 30);
+        }
+
+        else if (collision.tag == "Acid")
+        {
+            Debug.Log("fell in acid");
+            transform.position = playerPos + new Vector2(0, 20);
         }
     }
 

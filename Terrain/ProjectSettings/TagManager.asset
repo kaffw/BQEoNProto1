@@ -23,6 +23,7 @@ TagManager:
   - PortalExit
   - Clouds
   - CloudResetter
+  - Acid
   layers:
   - Default
   - TransparentFX
