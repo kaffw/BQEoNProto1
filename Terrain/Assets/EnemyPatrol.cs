@@ -162,11 +162,11 @@ public class EnemyPatrol : MonoBehaviour
     }
     public void GroundTakeDamage()
     {
+        Debug.Log("Damage taken");
         hit = true;
         if (enemyHealth > 1)
         {
             enemyHealth--;
-            // Insert hurt animation
         }
         else
         {

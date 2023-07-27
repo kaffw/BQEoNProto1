@@ -51,7 +51,7 @@ public class CombatMelee : MonoBehaviour
                 AttackProjectile.SetActive(true);
                 AttackProjectileState = true;
                     
-                CheckAttackHitBox();
+                //CheckAttackHitBox();
 
                 Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
                 
@@ -68,6 +68,7 @@ public class CombatMelee : MonoBehaviour
                     EnemyPatrol enemyPathing = detectedObjects[i].GetComponent<EnemyPatrol>();
                     if (enemyPathing != null)
                     {
+                    Debug.Log("damage dealt to enemy");
                         enemyPathing.GroundTakeDamage();
                     }
 
@@ -112,7 +113,7 @@ public class CombatMelee : MonoBehaviour
             }
         }
     }
-
+    /*
     private void CheckAttackHitBox()
     {
         Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
@@ -142,7 +143,7 @@ public class CombatMelee : MonoBehaviour
                 direction = -1;
             }
 
-            moveSet.Knockback(direction);*/
+            moveSet.Knockback(direction);//
         }
     }
 
@@ -151,7 +152,7 @@ public class CombatMelee : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPos.position, attackRange);
     }
-
+    */
     void DeactivateAttackProjectile()
     {
         AttackProjectile.SetActive(false);

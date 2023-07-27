@@ -18,8 +18,11 @@ public class PreviousMap : MonoBehaviour
                 {
                     MapSequenceInitializer.location--;
                     MapSequenceInitializer.counterToAct1End--;
+                    CharacterPositionManager.ifFromEntrance = true;
                     SceneManager.LoadScene(MapSequenceInitializer.mapsequence[MapSequenceInitializer.location]);
+
                 }
+
             }
 
             //MapSequenceInitializer.act2Location--;
@@ -29,6 +32,7 @@ public class PreviousMap : MonoBehaviour
                 {
                     MapSequenceInitializer.act2Location--;
                     MapSequenceInitializer.counterToAct2End--;
+                    CharacterPositionManager.ifFromEntrance = true;
                     SceneManager.LoadScene(MapSequenceInitializer.mapsequence2[MapSequenceInitializer.act2Location]);
                 }
             }

@@ -15,6 +15,6 @@ public class NagaBack2 : MonoBehaviour
 
     void Update()
     {
-        transform.position = new Vector2(Target.transform.position.x / -6 + 120, 3);
+        transform.position = new Vector2(Target.transform.position.x / -6 + 146, 0);
     }
 }
