@@ -11,6 +11,7 @@ public class PickUp : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log(MapSequenceInitializer.savedCurrentHealth);
             MapSequenceInitializer.savedCurrentHealth++;
             Health.currentHealth += 1f;
             moveset.deathCounter--;
