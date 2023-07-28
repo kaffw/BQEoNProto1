@@ -10,7 +10,7 @@ public class CombatMelee : MonoBehaviour
     private int comboCount = 0; // Tracks the current combo count
     private bool isAttacking = false; // Flag to prevent attacking during combo
 
-    [SerializeField] private float stunDamageAmount = 1f;
+    /*[SerializeField] private float stunDamageAmount = 1f;*/
     private float attackRange;
     public Transform attackPos;
     public LayerMask whatIsEnemies;
