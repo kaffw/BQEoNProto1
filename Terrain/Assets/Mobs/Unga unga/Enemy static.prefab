@@ -14,9 +14,6 @@ GameObject:
   - component: {fileID: 6002356559508995727}
   - component: {fileID: 6002356559508995724}
   - component: {fileID: 6002356559508995725}
-  - component: {fileID: 6002356559508995713}
-  - component: {fileID: 6002356559508995715}
-  - component: {fileID: 7751682529327495721}
   - component: {fileID: 3140700932188760211}
   m_Layer: 9
   m_Name: Unga unga
@@ -38,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6002356560764090747}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6002356559508995726
 SpriteRenderer:
@@ -200,66 +197,6 @@ PolygonCollider2D:
       - {x: 0.175, y: -0.13}
       - {x: 0.175, y: -0.08}
       - {x: 0.16499999, y: -0.07}
---- !u!114 &6002356559508995713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6002356559508995723}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bbe3034567907d4ea7c5dead23fb70e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  enemyAnim: {fileID: 6002356559508995712}
-  hit: 0
-  Attacking: 0
---- !u!114 &6002356559508995715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6002356559508995723}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcf945244716b4041a34f9f1a24abe98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyJumpForce: 10
-  enemyHealth: 5
-  patrolPoints:
-  - {fileID: 6002356559558853670}
-  - {fileID: 6002356560364314345}
-  speed: 3
-  thisEnemy: {fileID: 6002356559508995723}
-  thisEnemyPos: {x: 0, y: 0}
-  player: {fileID: 0}
-  Target: {x: 0, y: 0}
-  wallCollided: 0
-  enemyAnim: {fileID: 6002356559508995712}
-  sprite: {fileID: 6002356559508995726}
-  hit: 0
-  direction: {x: 0, y: 0}
-  isWalking: 1
-  isAttacking: {fileID: 6002356559508995713}
---- !u!114 &7751682529327495721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6002356559508995723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb09b48842c38844687d96f7ff4cc9bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mob: {fileID: 6002356559508995723}
-  mobRB: {fileID: 6002356559508995727}
-  moveSpeed: 8
 --- !u!114 &3140700932188760211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,68 +211,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   hit: 0
---- !u!1 &6002356559558853670
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6002356559558853689}
-  m_Layer: 0
-  m_Name: patrolPointA (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &6002356559558853689
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6002356559558853670}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -35, y: 3.583286, z: 0.946561}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6002356560764090747}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6002356560364314345
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6002356560364314344}
-  m_Layer: 0
-  m_Name: patrolPointB (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &6002356560364314344
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6002356560364314345}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25, y: 3.5832863, z: 0.946561}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6002356560764090747}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6002356560764090744
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,7 +221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6002356560764090747}
   m_Layer: 0
-  m_Name: Enemy Prototype Uu Pillars
+  m_Name: Enemy static
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -364,8 +239,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6002356559558853689}
-  - {fileID: 6002356560364314344}
   - {fileID: 6002356559508995722}
   m_Father: {fileID: 0}
   m_RootOrder: 0

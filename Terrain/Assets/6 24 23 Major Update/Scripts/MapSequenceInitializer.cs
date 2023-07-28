@@ -27,6 +27,7 @@ public class MapSequenceInitializer : MonoBehaviour
 
     public Animator bulanAnim;
 
+    public static bool quickDeath = false;
     void Start()
     {
         if (oneInstance == 0) { MapSequenceUpdate(); oneInstance++; }
@@ -34,6 +35,20 @@ public class MapSequenceInitializer : MonoBehaviour
 
     void Update()
     {
+        if (moveset.deathCounter == 5 && quickDeath)
+        {
+            mapsequence.Clear();
+            mapsequence2.Clear();
+            MapSequenceUpdate();
+            moveset.deathCounter = 0;
+            if (SavePoint.nagaLairReached == true) SceneManager.LoadScene(27);
+            if (moveset.ActLocation == 0) SceneManager.LoadScene(1);
+            if (moveset.ActLocation == 1) SceneManager.LoadScene(26); //1 //25
+            if (moveset.ActLocation == 2) SceneManager.LoadScene(25); //8 //26
+            if (moveset.ActLocation == 3) SceneManager.LoadScene(27); //18
+            quickDeath = false;
+        }
+
         if (moveset.deathCounter == 5)
         {
             mapsequence.Clear();

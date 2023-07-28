@@ -328,6 +328,13 @@ public class moveset : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.tag == "Acid")
+        {
+            MapSequenceInitializer.quickDeath = true;
+            deathCounter = 5;
+
+        }
+
         if (collision.tag == "FallDetector" && !shielded && !immunity)
         {
             transform.position = respawnPoint;
@@ -344,15 +351,6 @@ public class moveset : MonoBehaviour
         else if (collision.tag == "PortalExit")
         {
             portalExit = new Vector2(transform.position.x, transform.position.y + 30);
-        }
-
-        else if (collision.tag == "Acid")
-        {
-            Debug.Log("fell in acid");
-            Debug.Log(deathCounter);
-            deathCounter = 5;
-            Debug.Log(deathCounter);
-
         }
     }
 
