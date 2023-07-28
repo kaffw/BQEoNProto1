@@ -38,7 +38,9 @@ public class EnemyPatrol : MonoBehaviour
 
     public EnemyMeleeDamage isAttacking;
 
-    
+    private bool isAlive = true;
+
+   // public EnemyMeleeDamage disableScript;
     private void Awake()
     {
         player = GameObject.Find("Bulan");
@@ -49,6 +51,7 @@ public class EnemyPatrol : MonoBehaviour
         enemyRB = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         enemyAnim = GetComponent<Animator>();
+        //disableScript = GetComponent<EnemyMeleeDamage>();
 
         direction = transform.position;
 
@@ -58,79 +61,82 @@ public class EnemyPatrol : MonoBehaviour
     }
     private void Update()
     {
-        if (hit)
+        if (isAlive)
         {
-            enemyAnim.SetTrigger("enemyHit");
-            hit = false;
-        }
-        if (enemyHealth == 0) Destroy(gameObject);
-
-        UpdateAnimation();
-        if (isAttacking.Attacking == false)
-        {
-            direction = new Vector2(transform.position.x, transform.position.y);
-            if (previousTime >= 0.15f)
+            if (hit)
             {
-                SavePosition();
-                previousPosition = transform.position;
-
-                previousTime = 0f;
+                enemyAnim.SetTrigger("enemyHit");
+                hit = false;
             }
-            else previousTime += Time.deltaTime;
+            //if (enemyHealth == 0) ;// Destroy(gameObject);
 
-            thisEnemyPos = new Vector2(thisEnemy.transform.position.x, thisEnemy.transform.position.y);
-            Target = new Vector2(player.transform.position.x, player.transform.position.y);
-
-            if (!EnemyRange.playerInEnemyRange)
+            UpdateAnimation();
+            if (isAttacking.Attacking == false)
             {
-                if (Vector2.Distance(patrolPoints[currentPatrolPointIndex].transform.position, transform.position) < .1f)
+                direction = new Vector2(transform.position.x, transform.position.y);
+                if (previousTime >= 0.15f)
                 {
-                    sprite.flipX = true;//sprite.flipX = false;
-                    currentPatrolPointIndex++;
-                    if (currentPatrolPointIndex >= patrolPoints.Length)
+                    SavePosition();
+                    previousPosition = transform.position;
+
+                    previousTime = 0f;
+                }
+                else previousTime += Time.deltaTime;
+
+                thisEnemyPos = new Vector2(thisEnemy.transform.position.x, thisEnemy.transform.position.y);
+                Target = new Vector2(player.transform.position.x, player.transform.position.y);
+
+                if (!EnemyRange.playerInEnemyRange)
+                {
+                    if (Vector2.Distance(patrolPoints[currentPatrolPointIndex].transform.position, transform.position) < .1f)
                     {
-                        sprite.flipX = false;//sprite.flipX = true;
-                        currentPatrolPointIndex = 0;
+                        sprite.flipX = true;//sprite.flipX = false;
+                        currentPatrolPointIndex++;
+                        if (currentPatrolPointIndex >= patrolPoints.Length)
+                        {
+                            sprite.flipX = false;//sprite.flipX = true;
+                            currentPatrolPointIndex = 0;
+                        }
                     }
+
+                    transform.position = Vector2.MoveTowards(transform.position, patrolPoints[currentPatrolPointIndex].transform.position, Time.deltaTime * speed);
+                    isWalking = true;
+                }
+                /*
+                else if (EnemyRange.playerInEnemyRange && Target.x < thisEnemyPos.x)
+                {
+                    thisEnemy.transform.position = new Vector2(transform.position.x + (-7 * Time.deltaTime), transform.position.y);
+                    isWalking = true;
+                    Debug.Log("moving to left");
+                    //sprite.flipX = true;
                 }
 
-                transform.position = Vector2.MoveTowards(transform.position, patrolPoints[currentPatrolPointIndex].transform.position, Time.deltaTime * speed);
-                isWalking = true;
-            }
-            /*
-            else if (EnemyRange.playerInEnemyRange && Target.x < thisEnemyPos.x)
-            {
-                thisEnemy.transform.position = new Vector2(transform.position.x + (-7 * Time.deltaTime), transform.position.y);
-                isWalking = true;
-                Debug.Log("moving to left");
-                //sprite.flipX = true;
-            }
+                else if (EnemyRange.playerInEnemyRange && Target.x > thisEnemyPos.x)
+                {
+                    Debug.Log("moving to right");
+                    thisEnemy.transform.position = new Vector2(transform.position.x + (7 * Time.deltaTime), transform.position.y);
+                    isWalking = true;
+                    //sprite.flipX = false;
+                }
+                */
+                else if (!EnemyRange.playerInEnemyRange && Target.x < thisEnemyPos.x)
+                {
+                    //go to patrol point A
+                    transform.position = new Vector2(transform.position.x + (-7 * Time.deltaTime), transform.position.y);
+                    isWalking = true;
+                }
 
-            else if (EnemyRange.playerInEnemyRange && Target.x > thisEnemyPos.x)
-            {
-                Debug.Log("moving to right");
-                thisEnemy.transform.position = new Vector2(transform.position.x + (7 * Time.deltaTime), transform.position.y);
-                isWalking = true;
-                //sprite.flipX = false;
-            }
-            */
-            else if (!EnemyRange.playerInEnemyRange && Target.x < thisEnemyPos.x)
-            {
-                //go to patrol point A
-                transform.position = new Vector2(transform.position.x + (-7 * Time.deltaTime), transform.position.y);
-                isWalking = true;
-            }
+                else if ((!EnemyRange.playerInEnemyRange && Target.x > thisEnemyPos.x))
+                {
+                    //go to patrol point B
+                    transform.position = new Vector2(transform.position.x + (7 * Time.deltaTime), transform.position.y);
+                    isWalking = true;
+                }
 
-            else if ((!EnemyRange.playerInEnemyRange && Target.x > thisEnemyPos.x))
-            {
-                //go to patrol point B
-                transform.position = new Vector2(transform.position.x + (7 * Time.deltaTime), transform.position.y);
-                isWalking = true;
+                enemyRB.mass = 3f;
+                if (direction.x < previousPosition.x && !sprite.flipX) sprite.flipX = false;// sprite.flipX = true;// Debug.Log("less than previous");               && !sprite.flipX)
+                else if (direction.x > previousPosition.x && sprite.flipX) sprite.flipX = true;// sprite.flipX = false; // Debug.Log("higher than previous");      && sprite.flipX)
             }
-
-            enemyRB.mass = 3f;
-            if (direction.x < previousPosition.x && !sprite.flipX) sprite.flipX = false;// sprite.flipX = true;// Debug.Log("less than previous");               && !sprite.flipX)
-            else if (direction.x > previousPosition.x && sprite.flipX) sprite.flipX = true;// sprite.flipX = false; // Debug.Log("higher than previous");      && sprite.flipX)
         }
     }
     public void UpdateAnimation()
@@ -171,8 +177,17 @@ public class EnemyPatrol : MonoBehaviour
         else
         {
             enemyHealth--;
-            Destroy(gameObject);
+            StartCoroutine(DeathDelay());
 
         }
+    }
+
+    private IEnumerator DeathDelay()
+    {
+        isAlive = false;
+        enemyAnim.SetTrigger("AswangDeath");
+        //disableScript.isEnabled = true;
+        yield return new WaitForSeconds(5f);
+        Destroy(gameObject);
     }
 }
