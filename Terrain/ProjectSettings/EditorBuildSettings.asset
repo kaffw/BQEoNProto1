@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Cutscene.unity
     guid: 993baaac465a11f4b885a62ad8c84ef0
   - enabled: 1
-    path: Assets/Scenes/Map (Tutorial).unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Map0 Tutorial.unity
+    guid: 6e075205e2b7c304abfe280678b12c18
   - enabled: 1
     path: Assets/Scenes/Map1 Act2.unity
     guid: 17df482768483ba45a4ead79703ef62d
@@ -98,4 +98,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LockClaimCutscene.unity
     guid: 97f4ff50a450d2446863e02b8c1fe9c4
+  - enabled: 1
+    path: Assets/Scenes/Map (Tutorial).unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
