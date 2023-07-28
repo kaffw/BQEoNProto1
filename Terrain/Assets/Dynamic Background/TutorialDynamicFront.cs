@@ -31,7 +31,7 @@ public class TutorialDynamicFront : MonoBehaviour
     {
         if (collision.tag == "CloudResetter")
         {
-            Debug.Log("reset");
+            //Debug.Log("reset");
             transform.position = new Vector2(transform.position.x + 150, transform.position.y);
         }
     }

@@ -79,7 +79,7 @@ public class moveset : MonoBehaviour
 
     public static bool isJumping, isGrabbing; //from PlayerVariable.cs moved to moveset.cs
 
-    public static int ActLocation = 1;
+    public static int ActLocation = 0;
 
     //hit immunity
     public static float hitImmunityDuration = 1.5f;
@@ -107,6 +107,8 @@ public class moveset : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log(MapSequenceInitializer.location + "Current location");
+        //Debug.Log(MapSequenceInitializer.act2Location + "Current act 2 location");
         shielded = false;                           //from Playermovement.cs
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<BoxCollider2D>();       //from Playermovement.cs
@@ -455,9 +457,9 @@ public class moveset : MonoBehaviour
 
     private IEnumerator ImmunityDuration()
     {
-        Debug.Log("Start of Iframe");
+        //Debug.Log("Start of Iframe");
         yield return new WaitForSeconds(3f); //3 f prev
-        Debug.Log("End of Iframe");
+        //Debug.Log("End of Iframe");
         immunity = false;
     }
 }

@@ -20,7 +20,7 @@ public class EnemyMeleeDamage: MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("on Contact");
+            //Debug.Log("on Contact");
         }
         /*if (collision.gameObject.CompareTag("Player"))
         {
@@ -64,7 +64,7 @@ public class EnemyMeleeDamage: MonoBehaviour
         Attacking = true;
         yield return new WaitForSeconds(.75f);
         if (hit) collide.gameObject.GetComponent<Health>().TakeDamage(damage);
-        else Debug.Log("Exit Attack Range");
+        // Debug.Log("Exit Attack Range");
         Attacking = false;
     }
 }

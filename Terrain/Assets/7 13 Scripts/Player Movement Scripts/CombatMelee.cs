@@ -68,7 +68,7 @@ public class CombatMelee : MonoBehaviour
                     EnemyPatrol enemyPathing = detectedObjects[i].GetComponent<EnemyPatrol>();
                     if (enemyPathing != null)
                     {
-                    Debug.Log("damage dealt to enemy");
+                    //Debug.Log("damage dealt to enemy");
                         enemyPathing.GroundTakeDamage();
                     }
 

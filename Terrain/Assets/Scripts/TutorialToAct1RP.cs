@@ -25,6 +25,7 @@ public class TutorialToAct1RP : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            moveset.ActLocation = 1;
             StartCoroutine(EntryRP());
         }
     }

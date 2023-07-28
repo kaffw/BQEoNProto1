@@ -9,30 +9,26 @@ public class PreviousMap : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            CharacterPositionManager.ifFromEntrance = true;
-            //MapSequenceInitializer.location--;
 
             if (moveset.ActLocation == 1)
             {
                 if (MapSequenceInitializer.location != 1)
                 {
+                    CharacterPositionManager.ifFromEntrance = true;
                     MapSequenceInitializer.location--;
                     MapSequenceInitializer.counterToAct1End--;
-                    CharacterPositionManager.ifFromEntrance = true;
                     SceneManager.LoadScene(MapSequenceInitializer.mapsequence[MapSequenceInitializer.location]);
-
                 }
 
             }
 
-            //MapSequenceInitializer.act2Location--;
             if (moveset.ActLocation == 2)
             {
                 if (MapSequenceInitializer.act2Location != 1)
                 {
+                    CharacterPositionManager.ifFromEntrance = true;
                     MapSequenceInitializer.act2Location--;
                     MapSequenceInitializer.counterToAct2End--;
-                    CharacterPositionManager.ifFromEntrance = true;
                     SceneManager.LoadScene(MapSequenceInitializer.mapsequence2[MapSequenceInitializer.act2Location]);
                 }
             }
