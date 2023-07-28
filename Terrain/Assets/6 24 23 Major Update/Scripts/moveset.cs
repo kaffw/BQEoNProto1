@@ -349,7 +349,10 @@ public class moveset : MonoBehaviour
         else if (collision.tag == "Acid")
         {
             Debug.Log("fell in acid");
-            transform.position = playerPos + new Vector2(0, 20);
+            Debug.Log(deathCounter);
+            deathCounter = 5;
+            Debug.Log(deathCounter);
+
         }
     }
 

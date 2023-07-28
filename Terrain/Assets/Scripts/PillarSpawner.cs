@@ -67,7 +67,7 @@ public class PillarSpawner : MonoBehaviour
         MapSequenceInitializer.entryToAct3 = true;
         if (!ifExit)
         {
-            if (timer <= 120f) //condition to change scene
+            if (timer <= 30f) //condition to change scene
             {
                 timer += Time.deltaTime;
             }
@@ -86,6 +86,7 @@ public class PillarSpawner : MonoBehaviour
 
                 if (i == 2)
                 {
+                    Instantiate(mobType[UnityEngine.Random.Range(0, 2)], new Vector2(Target.transform.position.x + 60, UnityEngine.Random.Range(-5, 15)), transform.rotation);
                     ifSpawn = true;
                     i = 0;
                 }

@@ -6,7 +6,7 @@ public class MoblinearMovement : MonoBehaviour
 {
     public GameObject mob;
     public Rigidbody2D mobRB;
-    public float moveSpeed = 3.25f;
+    public float moveSpeed = 8f;
     void Start()
     {
         mobRB = GetComponent<Rigidbody2D>();
