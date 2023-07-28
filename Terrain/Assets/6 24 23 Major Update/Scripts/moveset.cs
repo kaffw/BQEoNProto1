@@ -107,7 +107,7 @@ public class moveset : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(MapSequenceInitializer.location + "Current location");
+        //Debug.Log(MapSequenceInitializer.location + "Current location");
         //Debug.Log(MapSequenceInitializer.act2Location + "Current act 2 location");
         shielded = false;                           //from Playermovement.cs
         rb = GetComponent<Rigidbody2D>();

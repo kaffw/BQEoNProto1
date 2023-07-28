@@ -45,3 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dupeChecker: 0
+  bulanAnim: {fileID: 2611164972877872476, guid: 076aaa84b90f9a343b748833fe57fddc, type: 3}

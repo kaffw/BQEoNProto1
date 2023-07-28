@@ -25,6 +25,8 @@ public class MapSequenceInitializer : MonoBehaviour
     public static int oneInstance = 0;
     public static float savedCurrentHealth = 5; //recently removed
 
+    public Animator bulanAnim;
+
     void Start()
     {
         if (oneInstance == 0) { MapSequenceUpdate(); oneInstance++; }
@@ -38,11 +40,8 @@ public class MapSequenceInitializer : MonoBehaviour
             mapsequence2.Clear();
             MapSequenceUpdate();
             moveset.deathCounter = 0;
-            if (SavePoint.nagaLairReached == true) SceneManager.LoadScene(27);
-            if (moveset.ActLocation == 0) SceneManager.LoadScene(1);
-            if(moveset.ActLocation == 1) SceneManager.LoadScene(26); //1 //25
-            if(moveset.ActLocation == 2) SceneManager.LoadScene(25); //8 //26
-            if(moveset.ActLocation == 3) SceneManager.LoadScene(27); //18
+            StartCoroutine(DeathDelay());
+
         }
 
         if (Health.damaged) { savedCurrentHealth--; Health.damaged = false; }
@@ -106,5 +105,16 @@ public class MapSequenceInitializer : MonoBehaviour
             }
         }
         mapsequence2.Add(8);
+    }
+
+    private IEnumerator DeathDelay()
+    {
+        bulanAnim.SetTrigger("die");
+        yield return new WaitForSeconds(3f);
+        if (SavePoint.nagaLairReached == true) SceneManager.LoadScene(27);
+        if (moveset.ActLocation == 0) SceneManager.LoadScene(1);
+        if (moveset.ActLocation == 1) SceneManager.LoadScene(26); //1 //25
+        if (moveset.ActLocation == 2) SceneManager.LoadScene(25); //8 //26
+        if (moveset.ActLocation == 3) SceneManager.LoadScene(27); //18
     }
 }
