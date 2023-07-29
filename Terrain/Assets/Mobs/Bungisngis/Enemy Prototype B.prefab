@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 3193431467338455534}
   - component: {fileID: 3193431467338455506}
   - component: {fileID: 3193431467338455507}
-  - component: {fileID: 3193431467338455508}
   - component: {fileID: 3193431467338455509}
+  - component: {fileID: 5451968815985346197}
   m_Layer: 9
   m_Name: Bungisngis
   m_TagString: Untagged
@@ -147,7 +147,7 @@ MonoBehaviour:
   speed: 3
   thisEnemy: {fileID: 3193431467338455533}
   thisEnemyPos: {x: 0, y: 0}
-  player: {fileID: 0}
+  player: {fileID: 2611164972877872486, guid: 076aaa84b90f9a343b748833fe57fddc, type: 3}
   Target: {x: 0, y: 0}
   wallCollided: 0
   enemyAnim: {fileID: 3193431467338455534}
@@ -156,6 +156,7 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   isWalking: 1
   isAttacking: {fileID: 3193431467338455535}
+  capsulecoll: {fileID: 5451968815985346197}
 --- !u!61 &3193431467338455507
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -182,42 +183,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7607269, y: 0.42703325}
   m_EdgeRadius: 0
---- !u!60 &3193431467338455508
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3193431467338455533}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.52, y: 0.52}
-    newSize: {x: 0.52, y: 0.52}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.14, y: 0.19}
-      - {x: 0.12509285, y: 0.19999999}
-      - {x: -0.14, y: 0.19999999}
-      - {x: -0.23509285, y: 0.14736046}
-      - {x: -0.23886654, y: -0.01}
-      - {x: -0.22038555, y: -0.15146059}
-      - {x: -0.17999999, y: -0.22}
-      - {x: -0.12, y: -0.26}
-      - {x: 0.17999999, y: -0.26}
-      - {x: 0.22886558, y: -0.12}
-      - {x: 0.23641296, y: 0.09377327}
 --- !u!50 &3193431467338455509
 Rigidbody2D:
   serializedVersion: 4
@@ -239,6 +204,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!70 &5451968815985346197
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3193431467338455533}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.019655228, y: -0.058965385}
+  m_Size: {x: 0.28413773, y: 0.4020692}
+  m_Direction: 0
 --- !u!1 &3193431468513379410
 GameObject:
   m_ObjectHideFlags: 0

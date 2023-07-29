@@ -65,6 +65,10 @@ public class EnemyMeleeDamage: MonoBehaviour
         yield return new WaitForSeconds(.75f);
         if (hit) collide.gameObject.GetComponent<Health>().TakeDamage(damage);
         // Debug.Log("Exit Attack Range");
+        yield return new WaitForSeconds(2.25f);
+        Attacking = true;
+
+        yield return new WaitForSeconds(0.01f);
         Attacking = false;
     }
 }

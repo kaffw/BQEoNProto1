@@ -50,7 +50,9 @@ public class CombatMelee : MonoBehaviour
 
                 AttackProjectile.SetActive(true);
                 AttackProjectileState = true;
-                    
+
+                if (moveset.deathCounter == 0) damage *= 2;
+                else damage = 1;
                 //CheckAttackHitBox();
 
                 Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);

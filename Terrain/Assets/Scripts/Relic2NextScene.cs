@@ -16,7 +16,7 @@ public class Relic2NextScene : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer > 6.1f)
+        if (timer > 12f)
         {
             //MapSequenceInitializer.act2Location++;
             //MapSequenceInitializer.counterToAct2End++;

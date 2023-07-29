@@ -99,6 +99,12 @@ EditorBuildSettings:
     path: Assets/Scenes/LockClaimCutscene.unity
     guid: 97f4ff50a450d2446863e02b8c1fe9c4
   - enabled: 1
+    path: Assets/Scenes/Prologue.unity
+    guid: be62a9ccf8b2adf47ba74df56415703a
+  - enabled: 1
+    path: Assets/Scenes/Naga Death Scene.unity
+    guid: 8b4098c69050cfb4cab102d93b4c4e33
+  - enabled: 1
     path: Assets/Scenes/Map (Tutorial).unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

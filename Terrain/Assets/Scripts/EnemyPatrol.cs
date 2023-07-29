@@ -40,6 +40,8 @@ public class EnemyPatrol : MonoBehaviour
 
     private bool isAlive = true;
 
+    public CapsuleCollider2D capsulecoll;
+
    // public EnemyMeleeDamage disableScript;
     private void Awake()
     {
@@ -51,6 +53,7 @@ public class EnemyPatrol : MonoBehaviour
         enemyRB = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         enemyAnim = GetComponent<Animator>();
+        capsulecoll = GetComponent<CapsuleCollider2D>();
         //disableScript = GetComponent<EnemyMeleeDamage>();
 
         direction = transform.position;
@@ -177,6 +180,7 @@ public class EnemyPatrol : MonoBehaviour
         else
         {
             enemyHealth--;
+            isAlive = false;
             StartCoroutine(DeathDelay());
 
         }
@@ -184,8 +188,11 @@ public class EnemyPatrol : MonoBehaviour
 
     private IEnumerator DeathDelay()
     {
-        isAlive = false;
+        
         enemyAnim.SetTrigger("AswangDeath");
+        capsulecoll.size = new Vector2(0.0001f, 0.0001f);
+        capsulecoll.offset = new Vector2(transform.position.x, -.27f);
+
         //disableScript.isEnabled = true;
         yield return new WaitForSeconds(5f);
         Destroy(gameObject);

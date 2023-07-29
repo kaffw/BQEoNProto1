@@ -80,7 +80,7 @@ GameObject:
   - component: {fileID: 149913271131403906}
   - component: {fileID: 149913271131403905}
   - component: {fileID: 149913271131403907}
-  - component: {fileID: 149913271131403908}
+  - component: {fileID: 5228841439125847456}
   m_Layer: 9
   m_Name: Manananggal
   m_TagString: Untagged
@@ -217,7 +217,7 @@ MonoBehaviour:
   speed: 3
   thisEnemy: {fileID: 149913271131403964}
   thisEnemyPos: {x: 0, y: 0}
-  player: {fileID: 0}
+  player: {fileID: 2611164972877872486, guid: 076aaa84b90f9a343b748833fe57fddc, type: 3}
   Target: {x: 0, y: 0}
   wallCollided: 0
   enemyAnim: {fileID: 149913271131403967}
@@ -226,6 +226,7 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   isWalking: 1
   isAttacking: {fileID: 149913271131403905}
+  capsulecoll: {fileID: 5228841439125847456}
 --- !u!114 &149913271131403905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,8 +269,8 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.68591976, y: 0.3541468}
   m_EdgeRadius: 0
---- !u!60 &149913271131403908
-PolygonCollider2D:
+--- !u!70 &5228841439125847456
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -281,27 +282,9 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.34714866, y: 0.4470901}
-    oldSize: {x: 0.45, y: 0.4}
-    newSize: {x: 0.45, y: 0.4}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.13532212, y: -0.067809775}
-      - {x: 0.1315218, y: -0.029904056}
-      - {x: 0.113532454, y: 0.05060906}
-      - {x: 0.03605643, y: 0.14685014}
-      - {x: -0.05660513, y: 0.14210668}
-      - {x: -0.06925419, y: -0.02037542}
-      - {x: -0.03134823, y: -0.09828117}
-      - {x: -0.013484448, y: -0.17409259}
-      - {x: 0.10899782, y: -0.17567375}
+  m_Offset: {x: 0.068783104, y: 0.021163955}
+  m_Size: {x: 0.45, y: 0.4}
+  m_Direction: 0
 --- !u!1 &149913271360218770
 GameObject:
   m_ObjectHideFlags: 0

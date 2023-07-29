@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 8517679806427707042}
   - component: {fileID: 8517679806427707045}
   - component: {fileID: 8517679806427707044}
-  - component: {fileID: 8517679806427707047}
+  - component: {fileID: 8458621747704381089}
   m_Layer: 9
   m_Name: Tiyanak
   m_TagString: Untagged
@@ -199,7 +199,7 @@ MonoBehaviour:
   speed: 3
   thisEnemy: {fileID: 8517679806427707039}
   thisEnemyPos: {x: 0, y: 0}
-  player: {fileID: 0}
+  player: {fileID: 2611164972877872486, guid: 076aaa84b90f9a343b748833fe57fddc, type: 3}
   Target: {x: 0, y: 0}
   wallCollided: 0
   enemyAnim: {fileID: 8517679806427707040}
@@ -208,6 +208,7 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   isWalking: 1
   isAttacking: {fileID: 8517679806427707042}
+  capsulecoll: {fileID: 8458621747704381089}
 --- !u!61 &8517679806427707044
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -234,8 +235,8 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.84280777, y: 0.35}
   m_EdgeRadius: 0
---- !u!60 &8517679806427707047
-PolygonCollider2D:
+--- !u!70 &8458621747704381089
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -248,29 +249,8 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.35}
-    newSize: {x: 0.32, y: 0.35}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.08557068, y: 0.16389577}
-      - {x: -0.15555778, y: 0.10947889}
-      - {x: -0.15129852, y: -0.0067492425}
-      - {x: -0.12283611, y: -0.057586268}
-      - {x: -0.15185547, y: -0.08203149}
-      - {x: -0.16, y: -0.175}
-      - {x: 0.08867741, y: -0.16721252}
-      - {x: 0.122244984, y: -0.15945408}
-      - {x: 0.16750145, y: -0.12792483}
-      - {x: 0.17773724, y: 0.03354314}
-      - {x: 0.11558357, y: 0.093932986}
-      - {x: 0.09670009, y: 0.17277916}
+  m_Size: {x: 0.32, y: 0.35}
+  m_Direction: 0
 --- !u!1 &8517679806483473778
 GameObject:
   m_ObjectHideFlags: 0

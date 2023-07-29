@@ -10,9 +10,9 @@ public class StartGameIntro : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer > 6f)
+        if (timer > 38.1f)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(31);
         }
     }
 }

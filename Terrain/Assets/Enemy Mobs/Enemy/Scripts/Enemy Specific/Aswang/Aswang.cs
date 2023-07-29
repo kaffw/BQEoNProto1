@@ -42,12 +42,12 @@ public class Aswang : Entity
         stateMachine.Initialize(moveState);
     }
 
-    public virtual void OnDrawGizmos()
+    /*public virtual void OnDrawGizmos()
     {
         base.OnDrawGizmos();
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(meleeAttackPosition.position, meleeAttackStateData.attackRadius);
-    }
+    }*/
 
     public override void Damage(AttackDetails attackDetails)
     {

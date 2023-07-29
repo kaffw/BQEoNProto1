@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 6002356559508995712}
   - component: {fileID: 6002356559508995727}
   - component: {fileID: 6002356559508995724}
-  - component: {fileID: 6002356559508995725}
   - component: {fileID: 6002356559508995713}
   - component: {fileID: 6002356559508995715}
+  - component: {fileID: 3406161317984510432}
   m_Layer: 9
   m_Name: Unga unga
   m_TagString: Untagged
@@ -158,46 +158,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.35, y: 0.38}
   m_EdgeRadius: 0
---- !u!60 &6002356559508995725
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6002356559508995723}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.35, y: 0.38}
-    newSize: {x: 0.35, y: 0.38}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.125, y: 0.19}
-      - {x: -0.175, y: 0.06}
-      - {x: -0.175, y: -0.11}
-      - {x: -0.085, y: -0.12}
-      - {x: -0.035, y: -0.19}
-      - {x: 0.145, y: -0.19}
-      - {x: 0.145, y: -0.089999996}
-      - {x: 0.125, y: 0.049999997}
-      - {x: 0.065, y: 0.19}
-    - - {x: 0.145, y: -0.07}
-      - {x: 0.13499999, y: -0.099999994}
-      - {x: 0.16499999, y: -0.13}
-      - {x: 0.175, y: -0.13}
-      - {x: 0.175, y: -0.08}
-      - {x: 0.16499999, y: -0.07}
 --- !u!114 &6002356559508995713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,7 +194,7 @@ MonoBehaviour:
   speed: 3
   thisEnemy: {fileID: 6002356559508995723}
   thisEnemyPos: {x: 0, y: 0}
-  player: {fileID: 0}
+  player: {fileID: 2611164972877872486, guid: 076aaa84b90f9a343b748833fe57fddc, type: 3}
   Target: {x: 0, y: 0}
   wallCollided: 0
   enemyAnim: {fileID: 6002356559508995712}
@@ -243,6 +203,23 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   isWalking: 1
   isAttacking: {fileID: 6002356559508995713}
+  capsulecoll: {fileID: 3406161317984510432}
+--- !u!70 &3406161317984510432
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6002356559508995723}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.35, y: 0.38}
+  m_Direction: 0
 --- !u!1 &6002356559558853670
 GameObject:
   m_ObjectHideFlags: 0

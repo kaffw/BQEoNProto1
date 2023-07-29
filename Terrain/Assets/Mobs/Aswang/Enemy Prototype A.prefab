@@ -45,8 +45,8 @@ GameObject:
   - component: {fileID: 2057202557791823551}
   - component: {fileID: 2057202557791823539}
   - component: {fileID: 2057202557791823537}
-  - component: {fileID: 2057202557791823542}
   - component: {fileID: 2057202557791823543}
+  - component: {fileID: 6679546116460489945}
   m_Layer: 9
   m_Name: Aswang
   m_TagString: Untagged
@@ -199,7 +199,7 @@ MonoBehaviour:
   speed: 3
   thisEnemy: {fileID: 2057202557791823553}
   thisEnemyPos: {x: 0, y: 0}
-  player: {fileID: 0}
+  player: {fileID: 2611164972877872486, guid: 076aaa84b90f9a343b748833fe57fddc, type: 3}
   Target: {x: 0, y: 0}
   wallCollided: 0
   enemyAnim: {fileID: 2057202557791823551}
@@ -208,51 +208,7 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   isWalking: 1
   isAttacking: {fileID: 2057202557791823539}
---- !u!60 &2057202557791823542
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057202557791823553}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.55315346, y: 0.43866923}
-    oldSize: {x: 9, y: 9}
-    newSize: {x: 2, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.5674286, y: 3.4}
-      - {x: -0.89904785, y: 2.4206471}
-      - {x: -2.2154694, y: 2.3773122}
-      - {x: -2.765155, y: 1.3532288}
-      - {x: -2.7861328, y: 0.2}
-      - {x: -2.122589, y: -0.5480156}
-      - {x: -1.7171631, y: -0.7602844}
-      - {x: -2.7045746, y: -1.9594231}
-      - {x: -4.5, y: -3.4}
-      - {x: -2.0144958, y: -3.4000006}
-      - {x: -1.4580536, y: -1.8196821}
-      - {x: 0.1843872, y: -2.8625975}
-      - {x: 2.3432465, y: -3.3845844}
-      - {x: 4.5, y: -3.4}
-      - {x: 4.3441925, y: -0.89836407}
-      - {x: 3.3830109, y: -0.027501106}
-      - {x: 3.4023743, y: 0.41074753}
-      - {x: 3.7877502, y: 0.99806714}
-      - {x: 3.8025055, y: 1.7906823}
-      - {x: 2.5212953, y: 3.4}
+  capsulecoll: {fileID: 6679546116460489945}
 --- !u!61 &2057202557791823543
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -279,6 +235,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 28.37584, y: 6.297379}
   m_EdgeRadius: 0
+--- !u!70 &6679546116460489945
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057202557791823553}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.15662766, y: -0.6472888}
+  m_Size: {x: 4.846443, y: 6.601468}
+  m_Direction: 0
 --- !u!1 &2057202558371917685
 GameObject:
   m_ObjectHideFlags: 0

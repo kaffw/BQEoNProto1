@@ -4,6 +4,7 @@ using System.Threading;
 using UnityEditor;
 //using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NagaPathing : MonoBehaviour
 {
@@ -101,7 +102,9 @@ public class NagaPathing : MonoBehaviour
         else if (enemyBehaviour.Hitpoints <= 0)
         {
             Debug.Log("Naga Died");
+            SceneManager.LoadScene(32);
             Destroy(gameObject);
+
         }
         
         if (attackTimer <= 20f)

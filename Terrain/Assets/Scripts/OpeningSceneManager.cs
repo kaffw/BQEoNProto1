@@ -25,7 +25,7 @@ public class OpeningSceneManager : MonoBehaviour
         {
             FirstVid.SetActive(false);
         }
-        if (timer > 43f)
+        if (timer > 14.5f)
         {
             SceneManager.LoadScene(21);
         }
