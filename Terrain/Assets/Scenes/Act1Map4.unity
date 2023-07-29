@@ -54272,6 +54272,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 812442874}
     m_Modifications:
+    - target: {fileID: 2753653940520051920, guid: 2b0a2f3ce2e38dd488041da65b1a1410, type: 3}
+      propertyPath: m_Constraints
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2753653940520051922, guid: 2b0a2f3ce2e38dd488041da65b1a1410, type: 3}
       propertyPath: m_Name
       value: Stalactites (3)
@@ -54286,7 +54290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2753653940520051932, guid: 2b0a2f3ce2e38dd488041da65b1a1410, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.0173378
+      value: -3.4300003
       objectReference: {fileID: 0}
     - target: {fileID: 2753653940520051932, guid: 2b0a2f3ce2e38dd488041da65b1a1410, type: 3}
       propertyPath: m_LocalPosition.z
@@ -54846,6 +54850,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 812442874}
     m_Modifications:
+    - target: {fileID: 2753653940520051920, guid: 2b0a2f3ce2e38dd488041da65b1a1410, type: 3}
+      propertyPath: m_Constraints
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2753653940520051922, guid: 2b0a2f3ce2e38dd488041da65b1a1410, type: 3}
       propertyPath: m_Name
       value: Stalactites (1)
@@ -54860,7 +54868,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2753653940520051932, guid: 2b0a2f3ce2e38dd488041da65b1a1410, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.0173378
+      value: -3.4300003
       objectReference: {fileID: 0}
     - target: {fileID: 2753653940520051932, guid: 2b0a2f3ce2e38dd488041da65b1a1410, type: 3}
       propertyPath: m_LocalPosition.z
@@ -56224,6 +56232,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 812442874}
     m_Modifications:
+    - target: {fileID: 2753653940520051920, guid: 2b0a2f3ce2e38dd488041da65b1a1410, type: 3}
+      propertyPath: m_Constraints
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2753653940520051922, guid: 2b0a2f3ce2e38dd488041da65b1a1410, type: 3}
       propertyPath: m_Name
       value: Stalactites (2)
@@ -56238,7 +56250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2753653940520051932, guid: 2b0a2f3ce2e38dd488041da65b1a1410, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.0173378
+      value: -3.43
       objectReference: {fileID: 0}
     - target: {fileID: 2753653940520051932, guid: 2b0a2f3ce2e38dd488041da65b1a1410, type: 3}
       propertyPath: m_LocalPosition.z
@@ -58880,6 +58892,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 812442874}
     m_Modifications:
+    - target: {fileID: 2753653940520051920, guid: 2b0a2f3ce2e38dd488041da65b1a1410, type: 3}
+      propertyPath: m_Constraints
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2753653940520051922, guid: 2b0a2f3ce2e38dd488041da65b1a1410, type: 3}
       propertyPath: m_Name
       value: Stalactites
@@ -58894,7 +58910,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2753653940520051932, guid: 2b0a2f3ce2e38dd488041da65b1a1410, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.0173378
+      value: -3.4300003
       objectReference: {fileID: 0}
     - target: {fileID: 2753653940520051932, guid: 2b0a2f3ce2e38dd488041da65b1a1410, type: 3}
       propertyPath: m_LocalPosition.z
@@ -60372,6 +60388,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 812442874}
     m_Modifications:
+    - target: {fileID: 2753653940520051920, guid: 2b0a2f3ce2e38dd488041da65b1a1410, type: 3}
+      propertyPath: m_Constraints
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2753653940520051922, guid: 2b0a2f3ce2e38dd488041da65b1a1410, type: 3}
       propertyPath: m_Name
       value: Stalactites (4)
@@ -60386,7 +60406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2753653940520051932, guid: 2b0a2f3ce2e38dd488041da65b1a1410, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.0173378
+      value: -3.4299998
       objectReference: {fileID: 0}
     - target: {fileID: 2753653940520051932, guid: 2b0a2f3ce2e38dd488041da65b1a1410, type: 3}
       propertyPath: m_LocalPosition.z

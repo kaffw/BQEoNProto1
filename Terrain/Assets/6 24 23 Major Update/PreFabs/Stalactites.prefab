@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2753653939799494643}
   - component: {fileID: 2753653939799494642}
   - component: {fileID: 6276118691711075172}
+  - component: {fileID: 2650250830043213762}
   m_Layer: 0
   m_Name: 1s1k (spike)
   m_TagString: Untagged
@@ -43,7 +44,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -82,6 +83,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   hit: 0
+--- !u!114 &2650250830043213762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2753653939799494644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5faea8367565ba43a18eafa0f707f55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 2753653940520051922}
+  trap: {fileID: 6276118691711075172}
 --- !u!1 &2753653940520051922
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,7 +232,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 5
 --- !u!60 &2753653940520051921
 PolygonCollider2D:
   m_ObjectHideFlags: 0

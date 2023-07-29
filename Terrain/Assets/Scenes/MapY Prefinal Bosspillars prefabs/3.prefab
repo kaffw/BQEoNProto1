@@ -33,6 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6880472482594594421}
+  - {fileID: 7319068486433357907}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -241,118 +242,118 @@ MonoBehaviour:
   - position: {x: -2.6775143, y: 6.213049, z: 0}
     color: {r: 0, g: 0, b: 0, a: 1}
     uv: {x: 0, y: 0}
-  - position: {x: -3.0229, y: -6.0601, z: 0}
+  - position: {x: -3.0097, y: -6.0471, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: -3.0121, y: -6.1574, z: 0}
+  - position: {x: -2.9988, y: -6.1443, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: -2.9825, y: -6.2507, z: 0}
+  - position: {x: -2.9692, y: -6.2376, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: -2.9354, y: -6.3365, z: 0}
+  - position: {x: -2.9221, y: -6.3234, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: -2.8725, y: -6.4114, z: 0}
+  - position: {x: -2.8591, y: -6.3983, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: -2.7961, y: -6.4726, z: 0}
+  - position: {x: -2.7827, y: -6.4595, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: -2.7093, y: -6.5178, z: 0}
+  - position: {x: -2.6959, y: -6.5046, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: -2.6154, y: -6.5453, z: 0}
+  - position: {x: -2.602, y: -6.532, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: -2.5156, y: -6.5538, z: 0}
+  - position: {x: -2.5048, y: -6.5406, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: 3.2886, y: -6.4692, z: 0}
+  - position: {x: 3.2984, y: -6.4833, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: 3.3858, y: -6.4583, z: 0}
+  - position: {x: 3.3957, y: -6.4727, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: 3.4791, y: -6.4285, z: 0}
+  - position: {x: 3.4891, y: -6.4435, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: 3.5647, y: -6.3812, z: 0}
+  - position: {x: 3.575, y: -6.3965, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: 3.6395, y: -6.3181, z: 0}
+  - position: {x: 3.6501, y: -6.3338, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: 3.7006, y: -6.2417, z: 0}
+  - position: {x: 3.7115, y: -6.2576, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: 3.7456, y: -6.1548, z: 0}
+  - position: {x: 3.757, y: -6.1709, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: 3.7729, y: -6.0608, z: 0}
+  - position: {x: 3.7846, y: -6.0771, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: 3.7813, y: -5.9675, z: 0}
+  - position: {x: 3.7935, y: -5.981, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: 3.7378, y: 6.1747, z: 0}
+  - position: {x: 3.7381, y: 6.1726, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: 3.7279, y: 6.272, z: 0}
+  - position: {x: 3.7281, y: 6.2699, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: 3.6992, y: 6.3656, z: 0}
+  - position: {x: 3.6993, y: 6.3635, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: 3.6528, y: 6.4518, z: 0}
+  - position: {x: 3.6528, y: 6.4496, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: 3.5905, y: 6.5273, z: 0}
+  - position: {x: 3.5905, y: 6.525, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: 3.5147, y: 6.5892, z: 0}
+  - position: {x: 3.5146, y: 6.5869, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: 3.4284, y: 6.6352, z: 0}
+  - position: {x: 3.4282, y: 6.6328, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: 3.3347, y: 6.6634, z: 0}
+  - position: {x: 3.3345, y: 6.6609, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: 3.2418, y: 6.6729, z: 0}
+  - position: {x: 3.2415, y: 6.6703, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: -2.6718, y: 6.7201, z: 0}
+  - position: {x: -2.6651, y: 6.71, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: -2.7693, y: 6.7113, z: 0}
+  - position: {x: -2.7626, y: 6.7011, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: -2.8632, y: 6.6837, z: 0}
+  - position: {x: -2.8564, y: 6.6733, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: -2.9499, y: 6.6383, z: 0}
+  - position: {x: -2.9431, y: 6.6278, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: -3.0261, y: 6.5769, z: 0}
+  - position: {x: -3.0192, y: 6.5664, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: -3.0889, y: 6.5018, z: 0}
+  - position: {x: -3.0819, y: 6.4912, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: -3.1358, y: 6.416, z: 0}
+  - position: {x: -3.1288, y: 6.4053, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: -3.1652, y: 6.3226, z: 0}
+  - position: {x: -3.158, y: 6.3119, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  - position: {x: -3.1758, y: 6.2139, z: 0}
+  - position: {x: -3.1685, y: 6.2035, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
   m_Triangles: 000002000100000003000200040008000800040008000900040009000a0004000a000b0004000b000c0004000c000d0004000d000e0004000e000f0004000f001000040005001100040010001100050011001200050012001300050013001400050014001500050015001600050016001700050017001800050018001900050006001a00050019001a0006001a001b0006001b001c0006001c001d0006001d001e0006001e001f0006001f002000060020002100060021002200060007002300060022002300070023002400070024002500070025002600070026002700070027002800070028002900070029002a0007002a002b0008000400070008002b000700
   m_LocalBounds:
-    m_Center: {x: 0.30275, y: 0.08314991, z: 0}
-    m_Extent: {x: 3.47855, y: 6.63695, z: 0}
+    m_Center: {x: 0.3125, y: 0.08470011, z: 0}
+    m_Extent: {x: 3.481, y: 6.6253, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -367,3 +368,61 @@ MonoBehaviour:
   - {x: 3.286282, y: -5.978907, z: 0}
   - {x: 3.2394538, y: 6.16622, z: 0}
   - {x: -2.6775143, y: 6.213049, z: 0}
+--- !u!1 &6182248959884899240
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7319068486433357907}
+  - component: {fileID: 3443187518320751724}
+  m_Layer: 8
+  m_Name: wall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7319068486433357907
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6182248959884899240}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.475622, y: 0.4969312, z: -0.009566508}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3151881407843214759}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &3443187518320751724
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6182248959884899240}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 2.4501708, y: -0.49728727}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.14414, y: 12.380372}
+  m_EdgeRadius: 0

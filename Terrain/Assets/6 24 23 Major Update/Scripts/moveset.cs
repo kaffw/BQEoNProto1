@@ -86,6 +86,8 @@ public class moveset : MonoBehaviour
     public static bool isImmune = false;
 
     public Vector2 playerPos;
+
+    public static bool isAlive = true;
     private void Awake()
     {
         if (CharacterPositionManager.ifFromEntrance == true)
@@ -118,6 +120,11 @@ public class moveset : MonoBehaviour
 
         isFiring = false;
         fireRateTimer = 0;
+
+        if (isAlive == false)
+        {
+            StartCoroutine(Alive());
+        }
     }
 
     private void Update()
@@ -148,65 +155,73 @@ public class moveset : MonoBehaviour
                 // Re-enable collision and damage processing here
             }
         }
-
-        if (isDashing)
+        if (isAlive == false)
         {
-            return;
+            StartCoroutine(Alive());
         }
 
-        dirX = Input.GetAxisRaw("Horizontal");
-
-        if (!Dialogue.inDialogue && !shielded)
+        if (isAlive)
         {
-            horizontalMove = Input.GetAxisRaw("Horizontal");
-            rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
-            if (Input.GetButtonDown("Jump") && IsGrounded())
+            if (isDashing)
             {
-                doubleJump = false;
-
+                return;
             }
-            if (Input.GetButtonDown("Jump") && !Dialogue.inDialogue) //&& IsGrounded()
+
+            dirX = Input.GetAxisRaw("Horizontal");
+
+            if (!Dialogue.inDialogue && !shielded)
             {
-                if (IsGrounded() || doubleJump)
+                horizontalMove = Input.GetAxisRaw("Horizontal");
+                rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
+                if (Input.GetButtonDown("Jump") && IsGrounded())
                 {
-                    rb.velocity = new Vector2(rb.velocity.x, doubleJump ? doubleJumpingPower : jumpForce);
-                    doubleJump = !doubleJump;
+                    doubleJump = false;
+
+                }
+                if (Input.GetButtonDown("Jump") && !Dialogue.inDialogue) //&& IsGrounded()
+                {
+                    if (IsGrounded() || doubleJump)
+                    {
+                        rb.velocity = new Vector2(rb.velocity.x, doubleJump ? doubleJumpingPower : jumpForce);
+                        doubleJump = !doubleJump;
+                    }
+                }
+
+                if (Input.GetKeyDown("k") && canDash)
+                {
+                    isImmune = true;
+                    hitImmunityDuration = 1f;
+                    StartCoroutine(Dash());
+                    anim.SetTrigger("dash");
+                }
+
+                if (horizontalMove > 0f)
+                {
+                    anim.SetInteger("state", 1);
+                }
+                else if (horizontalMove < 0f)
+                {
+                    anim.SetInteger("state", 1);
+                }
+                else if (IsGrounded())
+                {
+                    anim.SetInteger("state", 4);
+                }
+                else
+                {
+                    anim.SetInteger("state", 0);
+                }
+                UpdateAnimationState();
+
+                fireRateTimer += Time.deltaTime;
+                if (Input.GetKeyDown("l") && fireRateTimer >= fireRate && !isFiring)
+                {
+                    isFiring = true;
+                    anim.SetTrigger("CombatRanged");
+                    StartCoroutine(DelayFire());
                 }
             }
-
-            if (Input.GetKeyDown("k") && canDash)
-            {
-                isImmune = true;
-                hitImmunityDuration = 1f;
-                StartCoroutine(Dash());
-                anim.SetTrigger("dash");
-            }
-
-            if (horizontalMove > 0f)
-            {
-                anim.SetInteger("state", 1);
-            }
-            else if (horizontalMove < 0f)
-            {
-                anim.SetInteger("state", 1);
-            }
-            else if (IsGrounded())
-            {
-                anim.SetInteger("state", 4);
-            }
-            else
-            {
-                anim.SetInteger("state", 0);
-            }
-            UpdateAnimationState();
-
-            fireRateTimer += Time.deltaTime;
-            if (Input.GetKeyDown("l") && fireRateTimer >= fireRate && !isFiring)
-            {
-                isFiring = true;
-                anim.SetTrigger("CombatRanged");
-                StartCoroutine(DelayFire());
-            }
+        
         }
 
         ActLocator();
@@ -462,5 +477,12 @@ public class moveset : MonoBehaviour
         yield return new WaitForSeconds(3f); //3 f prev
         //Debug.Log("End of Iframe");
         immunity = false;
+    }
+
+    private IEnumerator Alive()
+    {
+        yield return new WaitForSeconds(3f);
+        isAlive = true;
+
     }
 }

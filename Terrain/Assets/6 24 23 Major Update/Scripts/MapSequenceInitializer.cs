@@ -47,6 +47,7 @@ public class MapSequenceInitializer : MonoBehaviour
             if (moveset.ActLocation == 2) SceneManager.LoadScene(25); //8 //26
             if (moveset.ActLocation == 3) SceneManager.LoadScene(27); //18
             quickDeath = false;
+            moveset.isAlive = false;
         }
 
         if (moveset.deathCounter == 5)
@@ -56,7 +57,7 @@ public class MapSequenceInitializer : MonoBehaviour
             MapSequenceUpdate();
             moveset.deathCounter = 0;
             StartCoroutine(DeathDelay());
-
+            moveset.isAlive = false;
         }
 
         if (Health.damaged) { savedCurrentHealth--; Health.damaged = false; }
