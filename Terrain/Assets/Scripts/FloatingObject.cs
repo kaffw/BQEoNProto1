@@ -45,9 +45,15 @@ public class FloatingObject : MonoBehaviour
     {
         if (pick.CompareTag("Player"))
         {
-            Destroy(gameObject, .25f);
             Debug.Log("Relic has been picked up");
-            SceneManager.LoadScene(23);
+            StartCoroutine(ActChangeScene());
         }
+    }
+
+    private IEnumerator ActChangeScene()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(23);
+        Destroy(gameObject, .25f);
     }
 }

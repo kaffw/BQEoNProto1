@@ -45,9 +45,17 @@ public class FloatingChains : MonoBehaviour
     {
         if (pick.CompareTag("Player"))
         {
-            Destroy(gameObject, .25f);
             Debug.Log("Relic has been picked up");
-            SceneManager.LoadScene(28);
+            StartCoroutine(ActChangeScene());
+            //SceneManager.LoadScene(28);
         }
+    }
+    
+    private IEnumerator ActChangeScene()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(28);
+        Destroy(gameObject, .25f);
+
     }
 }
