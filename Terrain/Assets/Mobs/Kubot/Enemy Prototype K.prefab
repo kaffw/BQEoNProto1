@@ -134,7 +134,7 @@ Animator:
   m_GameObject: {fileID: 5100648730582135148}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 80956ff753f4be346a22b87f8da2b0f5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -213,6 +213,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 5100648730582135146}
   hit: 0
   Attacking: 0
+  aliveState: {fileID: 5100648730582135156}
 --- !u!61 &5100648730582135147
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -268,7 +269,9 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   isWalking: 1
   isAttacking: {fileID: 5100648730582135151}
+  isAlive: 1
   capsulecoll: {fileID: 4249331358504376834}
+  disableScript: {fileID: 0}
 --- !u!70 &4249331358504376834
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -38,11 +38,10 @@ public class EnemyPatrol : MonoBehaviour
 
     public EnemyMeleeDamage isAttacking;
 
-    private bool isAlive = true;
+    public bool isAlive = true;
 
     public CapsuleCollider2D capsulecoll;
 
-   // public EnemyMeleeDamage disableScript;
     private void Awake()
     {
         player = GameObject.Find("Bulan");
@@ -54,7 +53,6 @@ public class EnemyPatrol : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         enemyAnim = GetComponent<Animator>();
         capsulecoll = GetComponent<CapsuleCollider2D>();
-        //disableScript = GetComponent<EnemyMeleeDamage>();
 
         direction = transform.position;
 
@@ -71,9 +69,7 @@ public class EnemyPatrol : MonoBehaviour
                 enemyAnim.SetTrigger("enemyHit");
                 hit = false;
             }
-            //if (enemyHealth == 0) ;// Destroy(gameObject);
 
-            UpdateAnimation();
             if (isAttacking.Attacking == false)
             {
                 direction = new Vector2(transform.position.x, transform.position.y);
@@ -105,23 +101,7 @@ public class EnemyPatrol : MonoBehaviour
                     transform.position = Vector2.MoveTowards(transform.position, patrolPoints[currentPatrolPointIndex].transform.position, Time.deltaTime * speed);
                     isWalking = true;
                 }
-                /*
-                else if (EnemyRange.playerInEnemyRange && Target.x < thisEnemyPos.x)
-                {
-                    thisEnemy.transform.position = new Vector2(transform.position.x + (-7 * Time.deltaTime), transform.position.y);
-                    isWalking = true;
-                    Debug.Log("moving to left");
-                    //sprite.flipX = true;
-                }
 
-                else if (EnemyRange.playerInEnemyRange && Target.x > thisEnemyPos.x)
-                {
-                    Debug.Log("moving to right");
-                    thisEnemy.transform.position = new Vector2(transform.position.x + (7 * Time.deltaTime), transform.position.y);
-                    isWalking = true;
-                    //sprite.flipX = false;
-                }
-                */
                 else if (!EnemyRange.playerInEnemyRange && Target.x < thisEnemyPos.x)
                 {
                     //go to patrol point A
@@ -142,13 +122,7 @@ public class EnemyPatrol : MonoBehaviour
             }
         }
     }
-    public void UpdateAnimation()
-    {
-        if (isWalking)
-        {
-            
-        }
-    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == 8 && !wallCollided)
@@ -181,6 +155,7 @@ public class EnemyPatrol : MonoBehaviour
         {
             enemyHealth--;
             isAlive = false;
+            enemyAnim.SetTrigger("AswangDeath");
             StartCoroutine(DeathDelay());
 
         }
@@ -188,12 +163,9 @@ public class EnemyPatrol : MonoBehaviour
 
     private IEnumerator DeathDelay()
     {
-        
-        enemyAnim.SetTrigger("AswangDeath");
         capsulecoll.size = new Vector2(0.0001f, 0.0001f);
         capsulecoll.offset = new Vector2(transform.position.x, -.27f);
 
-        //disableScript.isEnabled = true;
         yield return new WaitForSeconds(5f);
         Destroy(gameObject);
     }

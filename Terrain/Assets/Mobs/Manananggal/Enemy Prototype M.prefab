@@ -226,7 +226,9 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   isWalking: 1
   isAttacking: {fileID: 149913271131403905}
+  isAlive: 1
   capsulecoll: {fileID: 5228841439125847456}
+  disableScript: {fileID: 0}
 --- !u!114 &149913271131403905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,6 +245,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 149913271131403967}
   hit: 0
   Attacking: 0
+  aliveState: {fileID: 149913271131403906}
 --- !u!61 &149913271131403907
 BoxCollider2D:
   m_ObjectHideFlags: 0

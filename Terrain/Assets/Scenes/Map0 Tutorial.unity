@@ -593,11 +593,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6796221224206985690, guid: 0e52b015497addd478d27a13d02d17c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 109.7
+      value: 12.66
       objectReference: {fileID: 0}
     - target: {fileID: 6796221224206985690, guid: 0e52b015497addd478d27a13d02d17c0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.748348
+      value: 0.21834803
       objectReference: {fileID: 0}
     - target: {fileID: 6796221224206985690, guid: 0e52b015497addd478d27a13d02d17c0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3581,6 +3581,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1854343425}
     m_Modifications:
+    - target: {fileID: 8517679806427707042, guid: fc8e11d2f4a65e04b9f09129d754cbb7, type: 3}
+      propertyPath: aliveState
+      value: 
+      objectReference: {fileID: 572169092}
     - target: {fileID: 8517679806427707045, guid: fc8e11d2f4a65e04b9f09129d754cbb7, type: 3}
       propertyPath: capsulecoll
       value: 
@@ -3667,6 +3671,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8517679806483473781, guid: fc8e11d2f4a65e04b9f09129d754cbb7, type: 3}
   m_PrefabInstance: {fileID: 572169086}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &572169092 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8517679806427707045, guid: fc8e11d2f4a65e04b9f09129d754cbb7, type: 3}
+  m_PrefabInstance: {fileID: 572169086}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572169087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcf945244716b4041a34f9f1a24abe98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &575502601
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5989,11 +6004,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6991694253185548650, guid: f980aa44e12b13e4eab95039a77b92bb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 109.7
+      value: 12.66
       objectReference: {fileID: 0}
     - target: {fileID: 6991694253185548650, guid: f980aa44e12b13e4eab95039a77b92bb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.748348
+      value: 0.21834803
       objectReference: {fileID: 0}
     - target: {fileID: 6991694253185548650, guid: f980aa44e12b13e4eab95039a77b92bb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11384,11 +11399,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2611164972877872477, guid: 076aaa84b90f9a343b748833fe57fddc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 109.7
+      value: 12.66
       objectReference: {fileID: 0}
     - target: {fileID: 2611164972877872477, guid: 076aaa84b90f9a343b748833fe57fddc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.53
       objectReference: {fileID: 0}
     - target: {fileID: 2611164972877872477, guid: 076aaa84b90f9a343b748833fe57fddc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11508,7 +11523,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7213759558255214094, guid: 076aaa84b90f9a343b748833fe57fddc, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7407482702095680199, guid: 076aaa84b90f9a343b748833fe57fddc, type: 3}
       propertyPath: m_Layer
@@ -11548,35 +11563,6 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 2611164972877872480, guid: 076aaa84b90f9a343b748833fe57fddc, type: 3}
   m_PrefabInstance: {fileID: 1759467298}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1759467304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759467300}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e41d84e52077654a972235d9c872ec7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GroundEnemy: {fileID: 0}
-  Enemy1RB: {fileID: 0}
-  Enemy1Anim: {fileID: 0}
-  enemyHealth: 5
-  enemyMoveSpeed: 2
-  chaseRunSpeed: 3
-  playerDetection: 0
-  isAttacking: 0
-  target: {fileID: 1759467302}
-  targetPos: {x: 0, y: 0}
-  faceDirection: 1
-  noAggroFaceDirection: 1
-  PatrolPointA: {fileID: 0}
-  PatrolPointB: {fileID: 0}
-  currentDirection: 0
-  Aggro: {fileID: 0}
-  AggroPos: {x: 0, y: 0}
 --- !u!114 &1759467305
 MonoBehaviour:
   m_ObjectHideFlags: 0

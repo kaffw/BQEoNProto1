@@ -15,6 +15,7 @@ public class PrologueManager : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
+        if (Input.GetKeyDown("x")) timer = 30.3f;
 
         if (timer > 15.1f)
         {

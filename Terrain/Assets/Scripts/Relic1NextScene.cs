@@ -16,6 +16,8 @@ public class Relic1NextScene : MonoBehaviour
     {
         timer += Time.deltaTime;
 
+        if (Input.GetKeyDown("x")) timer = 13.1f;
+
         if (timer > 13.1f)
         {
             SceneManager.LoadScene(27); //27

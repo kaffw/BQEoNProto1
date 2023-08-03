@@ -5,41 +5,21 @@ using UnityEngine;
 public class EnemyMeleeDamage: MonoBehaviour
 {
     [SerializeField] private float damage;
-    //public Animator enemyAnim;
 
     public Animator enemyAnim;
     public bool hit = false;
 
     public bool Attacking = false;
-
+    public EnemyPatrol aliveState;
     private void Start()
     {
         enemyAnim.GetComponent<Animator>();
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            //Debug.Log("on Contact");
-        }
-        /*if (collision.gameObject.CompareTag("Player"))
-        {
-            enemyAnim.SetTrigger("enemyAttack");
-            if (moveset.isImmune == false)
-            {
-                StartCoroutine(DealDamage(collision));
-                
-                hit = true;
-            }
-        }
-        else if (collision.gameObject.CompareTag("Terrain")) { Debug.Log("hit terrain"); }
-        else { Debug.Log("hit nothing"); }
-        */
+        aliveState = GetComponent<EnemyPatrol>();
     }
 
     private void OnTriggerEnter2D(Collider2D collide)
     {
-        if (collide.CompareTag("Player"))
+        if (collide.CompareTag("Player") && aliveState.isAlive == true)
         {
             enemyAnim.SetTrigger("enemyAttack");
             if (moveset.isImmune == false)

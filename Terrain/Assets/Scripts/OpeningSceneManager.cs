@@ -16,6 +16,8 @@ public class OpeningSceneManager : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown("x")) timer = 29.5f;
+
         timer += Time.deltaTime;
         if (timer > 15)
         {

@@ -111,15 +111,17 @@ public class moveset : MonoBehaviour
     {
         //Debug.Log(MapSequenceInitializer.location + "Current location");
         //Debug.Log(MapSequenceInitializer.act2Location + "Current act 2 location");
-        shielded = false;                           //from Playermovement.cs
+                                   
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<BoxCollider2D>();       //from Playermovement.cs
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         respawnPoint = transform.position;
 
-        isFiring = false;
         fireRateTimer = 0;
+        isFiring = false;
+        isDashing = false;
+        shielded = false;
 
         if (isAlive == false)
         {
@@ -169,7 +171,7 @@ public class moveset : MonoBehaviour
 
             dirX = Input.GetAxisRaw("Horizontal");
 
-            if (!Dialogue.inDialogue && !shielded)
+            if (!shielded) //!Dialogue.inDialogue 
             {
                 horizontalMove = Input.GetAxisRaw("Horizontal");
                 rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);

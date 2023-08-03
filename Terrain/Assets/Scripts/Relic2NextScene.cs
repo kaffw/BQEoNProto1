@@ -15,7 +15,7 @@ public class Relic2NextScene : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-
+        if (Input.GetKeyDown("x")) timer = 12f;
         if (timer > 12f)
         {
             //MapSequenceInitializer.act2Location++;

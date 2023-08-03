@@ -163,7 +163,7 @@ public class CombatMelee : MonoBehaviour
     IEnumerator ComboResetCoroutine()
     {
         isAttacking = true;
-        yield return new WaitForSeconds(0.25f); // Delay between combo attacks //0.00625
+        yield return new WaitForSeconds(.35f); //.25 // Delay between combo attacks //0.00625
         isAttacking = false;
 
         AttackProjectile.SetActive(false); // Disable the AttackProjectile after the attack

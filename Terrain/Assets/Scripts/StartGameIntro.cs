@@ -10,6 +10,8 @@ public class StartGameIntro : MonoBehaviour
     {
         timer += Time.deltaTime;
 
+        if (Input.GetKeyDown("x")) timer = 38.1f;
+
         if (timer > 38.1f)
         {
             SceneManager.LoadScene(31);

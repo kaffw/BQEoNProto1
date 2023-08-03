@@ -11,6 +11,8 @@ public class PreBossScene : MonoBehaviour
     {
         timer += Time.deltaTime;
 
+        if (Input.GetKeyDown("x")) timer = 17f;
+
         if (timer > 17f)
         {
             SceneManager.LoadScene(20);

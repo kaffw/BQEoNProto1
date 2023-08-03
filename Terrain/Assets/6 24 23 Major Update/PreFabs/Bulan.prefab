@@ -739,14 +739,14 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7992620329124778148}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.011243822, y: 0.05189955}
-  m_Size: {x: 0.22617158, y: 0.30403677}
+  m_Offset: {x: 0.03500206, y: 0.05189955}
+  m_Size: {x: 0.13367967, y: 0.30403674}
   m_Direction: 0
 --- !u!114 &4439533413999982424
 MonoBehaviour:
