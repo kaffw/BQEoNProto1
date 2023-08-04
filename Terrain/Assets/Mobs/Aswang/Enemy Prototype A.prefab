@@ -211,7 +211,6 @@ MonoBehaviour:
   isAttacking: {fileID: 2057202557791823539}
   isAlive: 1
   capsulecoll: {fileID: 6679546116460489945}
-  disableScript: {fileID: 0}
 --- !u!61 &2057202557791823543
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -251,8 +250,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.15662766, y: -0.6472888}
-  m_Size: {x: 4.846443, y: 6.601468}
+  m_Offset: {x: -0.15662766, y: -0.41036558}
+  m_Size: {x: 4.846443, y: 6.1276217}
   m_Direction: 0
 --- !u!1 &2057202558371917685
 GameObject:
