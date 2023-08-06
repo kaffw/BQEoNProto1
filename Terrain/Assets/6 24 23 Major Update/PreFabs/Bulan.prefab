@@ -480,7 +480,7 @@ MonoBehaviour:
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 512
-  damage: 1
+  damage: 2
   anim: {fileID: 2611164972877872476}
   AttackProjectile: {fileID: 7992620329124778148}
   AttackProjectileState: 0
