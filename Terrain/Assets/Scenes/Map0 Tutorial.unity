@@ -3581,10 +3581,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1854343425}
     m_Modifications:
+    - target: {fileID: 2694197675278682217, guid: fc8e11d2f4a65e04b9f09129d754cbb7, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8517679806427707042, guid: fc8e11d2f4a65e04b9f09129d754cbb7, type: 3}
       propertyPath: aliveState
       value: 
       objectReference: {fileID: 572169092}
+    - target: {fileID: 8517679806427707044, guid: fc8e11d2f4a65e04b9f09129d754cbb7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8517679806427707045, guid: fc8e11d2f4a65e04b9f09129d754cbb7, type: 3}
       propertyPath: capsulecoll
       value: 
