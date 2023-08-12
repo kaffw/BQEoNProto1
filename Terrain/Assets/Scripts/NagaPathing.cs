@@ -63,6 +63,7 @@ public class NagaPathing : MonoBehaviour
     private float attackSpeed = 5f;
     void Start()
     {
+        if(BackgroundManager.isReachedEnd == false) BackgroundManager.isReachedEnd = true;
         nagaRB = GetComponent<Rigidbody2D>();
         nagaAnim = GetComponent<Animator>();
         Target = GameObject.Find("Bulan");
