@@ -28,7 +28,7 @@ public class NextMap : MonoBehaviour
             if (MapSequenceInitializer.NagasLairEntry == false)
             {
                 SceneManager.LoadScene(19);
-                MapSequenceInitializer.NagasLairEntry = true;
+                //MapSequenceInitializer.NagasLairEntry = true;
             }
         }
 

@@ -64,6 +64,12 @@ public class NagaPathing : MonoBehaviour
     void Start()
     {
         if(BackgroundManager.isReachedEnd == false) BackgroundManager.isReachedEnd = true;
+        if (MapSequenceInitializer.NagasLairEntry == false)
+        {
+            //SceneManager.LoadScene(19);
+            MapSequenceInitializer.NagasLairEntry = true;
+        }
+
         nagaRB = GetComponent<Rigidbody2D>();
         nagaAnim = GetComponent<Animator>();
         Target = GameObject.Find("Bulan");
