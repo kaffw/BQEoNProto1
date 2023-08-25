@@ -7,6 +7,7 @@ public class SettingMenu : MonoBehaviour
 {
     public GameObject soundButton, controlButton, creditButton;
     public GameObject soundObj, controlObj, creditObj;
+    public GameObject _MainMenu, _SettingMenu;
     private Image showSound, showControl, showCredit;
 
     void Awake()
@@ -27,6 +28,11 @@ public class SettingMenu : MonoBehaviour
         creditObj.SetActive(false);
     }
 
+    public void BackButton()
+    {
+        StartCoroutine(DelayBackButton());
+    }
+
     public void DispSound()
     {
         StartCoroutine(DispSoundWait());
@@ -40,6 +46,21 @@ public class SettingMenu : MonoBehaviour
     public void DispCredit()
     {
         StartCoroutine(DispCreditWait());
+    }
+
+    private IEnumerator DelayBackButton()
+    {
+        yield return new WaitForSeconds(0.05f);
+        soundButton.SetActive(true);
+        controlButton.SetActive(true);
+        creditButton.SetActive(true);
+
+        soundObj.SetActive(true);
+        controlObj.SetActive(false);
+        creditObj.SetActive(false);
+        
+        _MainMenu.SetActive(true);
+        _SettingMenu.SetActive(false);
     }
 
     private IEnumerator DispSoundWait()
