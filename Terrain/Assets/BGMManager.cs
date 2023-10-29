@@ -9,6 +9,7 @@ public class BGMManager : MonoBehaviour
     void Start()
     {
         BGMVolume = GetComponent<AudioSource>();
+        BGMVolume.volume = VolumeManager.BGMVolume;
     }
 
     void Update()
