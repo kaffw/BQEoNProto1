@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class VolumeManagerMain : MonoBehaviour
+public class VolumeManager : MonoBehaviour
 {
     public Slider BGM;
     static public float BGMVolume;
