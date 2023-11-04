@@ -7,6 +7,11 @@ public class SettingPopper : MonoBehaviour
     [SerializeField] private GameObject soundSettings;
     private bool isOpen = false;
 
+    void Awake()
+    {
+        bool isOpen = false;
+    }
+
     void Update()
     {
         if(Input.GetKeyDown("p"))
