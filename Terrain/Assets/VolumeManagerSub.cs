@@ -19,5 +19,6 @@ public class VolumeManagerSub : MonoBehaviour
     void Update()
     {
         BGMVolumeSub = BGMSub.value;
+        VolumeManagerMain.BGMVolume = BGMSub.value;
     }
 }
